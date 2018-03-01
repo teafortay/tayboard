@@ -27,10 +27,10 @@ class KeyboardViewController: UIInputViewController {
         let buttonTitles3 = ["Z", "A", "E", "H", "T", "D", "C", "K"]
         let buttonTitles4 = ["X", ",", "SPACE", "I", "N", "W", "V", "G"]
         
-        var row1 = createRowOfButtons(buttonTitles: buttonTitles1 as [NSString])
-        var row2 = createRowOfButtons(buttonTitles: buttonTitles2 as [NSString])
-        var row3 = createRowOfButtons(buttonTitles: buttonTitles3 as [NSString])
-        var row4 = createRowOfButtons(buttonTitles: buttonTitles4 as [NSString])
+        let row1 = createRowOfButtons(buttonTitles: buttonTitles1 as [NSString])
+        let row2 = createRowOfButtons(buttonTitles: buttonTitles2 as [NSString])
+        let row3 = createRowOfButtons(buttonTitles: buttonTitles3 as [NSString])
+        let row4 = createRowOfButtons(buttonTitles: buttonTitles4 as [NSString])
         
         self.view.addSubview(row1)
         self.view.addSubview(row2)
