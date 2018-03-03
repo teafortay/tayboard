@@ -1,4 +1,4 @@
-//
+
 //  KeyboardViewController.swift
 //  taylorDvor
 //
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController {
 
+class KeyboardViewController: UIInputViewController {
+    
     @IBOutlet var nextKeyboardButton: UIButton!
     
     override func updateViewConstraints() {
@@ -25,7 +26,7 @@ class KeyboardViewController: UIInputViewController {
         let buttonTitles1 = ["GLB", "J", "L", "M", "F", "P", "?", "BAK"]
         let buttonTitles2 = ["SHFT", "Q", ".", "O", "R", "S", "U", "Y", "B", "RET"]
         let buttonTitles3 = ["Z", "A", "E", "H", "T", "D", "C", "K"]
-        let buttonTitles4 = ["X", ",", "SPACE", "I", "N", "W", "V", "G"]
+        let buttonTitles4 = ["X", ",", " ", "I", "N", "W", "V", "G"]
         
         let row1 = createRowOfButtons(buttonTitles: buttonTitles1 as [NSString])
         let row2 = createRowOfButtons(buttonTitles: buttonTitles2 as [NSString])
@@ -43,10 +44,10 @@ class KeyboardViewController: UIInputViewController {
         row4.translatesAutoresizingMaskIntoConstraints = false
         
         addConstraintsToInputView(inputView: self.view, rowViews: [row1, row2, row3, row4])
-    //end
-        
+        //end
+
         self.nextKeyboardButton = UIButton(type: .system)
-        
+ 
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +59,7 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
@@ -80,9 +81,9 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-//start keyboard
+    //start keyboard
     func createButtonWithTitle(title: String) -> UIButton {
-    
+        
         let button = UIButton(type: .system) as UIButton
         button.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         button.setTitle(title, for: UIControlState.normal)
@@ -91,9 +92,9 @@ class KeyboardViewController: UIInputViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         button.setTitleColor(UIColor.darkGray, for: .normal)
-    
+        
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-    
+        
         return button
     }
     
@@ -103,17 +104,50 @@ class KeyboardViewController: UIInputViewController {
             if let title = button.title(for: .normal) {
                 var proxy = textDocumentProxy as UITextDocumentProxy
                 proxy.insertText(title)
+                proxy.deleteBackward()
+                switch title {
+                case "BAK" :
+                    proxy.deleteBackward()
+                    proxy.deleteBackward()
+                    proxy.deleteBackward()
+                case "RET" :
+                    proxy.deleteBackward()
+                    proxy.deleteBackward()
+                    proxy.insertText("\n")
+                    /*case "SHFT" :
+                     proxy.deleteBackward()
+                     proxy.deleteBackward()
+                     proxy.deleteBackward()
+                     proxy.deleteBackward()
+                     proxy.localizedCapitalizedString*/
+                    
+                case "      " :
+                    proxy.insertText(" ")
+                case "GLB" :
+                    self.advanceToNextInputMode()
+                default :
+                    proxy.insertText(title)
+                }
             }
         }
     }
-    
+    /* @objc func didTapButton(sender: AnyObject?) {
+     
+     if let button = sender as? UIButton{
+     if let title = button.title(for: .normal) {
+     var proxy = textDocumentProxy as UITextDocumentProxy
+     
+     proxy.insertText(title)
+     
+     
+     }}}*/
     func addIndividualButtonConstraints(buttons: [UIButton], mainView: UIView){
         
         for (index, button) in buttons.enumerated() {
             
             var topConstraint = NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: mainView, attribute: .top, multiplier: 1.0, constant: 1)
             
-            var bottomConstraint = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: mainView, attribute: .bottom, multiplier: 1.0, constant: -1)
+            var bottomConstraint = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: mainView, attribute: .bottom, multiplier: 1, constant: -1)
             
             var rightConstraint : NSLayoutConstraint!
             
@@ -149,20 +183,20 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     func createRowOfButtons(buttonTitles: [NSString]) -> UIView {
-    
-    var buttons = [UIButton]()
-        var keyboardRowView = UIView(frame: CGRect(x:0, y:0, width:320, height:320))
-    
-    for buttonTitle in buttonTitles{
-    
-        let button = createButtonWithTitle(title: buttonTitle as String)
-    buttons.append(button)
-    keyboardRowView.addSubview(button)
-    }
-    
+        
+        var buttons = [UIButton]()
+        var keyboardRowView = UIView(frame: CGRect(x:0, y:0, width:350, height:350))
+        
+        for buttonTitle in buttonTitles{
+            
+            let button = createButtonWithTitle(title: buttonTitle as String)
+            buttons.append(button)
+            keyboardRowView.addSubview(button)
+        }
+        
         addIndividualButtonConstraints(buttons: buttons, mainView: keyboardRowView)
-    
-    return keyboardRowView
+        
+        return keyboardRowView
     }
     func addConstraintsToInputView(inputView: UIView, rowViews: [UIView]){
         
