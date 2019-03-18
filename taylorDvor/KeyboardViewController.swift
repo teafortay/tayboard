@@ -159,7 +159,7 @@ class KeyboardViewController: UIInputViewController {
         button.frame = CGRect(x: 0, y: 0, width: 20, height: 40)
         button.setTitle(title, for: UIControlState.normal)
 //        button.sizeToFit()
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         button.setTitleColor(UIColor.darkGray, for: .normal)
