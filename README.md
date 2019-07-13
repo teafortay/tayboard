@@ -1,4 +1,5 @@
 # tayboard
 keyboard app
-dvorvak right keyboard for iPad/ iPhone
+dvorvak right keyboard for iPad/ iPhone.
+/n
 please see LICENSE
