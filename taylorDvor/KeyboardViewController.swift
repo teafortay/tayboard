@@ -11,7 +11,7 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
     
-    @IBOutlet var nextKeyboardButton: UIButton!
+@IBOutlet var nextKeyboardButton: UIButton!
     
     let upKeyboard = UIView(frame: CGRect())
     let downKeyboard = UIView(frame: CGRect())
@@ -31,7 +31,7 @@ class KeyboardViewController: UIInputViewController {
         let heightConstraint = NSLayoutConstraint(item: self.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 300)
         self.view.addConstraint(heightConstraint)
         
-        let upButtonTitles1 = ["GLB", "J", "L", "M", "F", "P", "?", "BAK"]
+        let upButtonTitles1 = ["GLB", "J", "L", "M", "F", "P", "?", "⌫"]
         let upButtonTitles2 = ["shft", "Q", ">", "O", "R", "S", "U", "Y", "B", "RET"]
         let upButtonTitles3 = ["Z", "A", "E", "H", "T", "D", "C", "K"]
         let upButtonTitles4 = ["123", "X", "<", "  ", "I", "N", "W", "V", "G"]
@@ -58,7 +58,7 @@ class KeyboardViewController: UIInputViewController {
         addKeyboardConstraints(keyboardView: upKeyboard)
         
        //down keyboard
-        let downButtonTitles1 = ["GLB", "j", "l", "m", "f", "p", "/", "BAK"]
+        let downButtonTitles1 = ["GLB", "j", "l", "m", "f", "p", "/", "⌫"]
         let downButtonTitles2 = ["SHFT", "q", ".", "o", "r", "s", "u", "y", "b"]
         let downButtonTitles3 = ["z", "a", "e", "h", "t", "d", "c", "k"]
         let downButtonTitles4 = ["123", "x", ",", " ", "i", "n", "w", "v", "g"]
@@ -87,7 +87,7 @@ class KeyboardViewController: UIInputViewController {
         //num keyboard
         let numButtonTitles1 = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
         let numButtonTitles2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
-        let numButtonTitles3 = ["GLB", "~", "[", "]", "{", "}", "\\", "|", "BAK"]
+        let numButtonTitles3 = ["GLB", "~", "[", "]", "{", "}", "\\", "|", "⌫"]
         let numButtonTitles4 = ["ABC", "+", "=", "-", "_", ";", ":", "'",  "\""]
         
         let nRow1 = createRowOfButtons(buttonTitles: numButtonTitles1 as [NSString])
@@ -175,7 +175,7 @@ class KeyboardViewController: UIInputViewController {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
                 switch title {
-                case "BAK" :
+                case "⌫" :
 //
                     proxy.deleteBackward()
                 case "RET" :
