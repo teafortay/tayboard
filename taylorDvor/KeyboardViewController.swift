@@ -31,20 +31,23 @@ class KeyboardViewController: UIInputViewController {
         let heightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 300)
         self.view.addConstraint(heightConstraint)
         
-        let upButtonTitles1 = ["GLB", "J", "L", "M", "F", "P", "?", "⌫"]
-        let upButtonTitles2 = ["shift", "Q", ">", "O", "R", "S", "U", "Y", "B", "⏎"]
-        let upButtonTitles3 = ["Z", "A", "E", "H", "T", "D", "C", "K"]
-        let upButtonTitles4 = ["123", "X", "<", " SPACE ", "I", "N", "W", "V", "G"]
+        let upButtonTitles1 = ["!", "@", "#", "$", "J", "L", "M", "F", "P", "?", "⌫"]
+        let upButtonTitles2 = ["tab", "%", "^", "Q", ">", "O", "R", "S", "U", "Y", "B", ":"]
+        let upButtonTitles3 = ["&", "*", "Z", "A", "E", "H", "T", "D", "C", "K", "⏎"]
+        let upButtonTitles4 = ["shift", "(", ")", "X", "<", "I", "N", "W", "V", "G", "\""]
+        let upButtonTitles5 = ["123", "   SPACE   ", "GLB"]
         
         let row1 = createRowOfButtons(buttonTitles: upButtonTitles1 as [NSString])
         let row2 = createRowOfButtons(buttonTitles: upButtonTitles2 as [NSString])
         let row3 = createRowOfButtons(buttonTitles: upButtonTitles3 as [NSString])
         let row4 = createRowOfButtons(buttonTitles: upButtonTitles4 as [NSString])
+        let row5 = createRowOfButtons(buttonTitles: upButtonTitles5 as [NSString])
         
         upKeyboard.addSubview(row1)
         upKeyboard.addSubview(row2)
         upKeyboard.addSubview(row3)
         upKeyboard.addSubview(row4)
+        upKeyboard.addSubview(row5)
         
         self.view.addSubview(upKeyboard)
         
@@ -52,26 +55,32 @@ class KeyboardViewController: UIInputViewController {
         row2.translatesAutoresizingMaskIntoConstraints = false
         row3.translatesAutoresizingMaskIntoConstraints = false
         row4.translatesAutoresizingMaskIntoConstraints = false
+        row5.translatesAutoresizingMaskIntoConstraints = false
+        
         upKeyboard.translatesAutoresizingMaskIntoConstraints = false
         
-        addConstraintsToInputView(inputView: self.view, rowViews: [row1, row2, row3, row4])
+        addConstraintsToInputView(inputView: self.view, rowViews: [row1, row2, row3, row4, row5])
         addKeyboardConstraints(keyboardView: upKeyboard)
         
        //down keyboard
-        let downButtonTitles1 = ["GLB", "j", "l", "m", "f", "p", "/", "⌫"]
-        let downButtonTitles2 = ["SHIFT", "q", ".", "o", "r", "s", "u", "y", "b", "⏎"]
-        let downButtonTitles3 = ["z", "a", "e", "h", "t", "d", "c", "k"]
-        let downButtonTitles4 = ["123", "x", ",", " SPACE ", "i", "n", "w", "v", "g"]
+        let downButtonTitles1 = ["1", "2", "3", "4", "j", "l", "m", "f", "p", "/", "⌫"]
+        let downButtonTitles2 = ["tab", "5", "6", "q", ".", "o", "r", "s", "u", "y", "b", ";"]
+        let downButtonTitles3 = ["7", "8", "z", "a", "e", "h", "t", "d", "c", "k", "⏎"]
+        let downButtonTitles4 = ["SHIFT", "9", "0", "x", ",", "i", "n", "w", "v", "g", "'"]
+        let downButtonTitles5 = ["123", "   SPACE   ", "GLB"]
+
         
         let dRow1 = createRowOfButtons(buttonTitles: downButtonTitles1 as [NSString])
         let dRow2 = createRowOfButtons(buttonTitles: downButtonTitles2 as [NSString])
         let dRow3 = createRowOfButtons(buttonTitles: downButtonTitles3 as [NSString])
         let dRow4 = createRowOfButtons(buttonTitles: downButtonTitles4 as [NSString])
+        let dRow5 = createRowOfButtons(buttonTitles: downButtonTitles5 as [NSString])
         
         downKeyboard.addSubview(dRow1)
         downKeyboard.addSubview(dRow2)
         downKeyboard.addSubview(dRow3)
         downKeyboard.addSubview(dRow4)
+        downKeyboard.addSubview(dRow5)
         
         self.view.addSubview(downKeyboard)
         
@@ -79,26 +88,31 @@ class KeyboardViewController: UIInputViewController {
         dRow2.translatesAutoresizingMaskIntoConstraints = false
         dRow3.translatesAutoresizingMaskIntoConstraints = false
         dRow4.translatesAutoresizingMaskIntoConstraints = false
+        dRow5.translatesAutoresizingMaskIntoConstraints = false
+        
         downKeyboard.translatesAutoresizingMaskIntoConstraints = false
         
-        addConstraintsToInputView(inputView: self.view, rowViews: [dRow1, dRow2, dRow3, dRow4])
+        addConstraintsToInputView(inputView: self.view, rowViews: [dRow1, dRow2, dRow3, dRow4, dRow5])
         addKeyboardConstraints(keyboardView: downKeyboard)
         
         //num keyboard
-        let numButtonTitles1 = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
+        let numButtonTitles1 = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "⌫"]
         let numButtonTitles2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
-        let numButtonTitles3 = ["GLB", "~", "[", "]", "{", "}", "\\", "\"", "|", "⌫"]
-        let numButtonTitles4 = ["ABC", "+", "=", " SPACE ", "-", "_", ";", ":", "'", "⏎"]
+        let numButtonTitles3 = ["~", "/", "[", "]", "{", "}", "\\", "|", "⏎"]
+        let numButtonTitles4 = ["+", "=", "-", "_", ";", ":", "\"", "'"]
+        let numButtonTitles5 = ["ABC", "   SPACE   ", "GLB"]
         
         let nRow1 = createRowOfButtons(buttonTitles: numButtonTitles1 as [NSString])
         let nRow2 = createRowOfButtons(buttonTitles: numButtonTitles2 as [NSString])
         let nRow3 = createRowOfButtons(buttonTitles: numButtonTitles3 as [NSString])
         let nRow4 = createRowOfButtons(buttonTitles: numButtonTitles4 as [NSString])
+        let nRow5 = createRowOfButtons(buttonTitles: numButtonTitles5 as [NSString])
         
         numKeyboard.addSubview(nRow1)
         numKeyboard.addSubview(nRow2)
         numKeyboard.addSubview(nRow3)
         numKeyboard.addSubview(nRow4)
+        numKeyboard.addSubview(nRow5)
         
         self.view.addSubview(numKeyboard)
         
@@ -106,9 +120,10 @@ class KeyboardViewController: UIInputViewController {
         nRow2.translatesAutoresizingMaskIntoConstraints = false
         nRow3.translatesAutoresizingMaskIntoConstraints = false
         nRow4.translatesAutoresizingMaskIntoConstraints = false
+        nRow5.translatesAutoresizingMaskIntoConstraints = false
         numKeyboard.translatesAutoresizingMaskIntoConstraints = false
         
-        addConstraintsToInputView(inputView: self.view, rowViews: [nRow1, nRow2, nRow3, nRow4])
+        addConstraintsToInputView(inputView: self.view, rowViews: [nRow1, nRow2, nRow3, nRow4, nRow5])
         addKeyboardConstraints(keyboardView: numKeyboard)
         
         self.numKeyboard.isHidden = true
@@ -188,7 +203,7 @@ class KeyboardViewController: UIInputViewController {
                     upKeyboard.isHidden = true
                     downKeyboard.isHidden = false
                     
-                case " SPACE ":
+                case "   SPACE   ":
                     proxy.insertText(" ")
                     
                 case "123":
