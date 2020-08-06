@@ -1,7 +1,5 @@
 //
-//  containerAppv3Tests.swift
-//  containerAppv3Tests
-//
+//  TheRightDvorakTests.swift//
 //  Created by Taylor Shaw on 1/22/18.
 //  Copyright © 2018 Taylor Shaw. All rights reserved.
 //
@@ -9,7 +7,7 @@
 import XCTest
 @testable import containerAppv3
 
-class containerAppv3Tests: XCTestCase {
+class TheRightDvorakTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
