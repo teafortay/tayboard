@@ -35,7 +35,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-sl-nFF">
                                 <rect key="frame" x="50" y="329.66666666666669" width="314" height="203.00000000000006"/>
-                                <mutableString key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "The Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Use the globe key to switch between keyboards.</mutableString>
+                                <mutableString key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "The Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the globe key to switch between keyboards.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

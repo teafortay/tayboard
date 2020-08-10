@@ -34,7 +34,7 @@ class KeyboardViewController: UIInputViewController {
         let upButtonTitles1 = ["!", "@", "#", "$", "J", "L", "M", "F", "P", "?", "⌫"]
         let upButtonTitles2 = ["tab", "%", "^", "Q", ">", "O", "R", "S", "U", "Y", "B", ":"]
         let upButtonTitles3 = ["&", "*", "Z", "A", "E", "H", "T", "D", "C", "K", "⏎"]
-        let upButtonTitles4 = ["shift", "(", ")", "X", "<", "I", "N", "W", "V", "G", "\""]
+        let upButtonTitles4 = ["↧", "(", ")", "X", "<", "I", "N", "W", "V", "G", "\""]
         let upButtonTitles5 = ["123", "   SPACE   ", "🌐"]
         
         let row1 = createRowOfButtons(buttonTitles: upButtonTitles1 as [NSString])
@@ -66,7 +66,7 @@ class KeyboardViewController: UIInputViewController {
         let downButtonTitles1 = ["1", "2", "3", "4", "j", "l", "m", "f", "p", "/", "⌫"]
         let downButtonTitles2 = ["tab", "5", "6", "q", ".", "o", "r", "s", "u", "y", "b", ";"]
         let downButtonTitles3 = ["7", "8", "z", "a", "e", "h", "t", "d", "c", "k", "⏎"]
-        let downButtonTitles4 = ["SHIFT", "9", "0", "x", ",", "i", "n", "w", "v", "g", "'"]
+        let downButtonTitles4 = ["↥", "9", "0", "x", ",", "i", "n", "w", "v", "g", "'"]
         let downButtonTitles5 = ["123", "   SPACE   ", "🌐"]
 
         
@@ -196,10 +196,10 @@ class KeyboardViewController: UIInputViewController {
                 case "⏎" :
 //
                     proxy.insertText("\n")
-                case "SHIFT" :
+                case "↥" :
                     downKeyboard.isHidden = true
                     upKeyboard.isHidden = false
-                case "shift":
+                case "↧":
                     upKeyboard.isHidden = true
                     downKeyboard.isHidden = false
                     
