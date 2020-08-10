@@ -35,7 +35,7 @@ class KeyboardViewController: UIInputViewController {
         let upButtonTitles2 = ["tab", "%", "^", "Q", ">", "O", "R", "S", "U", "Y", "B", ":"]
         let upButtonTitles3 = ["&", "*", "Z", "A", "E", "H", "T", "D", "C", "K", "⏎"]
         let upButtonTitles4 = ["shift", "(", ")", "X", "<", "I", "N", "W", "V", "G", "\""]
-        let upButtonTitles5 = ["123", "   SPACE   ", "GLB"]
+        let upButtonTitles5 = ["123", "   SPACE   ", "🌐"]
         
         let row1 = createRowOfButtons(buttonTitles: upButtonTitles1 as [NSString])
         let row2 = createRowOfButtons(buttonTitles: upButtonTitles2 as [NSString])
@@ -67,7 +67,7 @@ class KeyboardViewController: UIInputViewController {
         let downButtonTitles2 = ["tab", "5", "6", "q", ".", "o", "r", "s", "u", "y", "b", ";"]
         let downButtonTitles3 = ["7", "8", "z", "a", "e", "h", "t", "d", "c", "k", "⏎"]
         let downButtonTitles4 = ["SHIFT", "9", "0", "x", ",", "i", "n", "w", "v", "g", "'"]
-        let downButtonTitles5 = ["123", "   SPACE   ", "GLB"]
+        let downButtonTitles5 = ["123", "   SPACE   ", "🌐"]
 
         
         let dRow1 = createRowOfButtons(buttonTitles: downButtonTitles1 as [NSString])
@@ -100,7 +100,7 @@ class KeyboardViewController: UIInputViewController {
         let numButtonTitles2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
         let numButtonTitles3 = ["~", "/", "[", "]", "{", "}", "\\", "|", "⏎"]
         let numButtonTitles4 = ["+", "=", "-", "_", ";", ":", "\"", "'"]
-        let numButtonTitles5 = ["ABC", "   SPACE   ", "GLB"]
+        let numButtonTitles5 = ["ABC", "   SPACE   ", "🌐"]
         
         let nRow1 = createRowOfButtons(buttonTitles: numButtonTitles1 as [NSString])
         let nRow2 = createRowOfButtons(buttonTitles: numButtonTitles2 as [NSString])
@@ -217,8 +217,10 @@ class KeyboardViewController: UIInputViewController {
                     
 //                case "      " :
 //                    proxy.insertText(" ")
-                case "GLB" :
+                case "🌐" :
                     self.advanceToNextInputMode()
+                case "tab":
+                    proxy.insertText("    ")
                 default :
                     proxy.insertText(title)
                 }

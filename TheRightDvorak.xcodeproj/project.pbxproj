@@ -450,7 +450,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDV4ARUNAF;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
@@ -466,7 +466,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDV4ARUNAF;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
@@ -482,7 +482,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDV4ARUNAF;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorakTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorakTests;
@@ -499,7 +499,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDV4ARUNAF;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorakTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorakTests;
@@ -514,7 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDV4ARUNAF;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = "Dvorak-Right-Handed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right-handed";
@@ -529,7 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WDV4ARUNAF;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = "Dvorak-Right-Handed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right-handed";
