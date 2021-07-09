@@ -15,6 +15,8 @@
 		345BF97B2016B87700E3F9CB /* TheRightDvorakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF97A2016B87700E3F9CB /* TheRightDvorakTests.swift */; };
 		345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A88EE932698BA5400B6A27D /* KeyboardLayoutViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE912698BA5400B6A27D /* KeyboardLayoutViewViewController.swift */; };
+		4A88EE942698BA5400B6A27D /* KeyboardLayoutViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE922698BA5400B6A27D /* KeyboardLayoutViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dvorak-Right-Handed.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		345BF98D2016B8DF00E3F9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A88EE912698BA5400B6A27D /* KeyboardLayoutViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutViewViewController.swift; sourceTree = "<group>"; };
+		4A88EE922698BA5400B6A27D /* KeyboardLayoutViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardLayoutViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
+				4A88EE912698BA5400B6A27D /* KeyboardLayoutViewViewController.swift */,
+				4A88EE922698BA5400B6A27D /* KeyboardLayoutViewViewController.xib */,
 			);
 			path = "Dvorak-Right-Handed";
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A88EE942698BA5400B6A27D /* KeyboardLayoutViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A88EE932698BA5400B6A27D /* KeyboardLayoutViewViewController.swift in Sources */,
 				345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
