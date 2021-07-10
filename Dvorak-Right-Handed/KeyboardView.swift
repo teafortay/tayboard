@@ -20,5 +20,22 @@ class KeyboardView: UIView {
         // Drawing code
     }
     */
+    override init(frame: CGRect) {
+            super.init(frame: frame)
+            commonInit()
+        }
+        
+        required init?(coder: NSCoder) {
+            super.init(coder: coder)
+            commonInit()
+        }
+        
+        func commonInit(){
+            let viewFromXib = Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)![0] as! UIView
+            viewFromXib.frame = self.bounds
+            addSubview(viewFromXib)
+        }
+
+
 
 }

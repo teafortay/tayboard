@@ -31,6 +31,50 @@ class KeyboardViewController: UIInputViewController {
         let heightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 300)
         self.view.addConstraint(heightConstraint)
         
+        //self.oldKeyboard()
+      
+
+        self.nextKeyboardButton = UIButton(type: .system)
+ 
+        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
+        self.nextKeyboardButton.sizeToFit()
+        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+        
+        self.view.addSubview(self.nextKeyboardButton)
+        
+        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.nextKeyboardButton.isHidden = true
+    }
+    
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated
+    }  
+ 
+    override func textWillChange(_ textInput: UITextInput?) {
+        // The app is about to change the document's contents. Perform any preparation here.
+    }
+    
+    override func textDidChange(_ textInput: UITextInput?) {
+        // The app has just changed the document's contents, the document context has been updated.
+        
+//        let textColor: UIColor
+//        let proxy = self.textDocumentProxy
+//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
+//            textColor = UIColor.white
+//        } else {
+//            textColor = UIColor.black
+//        }
+       // self.nextKeyboardButton.setTitleColor(textColor, for: [])
+    }
+
+    //start keyboard
+    func oldKeyboard() {
         let upButtonTitles1 = ["!", "@", "#", "$", "J", "L", "M", "F", "P", "?", "⌫"]
         let upButtonTitles2 = ["%", "^", "Q", ">", "O", "R", "S", "U", "Y", "B", ":"]
         let upButtonTitles3 = ["&", "*", "Z", "A", "E", "H", "T", "D", "C", "K", "⏎"]
@@ -130,44 +174,7 @@ class KeyboardViewController: UIInputViewController {
         self.downKeyboard.isHidden = true
         self.upKeyboard.isHidden = false
         //end keyboard
-
-        self.nextKeyboardButton = UIButton(type: .system)
- 
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.nextKeyboardButton.isHidden = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated
-    }  
- 
-    override func textWillChange(_ textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-    
-    override func textDidChange(_ textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
-        
-//        let textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-//            textColor = UIColor.white
-//        } else {
-//            textColor = UIColor.black
-//        }
-       // self.nextKeyboardButton.setTitleColor(textColor, for: [])
-    }
-    //start keyboard
     func createButtonWithTitle(title: String) -> UIButton {
         
         let button = UIButton(type: .system) as UIButton
@@ -278,6 +285,7 @@ class KeyboardViewController: UIInputViewController {
             mainView.addConstraints([topConstraint, bottomConstraint, rightConstraint, leftConstraint])
         }
     }
+    
     func createRowOfButtons(buttonTitles: [NSString]) -> UIView {
         
         var buttons = [UIButton]()
