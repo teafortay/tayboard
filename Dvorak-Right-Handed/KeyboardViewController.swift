@@ -32,7 +32,12 @@ class KeyboardViewController: UIInputViewController {
         self.view.addConstraint(heightConstraint)
         
         //self.oldKeyboard()
-      
+        let bounds = UIScreen.main.bounds
+        let screenWidth = bounds.size.width
+        //let screenHeight = bounds.size.height
+        let KeyboardView = KeyboardView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 300.0))
+        KeyboardView.key1 = self.nextKeyboardButton
+        self.view.addSubview(KeyboardView)
 
         self.nextKeyboardButton = UIButton(type: .system)
  

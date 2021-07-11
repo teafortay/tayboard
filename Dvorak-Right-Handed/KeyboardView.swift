@@ -3,6 +3,7 @@
 //  Dvorak-Right-Handed
 //
 //  Created by Taylor Shaw on 7/9/21.
+// used this tutorial: https://iostutorialjunction.com/2020/04/how-to-create-custom-uiview-class-with-xib-in-swift-tutorial.html
 //  Copyright © 2021 Taylor Shaw. All rights reserved.
 //
 
@@ -13,8 +14,12 @@ class KeyboardView: UIView {
     @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var key1: UIButton!
+   
+     @IBAction func key1Press(_ sender: Any) {
+        print("pressed")
+     }
     /*
-    // Only override draw() if you perform custom drawing.
+     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code

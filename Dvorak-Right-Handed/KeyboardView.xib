@@ -29,6 +29,9 @@
                     <state key="normal" title="B">
                         <color key="titleColor" systemColor="labelColor"/>
                     </state>
+                    <connections>
+                        <action selector="key1Press:" destination="-1" eventType="touchUpInside" id="sDc-Bc-tXK"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemFillColor"/>
