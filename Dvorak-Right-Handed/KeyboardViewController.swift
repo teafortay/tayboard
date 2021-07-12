@@ -13,6 +13,7 @@ class KeyboardViewController: UIInputViewController {
     
 @IBOutlet var nextKeyboardButton: UIButton!
     //change this
+    
     let upKeyboard = UIView(frame: CGRect())
     let downKeyboard = UIView(frame: CGRect())
     let numKeyboard = UIView(frame: CGRect())
@@ -29,29 +30,29 @@ class KeyboardViewController: UIInputViewController {
         
         // Perform custom UI setup here
         let heightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 300)
-        self.view.addConstraint(heightConstraint)
+        //self.view.addConstraint(heightConstraint)
         
         //self.oldKeyboard()
         let bounds = UIScreen.main.bounds
         let screenWidth = bounds.size.width
         //let screenHeight = bounds.size.height
-        let KeyboardView = KeyboardView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 300.0))
-        KeyboardView.key1 = self.nextKeyboardButton
-        self.view.addSubview(KeyboardView)
+        let keyboardView = KeyboardView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 300.0))
+        
+        self.view.addSubview(keyboardView)
 
-        self.nextKeyboardButton = UIButton(type: .system)
- 
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.nextKeyboardButton.isHidden = true
+//        self.nextKeyboardButton = UIButton(type: .system)
+//
+//        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
+//        self.nextKeyboardButton.sizeToFit()
+//        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+//
+//        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+//
+//        self.view.addSubview(self.nextKeyboardButton)
+//
+//        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+//        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+//        self.nextKeyboardButton.isHidden = true
     }
     
     

@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardView" customModule="Dvorak_Right_Handed" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="RG7-jm-x0N"/>
-                <outlet property="key1" destination="UaI-BE-Tmb" id="4di-il-8Pt"/>
+                <outlet property="key1" destination="UaI-BE-Tmb" id="wLw-P3-VBn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,11 +26,11 @@
                         <constraint firstAttribute="height" constant="30" id="E2D-mw-zGH"/>
                         <constraint firstAttribute="width" constant="30" id="sFJ-VW-Gex"/>
                     </constraints>
-                    <state key="normal" title="B">
+                    <state key="normal" title="U">
                         <color key="titleColor" systemColor="labelColor"/>
                     </state>
                     <connections>
-                        <action selector="key1Press:" destination="-1" eventType="touchUpInside" id="sDc-Bc-tXK"/>
+                        <action selector="key1Press:" destination="-1" eventType="touchUpInside" id="GkD-ws-Xpp"/>
                     </connections>
                 </button>
             </subviews>

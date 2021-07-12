@@ -18,28 +18,22 @@ class KeyboardView: UIView {
      @IBAction func key1Press(_ sender: Any) {
         print("pressed")
      }
-    /*
-     // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
     override init(frame: CGRect) {
-            super.init(frame: frame)
-            commonInit()
-        }
-        
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
-            commonInit()
-        }
-        
-        func commonInit(){
-            let viewFromXib = Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)![0] as! UIView
-            viewFromXib.frame = self.bounds
-            addSubview(viewFromXib)
-        }
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    func commonInit(){
+        let viewFromXib = Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)![0] as! UIView
+        viewFromXib.frame = self.bounds
+        addSubview(viewFromXib)
+    }
 
 
 
