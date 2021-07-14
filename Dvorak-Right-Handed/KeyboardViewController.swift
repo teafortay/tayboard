@@ -36,7 +36,8 @@ class KeyboardViewController: UIInputViewController {
         let bounds = UIScreen.main.bounds
         let screenWidth = bounds.size.width
         //let screenHeight = bounds.size.height
-        let keyboardView = KeyboardView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 300.0))
+        let rect = CGRect(x: 0, y: 0, width: screenWidth, height: 300.0)
+        let keyboardView = KeyboardView(frame: rect, proxy: self.textDocumentProxy)
         
         self.view.addSubview(keyboardView)
 

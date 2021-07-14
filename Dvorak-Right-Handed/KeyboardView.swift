@@ -10,16 +10,11 @@
 import UIKit
 
 class KeyboardView: UIView {
-
-    @IBOutlet var contentView: UIView!
+    // let proxy = textDocumentProxy as UITextDocumentProxy
+    weak var proxy: UITextDocumentProxy?
     
-    @IBOutlet weak var key1: UIButton!
-   
-     @IBAction func key1Press(_ sender: Any) {
-        print("pressed")
-     }
-    
-    override init(frame: CGRect) {
+    init(frame: CGRect, proxy: UITextDocumentProxy) {
+        self.proxy = proxy
         super.init(frame: frame)
         commonInit()
     }
@@ -35,6 +30,16 @@ class KeyboardView: UIView {
         addSubview(viewFromXib)
     }
 
-
+    @IBOutlet var contentView: UIView!
+    
+    @IBOutlet weak var key1: UIButton!
+   
+     @IBAction func key1Press(_ sender: Any) {
+        print("pressed")
+        proxy!.insertText("A")
+        
+     }
+    
+   
 
 }
