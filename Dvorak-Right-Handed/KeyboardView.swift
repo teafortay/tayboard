@@ -3,7 +3,7 @@
 //  Dvorak-Right-Handed
 //
 //  Created by Taylor Shaw on 7/9/21.
-// used this tutorial: https://iostutorialjunction.com/2020/04/how-to-create-custom-uiview-class-with-xib-in-swift-tutorial.html
+// used this tutorial to make xib: https://iostutorialjunction.com/2020/04/how-to-create-custom-uiview-class-with-xib-in-swift-tutorial.html
 //  Copyright © 2021 Taylor Shaw. All rights reserved.
 //
 
@@ -29,17 +29,17 @@ class KeyboardView: UIView {
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
     }
-
+    /*
     @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var key1: UIButton!
    
      @IBAction func key1Press(_ sender: Any) {
-        print("pressed")
+       // print("pressed")
         proxy!.insertText("A")
         
      }
-    
+    */
    
 
 }

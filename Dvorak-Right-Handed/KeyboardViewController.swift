@@ -29,16 +29,16 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         
         // Perform custom UI setup here
-        let heightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 300)
-        //self.view.addConstraint(heightConstraint)
+        let heightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 300.0)
+        self.view.addConstraint(heightConstraint)
         
         //self.oldKeyboard()
         let bounds = UIScreen.main.bounds
+        //FIX I think the above line is causing this error: https://stackoverflow.com/questions/64767285/iphone-12-mini-screen-parameters-are-unexpected
         let screenWidth = bounds.size.width
         //let screenHeight = bounds.size.height
-        let rect = CGRect(x: 0, y: 0, width: screenWidth, height: 300.0)
+        let rect = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 300.0)
         let keyboardView = KeyboardView(frame: rect, proxy: self.textDocumentProxy)
-        
         self.view.addSubview(keyboardView)
 
 //        self.nextKeyboardButton = UIButton(type: .system)
