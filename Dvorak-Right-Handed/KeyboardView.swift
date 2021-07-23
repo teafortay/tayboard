@@ -28,14 +28,30 @@ class KeyboardView: UIView {
         let viewFromXib = Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
+        //other setup
+        insertButtonTitles()
     }
     
     @IBOutlet weak var globeKey: UIButton!
+    @IBOutlet weak var backspaceKey: UIButton!
+    @IBOutlet weak var enterKey: UIButton!
     
     @IBAction func globeKeyPress(_ sender: Any) {
-        kvc!.advanceToNextInputMode()
+        kvc?.advanceToNextInputMode()
     }
     
+    @IBAction func backspaceKeyPress(_ sender: Any) {
+        kvc?.textDocumentProxy.deleteBackward()
+    }
+    @IBAction func enterKeyPree(_ sender: Any) {
+        kvc?.textDocumentProxy.insertText("\n")
+    }
+    
+    func insertButtonTitles() {
+        self.globeKey.setTitle("🌐", for: .normal)
+        self.backspaceKey.setTitle("⌫", for: .normal)
+        self.enterKey.setTitle("⏎", for: .normal)
+    }
     /*
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var key1: UIButton!

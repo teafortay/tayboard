@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardView" customModule="Dvorak_Right_Handed" customModuleProvider="target">
             <connections>
+                <outlet property="backspaceKey" destination="avL-vn-Xz0" id="fbh-pb-dhL"/>
+                <outlet property="enterKey" destination="xaM-Xb-QEF" id="79G-k3-gr1"/>
                 <outlet property="globeKey" destination="tfl-Pf-bR2" id="dzG-Tr-Nt6"/>
             </connections>
         </placeholder>
@@ -100,6 +102,9 @@
                                     <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="backspaceKeyPress:" destination="-1" eventType="touchUpInside" id="CK6-zp-loh"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -264,6 +269,9 @@
                                     <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="enterKeyPree:" destination="-1" eventType="touchUpInside" id="94k-R2-QPx"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
