@@ -10,7 +10,9 @@ import UIKit
 
 
 class KeyboardViewController: UIInputViewController {
+    
     let keyboardHeight = CGFloat(300.0)
+    let bounds = UIScreen.main.bounds
     
 @IBOutlet var nextKeyboardButton: UIButton!
     //change this
@@ -22,14 +24,13 @@ class KeyboardViewController: UIInputViewController {
     
     override func updateViewConstraints() {
           super.updateViewConstraints()
-        //if let viewHeightConstraint =
         if let index = self.view.constraints.firstIndex(where: {$0.identifier == "UIView-Encapsulated-Layout-Height"}) {
             let viewHeightConstraint = self.view.constraints[index]
             viewHeightConstraint.priority = UILayoutPriority(rawValue: 750)
         }
         // Add custom view sizing constraints here
-        let heightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: keyboardHeight)
-        self.view.addConstraint(heightConstraint)
+        let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: keyboardHeight)
+        self.view.addConstraint(keyboardHeightConstraint)
     }
     
     override func viewDidLoad() {
@@ -40,12 +41,12 @@ class KeyboardViewController: UIInputViewController {
         
         
         //self.oldKeyboard()
-        let bounds = UIScreen.main.bounds
+        
         let screenWidth = bounds.size.width
         //let screenHeight = bounds.size.height
         let rect = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: keyboardHeight)
         
-        let keyboardView = KeyboardView(frame: rect, proxy: self.textDocumentProxy)
+        let keyboardView = KeyboardView(frame: rect, kvc: self)
         self.view.addSubview(keyboardView)
 
 //        self.nextKeyboardButton = UIButton(type: .system)

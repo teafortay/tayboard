@@ -11,10 +11,10 @@ import UIKit
 
 class KeyboardView: UIView {
     // let proxy = textDocumentProxy as UITextDocumentProxy
-    weak var proxy: UITextDocumentProxy?
+    weak var kvc: KeyboardViewController?
     
-    init(frame: CGRect, proxy: UITextDocumentProxy) {
-        self.proxy = proxy
+    init(frame: CGRect, kvc: KeyboardViewController) {
+        self.kvc = kvc
         super.init(frame: frame)
         commonInit()
     }
@@ -29,9 +29,15 @@ class KeyboardView: UIView {
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
     }
+    
+    @IBOutlet weak var globeKey: UIButton!
+    
+    @IBAction func globeKeyPress(_ sender: Any) {
+        kvc!.advanceToNextInputMode()
+    }
+    
     /*
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var key1: UIButton!
    
      @IBAction func key1Press(_ sender: Any) {
