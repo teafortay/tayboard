@@ -19,6 +19,25 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        }
+        
+        override func viewDidDisappear(_ animated: Bool) {
+            super.viewDidDisappear(animated)
+            UIDevice.current.endGeneratingDeviceOrientationNotifications()
+        }
+        
+        override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+            super.viewWillTransition(to: size, with: coordinator)
+            if UIDevice.current.orientation.isLandscape {
+                print("Landscape")
+            } else {
+                print("Portrait")
+            }
+        }
 
 
 }

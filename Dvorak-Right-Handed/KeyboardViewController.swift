@@ -22,7 +22,7 @@ class KeyboardViewController: UIInputViewController {
     
     
     override func updateViewConstraints() {
-          super.updateViewConstraints()
+        super.updateViewConstraints()
         if let index = self.view.constraints.firstIndex(where: {$0.identifier == "UIView-Encapsulated-Layout-Height"}) {
             let viewHeightConstraint = self.view.constraints[index]
             viewHeightConstraint.priority = UILayoutPriority(rawValue: 750)
@@ -34,12 +34,19 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        let screen = UIScreen.main.bounds
+        if screen.width < screen.height {
+            print("!!! portrait")
+            
+        } else {
+            print("!!! landspace")
+        }
 
-            if UIDevice.current.orientation.isLandscape {
-                print("Landscape")
-            } else {
-                print("Portrait")
-            }
+//            if UIDevice.current.orientation.isLandscape {
+//                print("Landscape")
+//            } else {
+//                print("Portrait")
+//            }
 //        guard let windowInterfaceOrientation = self.windowInterfaceOrientation else { return }
 //
 //                   if windowInterfaceOrientation.isLandscape {
@@ -47,6 +54,17 @@ class KeyboardViewController: UIInputViewController {
 //                   } else {
 //                       // activate portrait changes
 //                   }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("in viewwillappear")
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+       // UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
     
     override func viewDidLoad() {
