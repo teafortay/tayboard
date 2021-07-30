@@ -16,7 +16,6 @@ class KeyboardViewController: UIInputViewController {
     
 @IBOutlet var nextKeyboardButton: UIButton!
     //change this
-    
     let upKeyboard = UIView(frame: CGRect())
     let downKeyboard = UIView(frame: CGRect())
     let numKeyboard = UIView(frame: CGRect())
@@ -31,6 +30,23 @@ class KeyboardViewController: UIInputViewController {
         // Add custom view sizing constraints here
         let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: keyboardHeight)
         self.view.addConstraint(keyboardHeightConstraint)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+            if UIDevice.current.orientation.isLandscape {
+                print("Landscape")
+            } else {
+                print("Portrait")
+            }
+//        guard let windowInterfaceOrientation = self.windowInterfaceOrientation else { return }
+//
+//                   if windowInterfaceOrientation.isLandscape {
+//                       // activate landscape changes
+//                   } else {
+//                       // activate portrait changes
+//                   }
     }
     
     override func viewDidLoad() {
