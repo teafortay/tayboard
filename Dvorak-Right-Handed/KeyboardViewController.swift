@@ -11,10 +11,10 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
     
-    let keyboardHeight = CGFloat(300.0)
-    let bounds = UIScreen.main.bounds
+    var keyboardHeight = CGFloat(300.0)
+    //let bounds = UIScreen.main.bounds
     
-@IBOutlet var nextKeyboardButton: UIButton!
+//@IBOutlet var nextKeyboardButton: UIButton!
     //change this
     let upKeyboard = UIView(frame: CGRect())
     let downKeyboard = UIView(frame: CGRect())
@@ -37,9 +37,12 @@ class KeyboardViewController: UIInputViewController {
         let screen = UIScreen.main.bounds
         if screen.width < screen.height {
             print("!!! portrait")
+            keyboardHeight = CGFloat(300.0)
             
         } else {
             print("!!! landspace")
+            let halfScreenHeight = screen.height/2
+            keyboardHeight = halfScreenHeight
         }
 
 //            if UIDevice.current.orientation.isLandscape {
@@ -75,7 +78,7 @@ class KeyboardViewController: UIInputViewController {
         
         
         //self.oldKeyboard()
-        
+        let bounds = UIScreen.main.bounds
         let screenWidth = bounds.size.width
         //let screenHeight = bounds.size.height
         let rect = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: keyboardHeight)
@@ -111,6 +114,7 @@ class KeyboardViewController: UIInputViewController {
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
+        super.textDidChange(textInput)
         
 //        let textColor: UIColor
 //        let proxy = self.textDocumentProxy
