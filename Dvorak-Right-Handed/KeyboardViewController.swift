@@ -12,6 +12,8 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
     
     var keyboardHeight = CGFloat(300.0)
+    var keyboardView: KeyboardView?
+    var keyboardHeightConstraint: NSLayoutConstraint?
     //let bounds = UIScreen.main.bounds
     
 //@IBOutlet var nextKeyboardButton: UIButton!
@@ -30,19 +32,28 @@ class KeyboardViewController: UIInputViewController {
         // Add custom view sizing constraints here
         let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: keyboardHeight)
         self.view.addConstraint(keyboardHeightConstraint)
+        self.keyboardHeightConstraint = keyboardHeightConstraint
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         let screen = UIScreen.main.bounds
         if screen.width < screen.height {
-            print("!!! portrait")
+            print("portrait")
             keyboardHeight = CGFloat(300.0)
+            let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: keyboardHeight)
+            keyboardView?.frame = rect
+            keyboardHeightConstraint?.constant = keyboardHeight
             
         } else {
-            print("!!! landspace")
+            print("landspace")
             let halfScreenHeight = screen.height/2
             keyboardHeight = halfScreenHeight
+            let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: keyboardHeight)
+            keyboardView?.frame = rect
+            keyboardHeightConstraint?.constant = keyboardHeight
+            print(screen.height)
+            print(keyboardHeight)
         }
 
 //            if UIDevice.current.orientation.isLandscape {
@@ -82,9 +93,9 @@ class KeyboardViewController: UIInputViewController {
         let screenWidth = bounds.size.width
         //let screenHeight = bounds.size.height
         let rect = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: keyboardHeight)
-        
         let keyboardView = KeyboardView(frame: rect, kvc: self)
         self.view.addSubview(keyboardView)
+        self.keyboardView = keyboardView
 
 //        self.nextKeyboardButton = UIButton(type: .system)
 //
