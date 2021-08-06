@@ -213,12 +213,12 @@ class KeyboardViewController: UIInputViewController {
         button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         button.setTitleColor(UIColor.darkGray, for: .normal)
         
-        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
         return button
     }
     
-    @objc func didTapButton(_ sender: AnyObject?) {
+    func didTapButton(_ sender: Any) {
         
         if let button = sender as? UIButton {
             if let title = button.title(for: .normal) {

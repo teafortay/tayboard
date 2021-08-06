@@ -47,6 +47,9 @@ class KeyboardView: UIView {
         kvc?.textDocumentProxy.insertText("\n")
     }
     
+    @IBAction func keysPress(_ sender: Any) {
+        kvc?.didTapButton(sender)
+    }
     func insertButtonTitles() {
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)

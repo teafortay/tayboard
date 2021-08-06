@@ -117,6 +117,9 @@
                                     <state key="normal" title="5">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="AeP-R7-iQY"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-X6-c5Y">
                                     <rect key="frame" x="41.5" y="0.0" width="36" height="40"/>
@@ -124,6 +127,9 @@
                                     <state key="normal" title="6">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="uIp-kH-iMc"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-5Z-gQX">
                                     <rect key="frame" x="82.5" y="0.0" width="36.5" height="40"/>
@@ -138,6 +144,9 @@
                                     <state key="normal" title=".">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="gRN-gp-Cqw"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-nI-AMP">
                                     <rect key="frame" x="165.5" y="0.0" width="36.5" height="40"/>
@@ -159,6 +168,9 @@
                                     <state key="normal" title="s">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="lld-ss-MHb"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-Kh-0hf">
                                     <rect key="frame" x="289.5" y="0.0" width="36.5" height="40"/>
@@ -213,6 +225,9 @@
                                     <state key="normal" title="z">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="hzD-Em-LCc"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-oW-8Sl">
                                     <rect key="frame" x="124" y="0.0" width="36.5" height="40"/>
