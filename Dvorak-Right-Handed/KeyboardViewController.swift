@@ -8,16 +8,12 @@
 
 import UIKit
 
-
 class KeyboardViewController: UIInputViewController {
     
-//    var keyboardHeight = CGFloat(300.0)
     var keyboardView: KeyboardView?
     var keyboardHeightConstraint: NSLayoutConstraint?
-    //let bounds = UIScreen.main.bounds
     
-//@IBOutlet var nextKeyboardButton: UIButton!
-    //change this
+    //TODO: change this
     let upKeyboard = UIView(frame: CGRect())
     let downKeyboard = UIView(frame: CGRect())
     let numKeyboard = UIView(frame: CGRect())
@@ -31,7 +27,7 @@ class KeyboardViewController: UIInputViewController {
             let viewHeightConstraint = self.view.constraints[index]
             viewHeightConstraint.priority = UILayoutPriority(rawValue: 750)
         }
-        // Add custom view sizing constraints here
+        // Add custom view sizing constraints
         let rect = getKeyboardRectFromBounds()
         if  let heightConstraint = self.keyboardHeightConstraint {
             heightConstraint.constant = rect.height
@@ -40,117 +36,53 @@ class KeyboardViewController: UIInputViewController {
             let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: rect.height)
             self.view.addConstraint(keyboardHeightConstraint)
             self.keyboardHeightConstraint = keyboardHeightConstraint
-            
         }
     }
+    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         let rect = getKeyboardRectFromBounds()
         keyboardView?.frame = rect
         keyboardHeightConstraint?.constant = rect.height
-//        let screen = UIScreen.main.bounds
-//        if screen.width < screen.height {
-//            print("portrait")
-//            keyboardHeight = CGFloat(300.0)
-//            let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: keyboardHeight)
-//            keyboardView?.frame = rect
-//            keyboardHeightConstraint?.constant = rect.height
-//        } else {
-//            print("landspace")
-//            let halfScreenHeight = screen.height/2
-//            keyboardHeight = halfScreenHeight
-//            let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: keyboardHeight)
-//            keyboardView?.frame = rect
-//            keyboardHeightConstraint?.constant = rect.height
-//            print(screen.height)
-//            print(keyboardHeight)
-//        }
+    }
+    
 
-//            if UIDevice.current.orientation.isLandscape {
-//                print("Landscape")
-//            } else {
-//                print("Portrait")
-//            }
-//        guard let windowInterfaceOrientation = self.windowInterfaceOrientation else { return }
-//
-//                   if windowInterfaceOrientation.isLandscape {
-//                       // activate landscape changes
-//                   } else {
-//                       // activate portrait changes
-//                   }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("in viewwillappear")
-        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        UIDevice.current.endGeneratingDeviceOrientationNotifications()
-    }
-    
     override func viewDidLoad() {
+        //TODO: use viewwillload?
         super.viewDidLoad()
-        
         // Perform custom UI setup here
         
-        
-        
         //self.oldKeyboard()
-//        let bounds = UIScreen.main.bounds
-//        let screenWidth = bounds.size.width
-        //let screenHeight = bounds.size.height
-//        let rect = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: keyboardHeight)
+
         let rect = getKeyboardRectFromBounds()
         let keyboardView = KeyboardView(frame: rect, kvc: self)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
-
-//        self.nextKeyboardButton = UIButton(type: .system)
-//
-//        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-//        self.nextKeyboardButton.sizeToFit()
-//        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-//
-//        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-//
-//        self.view.addSubview(self.nextKeyboardButton)
-//
-//        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-//        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-//        self.nextKeyboardButton.isHidden = true
     }
     
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
     }  
  
+    
     override func textWillChange(_ textInput: UITextInput?) {
+        super.textWillChange(textInput)
         // The app is about to change the document's contents. Perform any preparation here.
     }
+    
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
         super.textDidChange(textInput)
-        
-//        let textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-//            textColor = UIColor.white
-//        } else {
-//            textColor = UIColor.black
-//        }
-       // self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
+    
     
     func getKeyboardRectFromBounds() -> CGRect {
         let screen = UIScreen.main.bounds
+        //TODO: figure out how to acces rectHeight for function var
 //        var keyboardRectHeight: CGFloat
         if screen.width < screen.height {
             print("portrait")
@@ -160,12 +92,19 @@ class KeyboardViewController: UIInputViewController {
         } else {
             print("landspace")
             let halfScreenHeight = screen.height/2
-            let rectHeight = halfScreenHeight
-            let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: rectHeight)
-            return rect
+            if halfScreenHeight > 300.0 {
+                let rectHeight = CGFloat(300.0)
+                let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: rectHeight)
+                return rect
+            } else {
+                let rectHeight = halfScreenHeight
+                let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: rectHeight)
+                return rect
+            }
         }
     }
 
+    
     //start keyboard
     func oldKeyboard() {
         let upButtonTitles1 = ["!", "@", "#", "$", "J", "L", "M", "F", "P", "?", "⌫"]
