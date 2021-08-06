@@ -33,8 +33,8 @@ class KeyboardViewController: UIInputViewController {
         }
         // Add custom view sizing constraints here
         let rect = getKeyboardRectFromBounds()
-        if  self.keyboardHeightConstraint != nil {
-            keyboardHeightConstraint?.constant = rect.height
+        if  let heightConstraint = self.keyboardHeightConstraint {
+            heightConstraint.constant = rect.height
             
         } else {
             let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: rect.height)
