@@ -25,15 +25,23 @@ class KeyboardViewController: UIInputViewController {
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
+        
+        //change priority of conflicting constraints
         if let index = self.view.constraints.firstIndex(where: {$0.identifier == "UIView-Encapsulated-Layout-Height"}) {
             let viewHeightConstraint = self.view.constraints[index]
             viewHeightConstraint.priority = UILayoutPriority(rawValue: 750)
         }
         // Add custom view sizing constraints here
         let rect = getKeyboardRectFromBounds()
-        let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: rect.height)
-        self.view.addConstraint(keyboardHeightConstraint)
-        self.keyboardHeightConstraint = keyboardHeightConstraint
+        if  self.keyboardHeightConstraint != nil {
+            keyboardHeightConstraint?.constant = rect.height
+            
+        } else {
+            let keyboardHeightConstraint = NSLayoutConstraint(item: self.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: rect.height)
+            self.view.addConstraint(keyboardHeightConstraint)
+            self.keyboardHeightConstraint = keyboardHeightConstraint
+            
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -81,7 +89,7 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-       // UIDevice.current.endGeneratingDeviceOrientationNotifications()
+        UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
     
     override func viewDidLoad() {
