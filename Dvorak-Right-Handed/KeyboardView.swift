@@ -10,9 +10,9 @@
 import UIKit
 
 class KeyboardView: UIView {
-    // let proxy = textDocumentProxy as UITextDocumentProxy
     weak var kvc: KeyboardViewController?
     
+    //initializers
     init(frame: CGRect, kvc: KeyboardViewController) {
         self.kvc = kvc
         super.init(frame: frame)
@@ -32,9 +32,15 @@ class KeyboardView: UIView {
         insertButtonTitles()
     }
     
+    //keys that need button titles
     @IBOutlet weak var globeKey: UIButton!
     @IBOutlet weak var backspaceKey: UIButton!
     @IBOutlet weak var enterKey: UIButton!
+    @IBOutlet weak var shiftKey: UIButton!
+    
+   //regular keyboard keys
+    @IBOutlet weak var keyA1: UIButton!
+    @IBOutlet weak var keyA2: UIButton!
     
     @IBAction func globeKeyPress(_ sender: Any) {
         kvc?.advanceToNextInputMode()
@@ -47,6 +53,10 @@ class KeyboardView: UIView {
         kvc?.textDocumentProxy.insertText("\n")
     }
     
+    @IBAction func shiftKeyPress(_ sender: Any) {
+        self.keyA1.setTitle("!", for: .normal)
+        self.keyA2.setTitle("@", for: .normal)
+    }
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
     }
@@ -54,17 +64,9 @@ class KeyboardView: UIView {
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
         self.enterKey.setTitle("⏎", for: .normal)
+        self.shiftKey.setTitle("↥" , for: .normal)
     }
-    /*
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var key1: UIButton!
-   
-     @IBAction func key1Press(_ sender: Any) {
-       // print("pressed")
-        proxy!.insertText("A")
-        
-     }
-    */
+    
    
 
 }

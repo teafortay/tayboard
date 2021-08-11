@@ -13,6 +13,9 @@
                 <outlet property="backspaceKey" destination="avL-vn-Xz0" id="fbh-pb-dhL"/>
                 <outlet property="enterKey" destination="xaM-Xb-QEF" id="79G-k3-gr1"/>
                 <outlet property="globeKey" destination="tfl-Pf-bR2" id="dzG-Tr-Nt6"/>
+                <outlet property="keyA1" destination="UaI-BE-Tmb" id="aFR-nb-RBE"/>
+                <outlet property="keyA2" destination="1zV-5N-oxw" id="5SW-3e-4EC"/>
+                <outlet property="shiftKey" destination="khd-Yb-3AS" id="OE5-G0-opo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -377,6 +380,9 @@
                                     <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="shiftKeyPress:" destination="-1" eventType="touchUpInside" id="y2j-mc-CaS"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-OF-OuG">
                                     <rect key="frame" x="41.5" y="0.0" width="36" height="40"/>
