@@ -11,7 +11,7 @@ import UIKit
 
 class KeyboardView: UIView {
     weak var kvc: KeyboardViewController?
-    var shift: Bool! = false
+    var shift: Bool = false
     
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController) {
@@ -61,13 +61,14 @@ class KeyboardView: UIView {
         if shift{
             self.shiftKey.setTitle("↧" , for: .normal)
 //            print(self.keyA0.restorationIdentifier!)
-            regularKeys.map({$0?.setTitle(Keys.upKeys[($0?.restorationIdentifier)!], for: .normal)})
+            let _ = regularKeys.map({$0?.setTitle(Keys.upKeys[($0?.restorationIdentifier ?? "≠")], for: .normal)})
 //            self.keyA0.setTitle(Keys.upKeys[keyA0.restorationIdentifier!], for: .normal)
 //            self.keyA1.setTitle(Keys.upKeys["A1"], for: .normal)
         } else {
             self.shiftKey.setTitle("↥" , for: .normal)
-            self.keyA0.setTitle(Keys.downKeys["A0"], for: .normal)
-            self.keyA1.setTitle(Keys.downKeys["A1"], for: .normal)
+            let _ = regularKeys.map({$0?.setTitle(Keys.downKeys[($0?.restorationIdentifier ?? "≠")], for: .normal)})
+//            self.keyA0.setTitle(Keys.downKeys["A0"], for: .normal)
+//            self.keyA1.setTitle(Keys.downKeys["A1"], for: .normal)
         }
         
     }

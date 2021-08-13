@@ -12,5 +12,5 @@ import UIKit
 struct Keys {
     static let upKeys = ["A0" : "!", "A1" : "@"]
     
-    static let downKeys = ["A0": "1", "A1" : "2"]
+    static let downKeys = ["A0" : "1", "A1" : "2"]
 }
