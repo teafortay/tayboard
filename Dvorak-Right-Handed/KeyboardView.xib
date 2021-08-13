@@ -13,8 +13,8 @@
                 <outlet property="backspaceKey" destination="avL-vn-Xz0" id="fbh-pb-dhL"/>
                 <outlet property="enterKey" destination="xaM-Xb-QEF" id="79G-k3-gr1"/>
                 <outlet property="globeKey" destination="tfl-Pf-bR2" id="dzG-Tr-Nt6"/>
-                <outlet property="keyA1" destination="UaI-BE-Tmb" id="aFR-nb-RBE"/>
-                <outlet property="keyA2" destination="1zV-5N-oxw" id="5SW-3e-4EC"/>
+                <outlet property="keyA0" destination="UaI-BE-Tmb" id="Und-4g-xKs"/>
+                <outlet property="keyA1" destination="1zV-5N-oxw" id="CB6-ez-DW3"/>
                 <outlet property="shiftKey" destination="khd-Yb-3AS" id="OE5-G0-opo"/>
             </connections>
         </placeholder>

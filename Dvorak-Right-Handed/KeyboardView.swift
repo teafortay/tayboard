@@ -39,8 +39,8 @@ class KeyboardView: UIView {
     @IBOutlet weak var shiftKey: UIButton!
     
    //regular keyboard keys
+    @IBOutlet weak var keyA0: UIButton!
     @IBOutlet weak var keyA1: UIButton!
-    @IBOutlet weak var keyA2: UIButton!
     
     @IBAction func globeKeyPress(_ sender: Any) {
         kvc?.advanceToNextInputMode()
@@ -54,8 +54,8 @@ class KeyboardView: UIView {
     }
     
     @IBAction func shiftKeyPress(_ sender: Any) {
-        self.keyA1.setTitle("!", for: .normal)
-        self.keyA2.setTitle("@", for: .normal)
+        self.keyA0.setTitle("!", for: .normal)
+        self.keyA1.setTitle("@", for: .normal)
     }
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
