@@ -57,9 +57,11 @@ class KeyboardView: UIView {
     @IBAction func shiftKeyPress(_ sender: Any) {
         shift = !shift
         if shift{
+            self.shiftKey.setTitle("↧" , for: .normal)
             self.keyA0.setTitle(Keys.upKeys["A0"], for: .normal)
             self.keyA1.setTitle(Keys.upKeys["A1"], for: .normal)
         } else {
+            self.shiftKey.setTitle("↥" , for: .normal)
             self.keyA0.setTitle(Keys.downKeys["A0"], for: .normal)
             self.keyA1.setTitle(Keys.downKeys["A1"], for: .normal)
         }
