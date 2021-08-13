@@ -11,6 +11,7 @@ import UIKit
 
 class KeyboardView: UIView {
     weak var kvc: KeyboardViewController?
+    var shift: Bool! = false
     
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController) {
@@ -54,8 +55,15 @@ class KeyboardView: UIView {
     }
     
     @IBAction func shiftKeyPress(_ sender: Any) {
-        self.keyA0.setTitle("!", for: .normal)
-        self.keyA1.setTitle("@", for: .normal)
+        shift = !shift
+        if shift{
+            self.keyA0.setTitle(Keys.upKeys["A0"], for: .normal)
+            self.keyA1.setTitle(Keys.upKeys["A1"], for: .normal)
+        } else {
+            self.keyA0.setTitle(Keys.downKeys["A0"], for: .normal)
+            self.keyA1.setTitle(Keys.downKeys["A1"], for: .normal)
+        }
+        
     }
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
