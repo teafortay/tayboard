@@ -136,7 +136,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="backspaceKeyPress:" destination="-1" eventType="touchUpInside" id="CK6-zp-loh"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -366,7 +366,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="enterKeyPree:" destination="-1" eventType="touchUpInside" id="94k-R2-QPx"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="oUZ-mN-Vay"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -504,7 +504,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="globeKeyPress:" destination="-1" eventType="touchUpInside" id="TUS-2v-pVX"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="GIg-Oc-xU7"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYo-un-7Ft">
@@ -513,6 +513,9 @@
                                     <state key="normal" title="Space">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="j69-Sw-ukI"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owF-0A-LSx">
                                     <rect key="frame" x="360" y="0.0" width="90" height="40"/>

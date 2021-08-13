@@ -230,24 +230,24 @@ class KeyboardViewController: UIInputViewController {
                 case "⏎" :
 //
                     proxy.insertText("\n")
-                case "↥" :
-                    downKeyboard.isHidden = true
-                    upKeyboard.isHidden = false
-                case "↧":
-                    upKeyboard.isHidden = true
-                    downKeyboard.isHidden = false
+//                case "↥" :
+//                    downKeyboard.isHidden = true
+//                    upKeyboard.isHidden = false
+//                case "↧":
+//                    upKeyboard.isHidden = true
+//                    downKeyboard.isHidden = false
                     
-                case "   SPACE   ":
+                case "Space":
                     proxy.insertText(" ")
                     
-                case "123":
-                    upKeyboard.isHidden = true
-                    downKeyboard.isHidden = true
-                    numKeyboard.isHidden = false
-                    
-                case "ABC":
-                    numKeyboard.isHidden = true
-                    upKeyboard.isHidden = false
+//                case "123":
+//                    upKeyboard.isHidden = true
+//                    downKeyboard.isHidden = true
+//                    numKeyboard.isHidden = false
+//
+//                case "ABC":
+//                    numKeyboard.isHidden = true
+//                    upKeyboard.isHidden = false
                     
 //                case "      " :
 //                    proxy.insertText(" ")

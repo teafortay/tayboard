@@ -33,7 +33,7 @@ class KeyboardView: UIView {
         insertButtonTitles()
     }
     
-    //keys that need button titles
+    //special keys - outlet to insert titles
     @IBOutlet weak var globeKey: UIButton!
     @IBOutlet weak var backspaceKey: UIButton!
     @IBOutlet weak var enterKey: UIButton!
@@ -43,16 +43,16 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyA0: UIButton!
     @IBOutlet weak var keyA1: UIButton!
     
-    @IBAction func globeKeyPress(_ sender: Any) {
-        kvc?.advanceToNextInputMode()
-    }
-    
-    @IBAction func backspaceKeyPress(_ sender: Any) {
-        kvc?.textDocumentProxy.deleteBackward()
-    }
-    @IBAction func enterKeyPree(_ sender: Any) {
-        kvc?.textDocumentProxy.insertText("\n")
-    }
+//    @IBAction func globeKeyPress(_ sender: Any) {
+//        kvc?.advanceToNextInputMode()
+//    }
+//
+//    @IBAction func backspaceKeyPress(_ sender: Any) {
+//        kvc?.textDocumentProxy.deleteBackward()
+//    }
+//    @IBAction func enterKeyPree(_ sender: Any) {
+//        kvc?.textDocumentProxy.insertText("\n")
+//    }
     
     @IBAction func shiftKeyPress(_ sender: Any) {
         shift = !shift
