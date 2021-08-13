@@ -43,6 +43,7 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyA0: UIButton!
     @IBOutlet weak var keyA1: UIButton!
     
+   
 //    @IBAction func globeKeyPress(_ sender: Any) {
 //        kvc?.advanceToNextInputMode()
 //    }
@@ -55,12 +56,14 @@ class KeyboardView: UIView {
 //    }
     
     @IBAction func shiftKeyPress(_ sender: Any) {
+        let regularKeys = [keyA0, keyA1]
         shift = !shift
         if shift{
             self.shiftKey.setTitle("↧" , for: .normal)
-            print(self.keyA0.restorationIdentifier!)
-            self.keyA0.setTitle(Keys.upKeys[keyA0.restorationIdentifier!], for: .normal)
-            self.keyA1.setTitle(Keys.upKeys["A1"], for: .normal)
+//            print(self.keyA0.restorationIdentifier!)
+            regularKeys.map({$0?.setTitle(Keys.upKeys[($0?.restorationIdentifier)!], for: .normal)})
+//            self.keyA0.setTitle(Keys.upKeys[keyA0.restorationIdentifier!], for: .normal)
+//            self.keyA1.setTitle(Keys.upKeys["A1"], for: .normal)
         } else {
             self.shiftKey.setTitle("↥" , for: .normal)
             self.keyA0.setTitle(Keys.downKeys["A0"], for: .normal)
