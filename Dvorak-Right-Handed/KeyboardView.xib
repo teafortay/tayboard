@@ -23,6 +23,17 @@
                 <outlet property="keyA7" destination="M3Q-Q0-VSS" id="q9L-aR-DoC"/>
                 <outlet property="keyA8" destination="w9z-sl-OwL" id="CXm-jA-o9I"/>
                 <outlet property="keyA9" destination="B7O-3L-ULF" id="NC7-rc-Eo5"/>
+                <outlet property="keyB0" destination="vMg-cf-y2w" id="vOl-xe-3dl"/>
+                <outlet property="keyB1" destination="UhW-X6-c5Y" id="kIQ-Wd-l3z"/>
+                <outlet property="keyB10" destination="LZW-m8-soG" id="rsN-L2-Tu6"/>
+                <outlet property="keyB2" destination="E9J-5Z-gQX" id="NTo-fL-9qQ"/>
+                <outlet property="keyB3" destination="sXm-6M-d3E" id="js8-CI-Mlc"/>
+                <outlet property="keyB4" destination="u9K-nI-AMP" id="pBM-bx-lE4"/>
+                <outlet property="keyB5" destination="gaV-Cy-ijr" id="sqP-7t-ysw"/>
+                <outlet property="keyB6" destination="Ntv-QY-8gz" id="EkT-ld-ePT"/>
+                <outlet property="keyB7" destination="Qv2-Kh-0hf" id="9xu-Hu-8nF"/>
+                <outlet property="keyB8" destination="QSZ-tt-JpR" id="9b7-9h-JZo"/>
+                <outlet property="keyB9" destination="Dcw-Ba-kuj" id="Oqg-8x-xsA"/>
                 <outlet property="shiftKey" destination="khd-Yb-3AS" id="OE5-G0-opo"/>
             </connections>
         </placeholder>
