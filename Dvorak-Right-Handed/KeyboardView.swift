@@ -85,7 +85,6 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyD9: UIButton!
     @IBOutlet weak var keyD10: UIButton!
     
-   
     //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
 //        kvc?.advanceToNextInputMode()
@@ -107,19 +106,16 @@ class KeyboardView: UIView {
         if shift{
             self.shiftKey.setTitle("↧" , for: .normal)
             let _ = regularKeys.map({$0?.setTitle(Keys.upKeys[($0?.restorationIdentifier ?? "≠")], for: .normal)})
-//            self.keyA0.setTitle(Keys.upKeys[keyA0.restorationIdentifier!], for: .normal)
-//            self.keyA1.setTitle(Keys.upKeys["A1"], for: .normal)
         } else {
             self.shiftKey.setTitle("↥" , for: .normal)
             let _ = regularKeys.map({$0?.setTitle(Keys.downKeys[($0?.restorationIdentifier ?? "≠")], for: .normal)})
-//            self.keyA0.setTitle(Keys.downKeys["A0"], for: .normal)
-//            self.keyA1.setTitle(Keys.downKeys["A1"], for: .normal)
         }
-        
     }
+    
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
     }
+    
     func insertButtonTitles() {
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
