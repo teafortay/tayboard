@@ -261,16 +261,7 @@ class KeyboardViewController: UIInputViewController {
             }
         }
     }
-    /* @objc func didTapButton(sender: AnyObject?) {
-     
-     if let button = sender as? UIButton{
-     if let title = button.title(for: .normal) {
-     var proxy = textDocumentProxy as UITextDocumentProxy
-     
-     proxy.insertText(title)
-     
-     
-     }}}*/
+
     func addIndividualButtonConstraints(buttons: [UIButton], mainView: UIView){
         
         for (index, button) in buttons.enumerated() {
