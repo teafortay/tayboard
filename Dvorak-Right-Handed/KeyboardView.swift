@@ -50,6 +50,7 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyA7: UIButton!
     @IBOutlet weak var keyA8: UIButton!
     @IBOutlet weak var keyA9: UIButton!
+    
     @IBOutlet weak var keyB0: UIButton!
     @IBOutlet weak var keyB1: UIButton!
     @IBOutlet weak var keyB2: UIButton!
@@ -61,6 +62,7 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyB8: UIButton!
     @IBOutlet weak var keyB9: UIButton!
     @IBOutlet weak var keyB10: UIButton!
+    
     @IBOutlet weak var keyC0: UIButton!
     @IBOutlet weak var keyC1: UIButton!
     @IBOutlet weak var keyC2: UIButton!
@@ -72,7 +74,19 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyC8: UIButton!
     @IBOutlet weak var keyC9: UIButton!
     
+    @IBOutlet weak var keyD1: UIButton!
+    @IBOutlet weak var keyD2: UIButton!
+    @IBOutlet weak var keyD3: UIButton!
+    @IBOutlet weak var keyD4: UIButton!
+    @IBOutlet weak var keyD5: UIButton!
+    @IBOutlet weak var keyD6: UIButton!
+    @IBOutlet weak var keyD7: UIButton!
+    @IBOutlet weak var keyD8: UIButton!
+    @IBOutlet weak var keyD9: UIButton!
+    @IBOutlet weak var keyD10: UIButton!
+    
    
+    //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
 //        kvc?.advanceToNextInputMode()
 //    }
@@ -85,7 +99,10 @@ class KeyboardView: UIView {
 //    }
     
     @IBAction func shiftKeyPress(_ sender: Any) {
-        let regularKeys = [keyA0, keyA1, keyA2, keyA3, keyA4, keyA5, keyA6, keyA7, keyA8, keyA9, keyB0, keyB1, keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10, keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9]
+        let regularKeys = [keyA0, keyA1, keyA2, keyA3, keyA4, keyA5, keyA6, keyA7, keyA8, keyA9,
+                    keyB0, keyB1, keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10,
+                    keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9,
+                    keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10]
         shift = !shift
         if shift{
             self.shiftKey.setTitle("↧" , for: .normal)

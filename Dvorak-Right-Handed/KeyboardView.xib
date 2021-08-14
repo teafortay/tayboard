@@ -44,6 +44,16 @@
                 <outlet property="keyC7" destination="wLt-Ka-gWa" id="R9M-Fo-Iu8"/>
                 <outlet property="keyC8" destination="93v-hV-zK8" id="3e1-GB-2fk"/>
                 <outlet property="keyC9" destination="sVA-3q-kzd" id="y4J-Oj-Fog"/>
+                <outlet property="keyD1" destination="VcU-OF-OuG" id="VTN-rW-m0O"/>
+                <outlet property="keyD10" destination="mD3-P9-NxP" id="zJm-aC-Tv0"/>
+                <outlet property="keyD2" destination="854-cg-PwL" id="oPd-Om-lHi"/>
+                <outlet property="keyD3" destination="ZRn-YM-QSe" id="5Q1-O0-ia6"/>
+                <outlet property="keyD4" destination="GPc-ST-Qsd" id="sJ9-a2-ROl"/>
+                <outlet property="keyD5" destination="LvK-dp-ABM" id="QkC-au-XmB"/>
+                <outlet property="keyD6" destination="Msw-HG-X8g" id="1dO-2K-kQU"/>
+                <outlet property="keyD7" destination="UBk-nE-YL9" id="5EC-dp-vx2"/>
+                <outlet property="keyD8" destination="Z0f-bk-nse" id="AbC-8A-cXT"/>
+                <outlet property="keyD9" destination="Yr8-vR-ehM" id="wRR-9i-13l"/>
                 <outlet property="shiftKey" destination="khd-Yb-3AS" id="OE5-G0-opo"/>
             </connections>
         </placeholder>
