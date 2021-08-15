@@ -12,6 +12,9 @@ import UIKit
 class KeyboardView: UIView {
     weak var kvc: KeyboardViewController?
     var shift: Bool = false
+    //need to play around with proper font/ size, make sure it works in all apps
+    //are there apps that have their own fonts, maybe pages?
+    let myFont = UIFont(name: "HelveticaNeue", size: 24)
     
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController) {
@@ -117,6 +120,14 @@ class KeyboardView: UIView {
     }
     
     func insertButtonTitles() {
+        //how to not copy-paste?
+        let allKeys = [keyA0, keyA1, keyA2, keyA3, keyA4, keyA5, keyA6, keyA7, keyA8, keyA9,
+                   keyB0, keyB1, keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10,
+                   keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9,
+                   keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10,
+                   globeKey, backspaceKey, enterKey, shiftKey]
+//        let _ = allKeys.map({$0?.titleLabel?.adjustsFontSizeToFitWidth = true})
+        let _ = allKeys.map({$0?.titleLabel?.font = myFont})
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
         self.enterKey.setTitle("⏎", for: .normal)
