@@ -12,7 +12,8 @@ import UIKit
 class KeyboardView: UIView {
     weak var kvc: KeyboardViewController?
     var shift: Bool = false
-    //need to play around with proper font/ size, make sure it works in all apps
+    var symbols: Bool = false
+    //TODO need to play around with proper font/ size, make sure it works in all apps
     //are there apps that have their own fonts, maybe pages?
     let myFont = UIFont(name: "HelveticaNeue", size: 24)
     
@@ -41,6 +42,7 @@ class KeyboardView: UIView {
     @IBOutlet weak var backspaceKey: UIButton!
     @IBOutlet weak var enterKey: UIButton!
     @IBOutlet weak var shiftKey: UIButton!
+    @IBOutlet weak var symKey: UIButton!
     
    //regular keyboard keys
     @IBOutlet weak var keyA0: UIButton!
@@ -106,12 +108,28 @@ class KeyboardView: UIView {
                     keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9,
                     keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10]
         shift = !shift
-        if shift{
-            self.shiftKey.setTitle("↧" , for: .normal)
-            let _ = regularKeys.map({$0?.setTitle(Keys.upKeys[($0?.restorationIdentifier ?? "≠")], for: .normal)})
+        if shift {
+            self.shiftKey.setTitle("⇩" , for: .normal)
+            let _ = regularKeys.map({$0?.setTitle(Keys.upKeys[($0?.restorationIdentifier ?? "☂︎")], for: .normal)})
         } else {
-            self.shiftKey.setTitle("↥" , for: .normal)
-            let _ = regularKeys.map({$0?.setTitle(Keys.downKeys[($0?.restorationIdentifier ?? "≠")], for: .normal)})
+            self.shiftKey.setTitle("⇧" , for: .normal)
+            let _ = regularKeys.map({$0?.setTitle(Keys.downKeys[($0?.restorationIdentifier ?? "☂︎")], for: .normal)})
+        }
+    }
+    
+    @IBAction func symKeyPress(_ sender: Any) {
+        //TODO what to do with shift key?
+        let regularKeys = [keyA0, keyA1, keyA2, keyA3, keyA4, keyA5, keyA6, keyA7, keyA8, keyA9,
+                    keyB0, keyB1, keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10,
+                    keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9,
+                    keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10]
+        symbols = !symbols
+        if symbols {
+            self.symKey.setTitle("ABC" , for: .normal)
+            let _ = regularKeys.map({$0?.setTitle(Keys.symKeys[($0?.restorationIdentifier ?? "☂︎")], for: .normal)})
+        } else {
+            self.symKey.setTitle("+=\\" , for: .normal)
+            let _ = regularKeys.map({$0?.setTitle(Keys.downKeys[($0?.restorationIdentifier ?? "☂︎")], for: .normal)})
         }
     }
     
@@ -125,13 +143,13 @@ class KeyboardView: UIView {
                    keyB0, keyB1, keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10,
                    keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9,
                    keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10,
-                   globeKey, backspaceKey, enterKey, shiftKey]
+                   globeKey, backspaceKey, enterKey, shiftKey, symKey]
 //        let _ = allKeys.map({$0?.titleLabel?.adjustsFontSizeToFitWidth = true})
         let _ = allKeys.map({$0?.titleLabel?.font = myFont})
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
         self.enterKey.setTitle("⏎", for: .normal)
-        self.shiftKey.setTitle("↥" , for: .normal)
+        self.shiftKey.setTitle("⇧" , for: .normal)
     }
     
    
