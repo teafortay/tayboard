@@ -72,6 +72,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-BE-Tmb">
                                     <rect key="frame" x="0.0" y="0.0" width="36.5" height="40"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="1">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
@@ -82,6 +83,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zV-5N-oxw">
                                     <rect key="frame" x="41.5" y="0.0" width="36" height="40"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="2">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>

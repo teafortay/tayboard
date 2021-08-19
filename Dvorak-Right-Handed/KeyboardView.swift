@@ -145,9 +145,11 @@ class KeyboardView: UIView {
     }
     
     func insertButtonTitles() {
-        let allKeys = regularKeys.append(contentsOf: ([globeKey, backspaceKey, enterKey, shiftKey, symKey])
-//        let _ = allKeys.map({$0?.titleLabel?.adjustsFontSizeToFitWidth = true})
-        let _ = allKeys.map({$0.titleLabel?.font = myFont})
+//        let specialKeys: [UIButton] = [globeKey, backspaceKey, enterKey, shiftKey]
+        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey]
+//        let allKeys: [UIButton] = regularKeys.append(shiftKey)
+        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
+//        let _ = allKeys.map({$0.titleLabel?.font = myFont})
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
         self.enterKey.setTitle("\u{23CE}", for: .normal)
