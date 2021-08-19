@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
-				4A88EE9526991F8600B6A27D /* KeyboardView.swift */,
 				4A88EE972699201300B6A27D /* KeyboardView.xib */,
+				4A88EE9526991F8600B6A27D /* KeyboardView.swift */,
 				4ACFC6C526C6248800504F3A /* Keys.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
