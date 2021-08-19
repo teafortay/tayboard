@@ -129,14 +129,16 @@ class KeyboardView: UIView {
 //                    keyB0, keyB1, keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10,
 //                    keyC0, keyC1, keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8, keyC9,
 //                    shiftKey, keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10]
+        //TODO: refactor
+        let keys: [UIButton] = regularKeys + [shiftKey]
         symbols = !symbols
         if symbols {
             self.symKey.setTitle("ABC" , for: .normal)
-            let _ = regularKeys.map({$0.setTitle(Keys.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = keys.map({$0.setTitle(Keys.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         } else {
             self.symKey.setTitle("+=\\" , for: .normal)
             self.shiftKey.setTitle("⇧" , for: .normal)
-            let _ = regularKeys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = keys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         }
     }
     
@@ -148,8 +150,8 @@ class KeyboardView: UIView {
 //        let specialKeys: [UIButton] = [globeKey, backspaceKey, enterKey, shiftKey]
         let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey]
 //        let allKeys: [UIButton] = regularKeys.append(shiftKey)
-        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
-//        let _ = allKeys.map({$0.titleLabel?.font = myFont})
+//        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
+        let _ = allKeys.map({$0.titleLabel?.font = myFont})
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
         self.enterKey.setTitle("\u{23CE}", for: .normal)
