@@ -120,7 +120,9 @@ class KeyboardView: UIView {
                 self.shiftKey.setTitle("⇧" , for: .normal)
                 let _ = regularKeys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
-        } //if !symbols
+        } else {
+            kvc?.didTapButton(sender)
+        }
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
