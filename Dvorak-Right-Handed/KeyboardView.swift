@@ -149,7 +149,7 @@ class KeyboardView: UIView {
         let _ = allKeys.map({$0.titleLabel?.font = myFont})
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)
-        self.enterKey.setTitle("\u{23CE}", for: .normal)
+        self.enterKey.setTitle("⏎", for: .normal)
         self.shiftKey.setTitle("⇧" , for: .normal)
     }
     
