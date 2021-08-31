@@ -88,24 +88,20 @@ class KeyboardViewController: UIInputViewController {
             rectHeight = screen.height/2
         } else if screen.width < screen.height {
             //portrait
-            if screen.height < 800 {
-                //between 800 and 500
+            if screen.height < 715 {
+                //between 500 and 715
                 rectHeight = CGFloat(250.0)
-            } else if screen.height < 1000 {
-                //between 1000 and 800
-                    rectHeight = CGFloat(300.0)
             } else {
-                    // > 1000
-                    rectHeight = CGFloat(400.0)
+                    // > 715
+                    rectHeight = screen.height * 0.35
             }
         } else {
             //landscape
-            if screen.height < 800 {
-                rectHeight = CGFloat(350)
-            } else if screen.height < 1050 {
-                rectHeight = CGFloat(425)
+            if screen.height < 700 {
+                rectHeight = screen.height/2
             } else {
-                rectHeight = CGFloat(500)
+                // > 700
+                rectHeight = screen.height * 0.45
             }
         }
         let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: rectHeight)
