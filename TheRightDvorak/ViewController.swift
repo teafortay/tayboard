@@ -22,21 +22,21 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+//            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         }
         
         override func viewDidDisappear(_ animated: Bool) {
             super.viewDidDisappear(animated)
-            UIDevice.current.endGeneratingDeviceOrientationNotifications()
+//            UIDevice.current.endGeneratingDeviceOrientationNotifications()
         }
         
         override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
             super.viewWillTransition(to: size, with: coordinator)
-            if UIDevice.current.orientation.isLandscape {
-                print("Landscape")
-            } else {
-                print("Portrait")
-            }
+//            if UIDevice.current.orientation.isLandscape {
+//                print("Landscape")
+//            } else {
+//                print("Portrait")
+//            }
         }
 
 
