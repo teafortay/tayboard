@@ -13,11 +13,6 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: KeyboardView?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
-    //TODO: change this
-//    let upKeyboard = UIView(frame: CGRect())
-//    let downKeyboard = UIView(frame: CGRect())
-//    let numKeyboard = UIView(frame: CGRect())
-    
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -52,9 +47,7 @@ class KeyboardViewController: UIInputViewController {
         //TODO: use viewwillload?
         super.viewDidLoad()
         // Perform custom UI setup here
-        
-        //self.oldKeyboard()
-
+      
         let rect = getKeyboardRectFromBounds()
         let keyboardView = KeyboardView(frame: rect, kvc: self)
         self.view.addSubview(keyboardView)
@@ -88,12 +81,12 @@ class KeyboardViewController: UIInputViewController {
             rectHeight = screen.height/2
         } else if screen.width < screen.height {
             //portrait
-            if screen.height < 715 {
-                //between 500 and 715
+            if screen.height < 730 {
+                //between 500 and 730
                 rectHeight = CGFloat(250.0)
             } else {
                     // > 715
-                    rectHeight = screen.height * 0.35
+                    rectHeight = screen.height * 0.33
             }
         } else {
             //landscape
@@ -101,7 +94,7 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = screen.height/2
             } else {
                 // > 700
-                rectHeight = screen.height * 0.45
+                rectHeight = screen.height * 0.42
             }
         }
         let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: rectHeight)

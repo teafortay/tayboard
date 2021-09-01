@@ -10,6 +10,7 @@
 import UIKit
 
 class KeyboardView: UIView {
+    
     weak var kvc: KeyboardViewController?
     var shift: Bool = false
     var symbols: Bool = false
