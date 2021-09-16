@@ -48,6 +48,23 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         // Perform custom UI setup here
       
+//        let rect = getKeyboardRectFromBounds()
+//        let keyboardView = KeyboardView(frame: rect, kvc: self)
+//        self.view.addSubview(keyboardView)
+//        self.keyboardView = keyboardView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        let rect = getKeyboardRectFromBounds()
+//        let keyboardView = KeyboardView(frame: rect, kvc: self)
+//        self.view.addSubview(keyboardView)
+//        self.keyboardView = keyboardView
+    }
+    
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        
         let rect = getKeyboardRectFromBounds()
         let keyboardView = KeyboardView(frame: rect, kvc: self)
         self.view.addSubview(keyboardView)
@@ -85,7 +102,7 @@ class KeyboardViewController: UIInputViewController {
                 //between 500 and 730
                 rectHeight = CGFloat(250.0)
             } else {
-                    // > 715
+                    // > 730
                     rectHeight = screen.height * 0.33
             }
         } else {
@@ -97,7 +114,15 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = screen.height * 0.42
             }
         }
-        let rect = CGRect(x: 0.0, y: 0.0, width: screen.width, height: rectHeight)
+        //TODO fix bug of width longer than safe area, not nativeBounds
+        var i = 0
+        let bounds = self.view.bounds.size
+        print("width: ", bounds.width)
+        print("height: ", i, bounds.height)
+        print("screen width: ", i, screen.width)
+//        print(UIScreen.main.nativeScale)
+        i = i+1
+        let rect = CGRect(x: 0.0, y: 0.0, width: bounds.width, height: rectHeight)
         return rect
     }
 
