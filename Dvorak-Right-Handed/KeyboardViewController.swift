@@ -13,6 +13,15 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: KeyboardView?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
+    override func viewDidLoad() {
+        //TODO: use viewwillload?
+        super.viewDidLoad()
+        // Perform custom UI setup here
+        let rect = getKeyboardRectFromBounds()
+        let keyboardView = KeyboardView(frame: rect, kvc: self)
+        self.view.addSubview(keyboardView)
+        self.keyboardView = keyboardView
+    }
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -23,7 +32,7 @@ class KeyboardViewController: UIInputViewController {
             viewHeightConstraint.priority = UILayoutPriority(rawValue: 750)
         }
         // Add custom view sizing constraints
-        let rect = getKeyboardRectFromBounds(from: "updateWiewConstraints")
+        let rect = getKeyboardRectFromBounds()
         if  let heightConstraint = self.keyboardHeightConstraint {
             heightConstraint.constant = rect.height
             
@@ -37,35 +46,23 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        let rect = getKeyboardRectFromBounds(from: "viewWillTransition")
+        let rect = getKeyboardRectFromBounds()
         keyboardView?.frame = rect
         keyboardHeightConstraint?.constant = rect.height
     }
-    
 
-    override func viewDidLoad() {
-        //TODO: use viewwillload?
-        super.viewDidLoad()
-        // Perform custom UI setup here
-      
-        let rect = getKeyboardRectFromBounds(from: "viewDidLoad")
-        let keyboardView = KeyboardView(frame: rect, kvc: self)
-        self.view.addSubview(keyboardView)
-        self.keyboardView = keyboardView
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let rect = getKeyboardRectFromBounds(from: "viewDidLayoutSubviews")
+        let rect = getKeyboardRectFromBounds()
         keyboardView?.frame = rect
         keyboardHeightConstraint?.constant = rect.height
     }
     
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        let rect = getKeyboardRectFromBounds(from: "viewLayoutMarginsDidChange")
-        keyboardView?.frame = rect
-        keyboardHeightConstraint?.constant = rect.height
+//        let rect = getKeyboardRectFromBounds(from: "viewLayoutMarginsDidChange")
+//        keyboardView?.frame = rect
+//        keyboardHeightConstraint?.constant = rect.height
     }
     
     
@@ -87,10 +84,9 @@ class KeyboardViewController: UIInputViewController {
     }
     
     
-    func getKeyboardRectFromBounds(from: String) -> CGRect {
+    func getKeyboardRectFromBounds() -> CGRect {
         let screen = UIScreen.main.bounds
         var rectHeight: CGFloat
-//        print(screen.height)
         if screen.height < 500 {
             rectHeight = screen.height/2
         } else if screen.width < screen.height {
@@ -111,21 +107,14 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = screen.height * 0.42
             }
         }
-        let bounds = self.view.bounds.size
+        //make width match safe area
         var rectWidth = self.view.bounds.size.width
         if rectWidth == 0.0 {
             rectWidth = screen.width
         }
-        print(from)
-        print(i, "width: ", bounds.width)
-        print(i, "height: ", bounds.height)
-        print(i, "screen width: ", screen.width)
-//        print(UIScreen.main.nativeScale)
-        i = i+1
         let rect = CGRect(x: 0.0, y: 0.0, width: rectWidth, height: rectHeight)
         return rect
     }
-    var i = 0
 
     func didTapButton(_ sender: Any) {
         
