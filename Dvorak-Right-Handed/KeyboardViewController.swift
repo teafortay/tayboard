@@ -48,27 +48,24 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         // Perform custom UI setup here
       
-//        let rect = getKeyboardRectFromBounds()
-//        let keyboardView = KeyboardView(frame: rect, kvc: self)
-//        self.view.addSubview(keyboardView)
-//        self.keyboardView = keyboardView
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        let rect = getKeyboardRectFromBounds()
-//        let keyboardView = KeyboardView(frame: rect, kvc: self)
-//        self.view.addSubview(keyboardView)
-//        self.keyboardView = keyboardView
-    }
-    
-    override func viewLayoutMarginsDidChange() {
-        super.viewLayoutMarginsDidChange()
-        
         let rect = getKeyboardRectFromBounds()
         let keyboardView = KeyboardView(frame: rect, kvc: self)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let rect = getKeyboardRectFromBounds()
+        keyboardView?.frame = rect
+        keyboardHeightConstraint?.constant = rect.height
+    }
+    
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        let rect = getKeyboardRectFromBounds()
+        keyboardView?.frame = rect
+        keyboardHeightConstraint?.constant = rect.height
     }
     
     
@@ -93,7 +90,7 @@ class KeyboardViewController: UIInputViewController {
     func getKeyboardRectFromBounds() -> CGRect {
         let screen = UIScreen.main.bounds
         var rectHeight: CGFloat
-        print(screen.height)
+//        print(screen.height)
         if screen.height < 500 {
             rectHeight = screen.height/2
         } else if screen.width < screen.height {
@@ -114,17 +111,20 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = screen.height * 0.42
             }
         }
-        //TODO fix bug of width longer than safe area, not nativeBounds
-        var i = 0
         let bounds = self.view.bounds.size
-        print("width: ", bounds.width)
-        print("height: ", i, bounds.height)
+        var rectWidth = self.view.bounds.size.width
+        if rectWidth == 0.0 {
+            rectWidth = screen.width
+        }
+        print(i, "width: ", bounds.width)
+        print(i, "height: ", bounds.height)
         print("screen width: ", i, screen.width)
 //        print(UIScreen.main.nativeScale)
         i = i+1
-        let rect = CGRect(x: 0.0, y: 0.0, width: bounds.width, height: rectHeight)
+        let rect = CGRect(x: 0.0, y: 0.0, width: rectWidth, height: rectHeight)
         return rect
     }
+    var i = 0
 
     func didTapButton(_ sender: Any) {
         
