@@ -108,6 +108,8 @@ class KeyboardViewController: UIInputViewController {
             }
         }
         //make width match safe area
+//        print("screen: ", screen.height)
+//        print("rect: ", rectHeight)
         var rectWidth = self.view.bounds.size.width
         if rectWidth == 0.0 {
             rectWidth = screen.width
