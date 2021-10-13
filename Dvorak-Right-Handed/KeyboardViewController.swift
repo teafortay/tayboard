@@ -87,6 +87,7 @@ class KeyboardViewController: UIInputViewController {
     func getKeyboardRectFromBounds() -> CGRect {
         let screen = UIScreen.main.bounds
         var rectHeight: CGFloat
+        var rectWidth: CGFloat
         if screen.height < 500 {
             rectHeight = screen.height/2
         } else if screen.width < screen.height {
@@ -110,7 +111,7 @@ class KeyboardViewController: UIInputViewController {
         //make width match safe area
 //        print("screen: ", screen.height)
 //        print("rect: ", rectHeight)
-        var rectWidth = self.view.bounds.size.width
+        rectWidth = self.view.bounds.size.width
         if rectWidth == 0.0 {
             rectWidth = screen.width
         }
