@@ -119,14 +119,14 @@ class KeyboardView: UIView {
                 let _ = regularKeys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         } else { //on symbol keyboard
-            kvc?.didTapButton(sender)
+            kvc?.didTapButton(sender) //FIX
         }
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
         
         //TODO: refactor
-        let keys: [UIButton] = regularKeys + [shiftKey]
+        let keys: [UIButton] = regularKeys + [shiftKey] //FIX
         symbols = !symbols
         if symbols {
             self.symKey.setTitle("ABC" , for: .normal)
