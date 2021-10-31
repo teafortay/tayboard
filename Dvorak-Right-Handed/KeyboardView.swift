@@ -94,6 +94,11 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyD9: UIButton!
     @IBOutlet weak var keyD10: UIButton!
     
+    @IBAction func doubleTapSpace(_ sender: Any) {
+        //get rid of space added by 1st click
+        kvc?.textDocumentProxy.deleteBackward()
+        kvc?.textDocumentProxy.insertText(".")
+    }
     //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
 //        kvc?.advanceToNextInputMode()
