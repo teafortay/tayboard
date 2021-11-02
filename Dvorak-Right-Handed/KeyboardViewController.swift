@@ -97,7 +97,7 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = CGFloat(250.0)
             } else {
                     // > 730
-                    rectHeight = screen.height * 0.35
+                    rectHeight = screen.height * 0.34
             }
         } else {
             //landscape
