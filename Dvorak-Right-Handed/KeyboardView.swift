@@ -99,6 +99,18 @@ class KeyboardView: UIView {
         kvc?.textDocumentProxy.deleteBackward()
         kvc?.textDocumentProxy.insertText(".")
     }
+    
+    @IBAction func tapped(sender: UITapGestureRecognizer)
+    {
+        print("tapped")
+        //Your animation code.
+    }
+
+    @IBAction func longPressed(sender: UILongPressGestureRecognizer)
+    {
+        print("longpressed")
+        //Different code
+    }
     //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
 //        kvc?.advanceToNextInputMode()
