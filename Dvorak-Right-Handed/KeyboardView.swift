@@ -14,6 +14,8 @@ class KeyboardView: UIView {
     weak var kvc: KeyboardViewController?
     var shift: Bool = false
     var symbols: Bool = false
+    var delete: Bool = false
+    
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)
     
@@ -94,21 +96,23 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyD9: UIButton!
     @IBOutlet weak var keyD10: UIButton!
     
+    //begin key press actions
     @IBAction func doubleTapSpace(_ sender: Any) {
         //get rid of space added by 1st click
         kvc?.textDocumentProxy.deleteBackward()
         kvc?.textDocumentProxy.insertText(".")
     }
-    
-    @IBAction func tapped(sender: UITapGestureRecognizer)
-    {
-        print("tapped")
-        //Your animation code.
-    }
 
-    @IBAction func longPressed(sender: UILongPressGestureRecognizer)
-    {
+    @IBAction func deleteKeyLongPress(sender: UILongPressGestureRecognizer) {
+     //for reference:
+      /*  po sender.view?.restorationIdentifier
+        ▿ Optional<String>
+          - some : "A10"
+        */
+        
         print("longpressed")
+        delete = !delete
+        print(delete)
         //Different code
     }
     //keep because might use when i implement TouchDown? taps
@@ -160,10 +164,7 @@ class KeyboardView: UIView {
     }
     
     func insertButtonTitles() {
-//        let specialKeys: [UIButton] = [globeKey, backspaceKey, enterKey, shiftKey]
         let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey]
-//        let allKeys: [UIButton] = regularKeys.append(shiftKey)
-//        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
         let _ = allKeys.map({$0.titleLabel?.font = myFont})
         self.globeKey.setTitle("🌐", for: .normal)
         self.backspaceKey.setTitle("⌫", for: .normal)

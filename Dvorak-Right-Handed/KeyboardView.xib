@@ -154,6 +154,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-sl-OwL">
                                     <rect key="frame" x="329.5" y="0.0" width="38" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <gestureRecognizers/>
                                     <state key="normal" title="p">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
@@ -174,14 +175,17 @@
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-vn-Xz0">
                                     <rect key="frame" x="412" y="0.0" width="38" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <gestureRecognizers/>
                                     <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
+                                        <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
                                     </connections>
                                 </button>
                             </subviews>
+                            <gestureRecognizers/>
                         </stackView>
                         <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="R2E-3i-UvG" userLabel="row2">
                             <rect key="frame" x="0.0" y="49" width="450" height="43.5"/>
@@ -603,6 +607,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="97"/>
         </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="op4-LL-f5o" userLabel="DeleteLong Press Gesture Recognizer">
+            <connections>
+                <action selector="deleteKeyLongPressWithSender:" destination="-1" id="GuM-iE-fQd"/>
+            </connections>
+        </pongPressGestureRecognizer>
     </objects>
     <resources>
         <systemColor name="labelColor">
