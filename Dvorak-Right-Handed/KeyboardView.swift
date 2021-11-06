@@ -111,16 +111,8 @@ class KeyboardView: UIView {
         */
         
         //TODO: implement backspace repeat functionality
-        var timer: Timer
         print("longpressed")
         delete = !delete
-        if delete {
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-                print("FIRE!!!")
-            })
-        } else {
-//            timer.invalidate()
-        }
         print(delete)
         //Different code
     }
