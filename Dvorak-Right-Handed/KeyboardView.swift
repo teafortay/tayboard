@@ -9,6 +9,7 @@
 
 import UIKit
 
+// TODO: refactor, seperate MVC
 class KeyboardView: UIView {
     
     weak var kvc: KeyboardViewController?
@@ -43,9 +44,6 @@ class KeyboardView: UIView {
         insertButtonTitles()
     }
     
-//    deinit {
-//        deleteTimer?.invalidate()
-//    }
     
     //special keys - outlet to insert titles
     @IBOutlet weak var globeKey: UIButton!
@@ -119,14 +117,13 @@ class KeyboardView: UIView {
         delete = !delete
         print(delete)
         if delete {
-            deleteTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-                print("FIRE!!!")
+            deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+                self.kvc?.textDocumentProxy.deleteBackward()
             })
 
         } else {
             deleteTimer?.invalidate()
         }
-        //Different code
     }
     //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
