@@ -15,7 +15,7 @@ class KeyboardView: UIView {
     var shift: Bool = false
     var symbols: Bool = false
     var delete: Bool = false
-    
+    var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)
     
@@ -42,6 +42,10 @@ class KeyboardView: UIView {
                             keyD1, keyD2, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9,keyD10]
         insertButtonTitles()
     }
+    
+//    deinit {
+//        deleteTimer?.invalidate()
+//    }
     
     //special keys - outlet to insert titles
     @IBOutlet weak var globeKey: UIButton!
@@ -114,6 +118,14 @@ class KeyboardView: UIView {
         print("longpressed")
         delete = !delete
         print(delete)
+        if delete {
+            deleteTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+                print("FIRE!!!")
+            })
+
+        } else {
+            deleteTimer?.invalidate()
+        }
         //Different code
     }
     //keep because might use when i implement TouchDown? taps
