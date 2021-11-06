@@ -112,16 +112,14 @@ class KeyboardView: UIView {
           - some : "A10"
         */
         
-        //TODO: implement backspace repeat functionality
-        print("longpressed")
         delete = !delete
-        print(delete)
         if delete {
             deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
                 self.kvc?.textDocumentProxy.deleteBackward()
             })
 
         } else {
+            //do I need to invalidate timer anywhere else?
             deleteTimer?.invalidate()
         }
     }
