@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-aP-XDW">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-aP-XDW">
                                 <rect key="frame" x="0.0" y="9" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pao-QT-9dP">
@@ -76,8 +76,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KwZ-aP-XDW" secondAttribute="trailing" id="DXa-HR-VCC"/>
-                            <constraint firstAttribute="bottom" secondItem="KwZ-aP-XDW" secondAttribute="bottom" id="PEs-y4-Q8Z"/>
-                            <constraint firstItem="KwZ-aP-XDW" firstAttribute="top" secondItem="2NP-qo-1EZ" secondAttribute="top" id="PsS-1U-A5w"/>
+                            <constraint firstAttribute="bottom" secondItem="KwZ-aP-XDW" secondAttribute="bottom" constant="-9" id="PEs-y4-Q8Z"/>
+                            <constraint firstItem="KwZ-aP-XDW" firstAttribute="top" secondItem="2NP-qo-1EZ" secondAttribute="top" constant="9" id="PsS-1U-A5w"/>
                             <constraint firstItem="KwZ-aP-XDW" firstAttribute="leading" secondItem="2NP-qo-1EZ" secondAttribute="leading" id="hsl-1G-6TM"/>
                         </constraints>
                     </view>
