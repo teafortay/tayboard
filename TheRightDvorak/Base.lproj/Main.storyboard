@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pao-QT-9dP">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="313.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="50.000000000000057" width="414" height="952.33333333333348"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Right Dvorak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-AV-t1o">
                                                 <rect key="frame" x="118" y="0.0" width="178" height="50"/>
@@ -56,6 +56,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <string key="userLabel">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</string>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="31" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-kx-T3f">
+                                                <rect key="frame" x="0.0" y="323.33333333333326" width="414" height="629"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet sollicitudin tellus. Proin congue tellus quis magna pretium pulvinar. Duis eget urna porttitor, suscipit turpis vel, laoreet nunc. Proin neque sem, mattis elementum vulputate id, condimentum nec ex. Vestibulum condimentum sollicitudin nisl, nec mattis sapien euismod in. Vivamus sed placerat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin dignissim odio at velit pharetra fringilla. Aenean posuere urna gravida sollicitudin porta. Suspendisse potenti. In sodales et libero vel vulputate. Aenean tempus dictum enim et aliquet. Cras id eleifend nisi, ac sollicitudin nisi. Quisque venenatis odio at felis congue volutpat. Aliquam hendrerit bibendum felis sed vehicula. In varius odio tortor, interdum tincidunt diam lobortis eu. Ut blandit vestibulum turpis, sed bibendum lectus mollis sed. Nam vehicula felis quis diam fermentum luctus. Nulla in est eu tellus malesuada fermentum eu sed magna. Phasellus nulla eros, molestie sed lacus sed, consectetur aliquet dui. Etiam nec consectetur tellus. Suspendisse non rhoncus ex. Cras posuere diam eu lacus efficitur venenatis. Quisque massa leo, tristique id facilisis ut, vestibulum iaculis urna. Nam congue nunc et sagittis rhoncus.
+
+Ut orci dui, feugiat ut sollicitudin semper, egestas iaculis nibh. Curabitur egestas tellus sed congue vehicula. Nam imperdiet odio at imperdiet pellentesque. Nam dignissim blandit turpis, at tempor lorem scelerisque a. Cras ac velit a lorem mollis ornare eget sit amet eros. Aliquam quis tincidunt eros, dictum condimentum enim. Curabitur volutpat lacinia mauris a bibendum. Vivamus elit ligula, hendrerit posuere risus tincidunt, sagittis sodales augue. Praesent a leo sodales urna semper finibus. Pellentesque viverra tincidunt dolor et volutpat. Nulla et nisi pulvinar, condimentum mauris ut, molestie augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis ante sit amet odio congue porttitor.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
