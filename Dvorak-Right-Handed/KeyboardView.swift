@@ -6,6 +6,8 @@
 // used this tutorial to make xib: https://iostutorialjunction.com/2020/04/how-to-create-custom-uiview-class-with-xib-in-swift-tutorial.html
 //  Copyright © 2021 Taylor Shaw. All rights reserved.
 //
+/* This file contains the KeyboardView class, which owns both keyboard xib files.
+ */
 
 import UIKit
 
@@ -33,7 +35,7 @@ class KeyboardView: UIView {
     }
     
     func commonInit(){
-        let viewFromXib = Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)![0] as! UIView
+        let viewFromXib = Bundle.main.loadNibNamed("FullKeyboardView", owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
         //other setup
