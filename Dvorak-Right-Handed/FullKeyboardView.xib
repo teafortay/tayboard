@@ -172,16 +172,14 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="SK5-WB-u0L"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-vn-Xz0">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-P9-NxP">
                                     <rect key="frame" x="412" y="0.0" width="38" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <gestureRecognizers/>
-                                    <state key="normal">
+                                    <state key="normal" title="'">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
-                                        <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9U0-Bh-sW8"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -510,14 +508,16 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="flI-oy-sbO"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-P9-NxP">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-vn-Xz0">
                                     <rect key="frame" x="412" y="0.0" width="38" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <state key="normal" title="'">
+                                    <gestureRecognizers/>
+                                    <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9U0-Bh-sW8"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
+                                        <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
                                     </connections>
                                 </button>
                             </subviews>
