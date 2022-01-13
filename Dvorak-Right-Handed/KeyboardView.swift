@@ -11,7 +11,6 @@
 
 import UIKit
 
-// TODO: refactor, seperate MVC
 class KeyboardView: UIView {
     
     weak var kvc: KeyboardViewController?
@@ -35,7 +34,8 @@ class KeyboardView: UIView {
     }
     
     func commonInit(){
-        let viewFromXib = Bundle.main.loadNibNamed("FullKeyboardView", owner: self, options: nil)![0] as! UIView
+        //TODO: make this work with 'condensed keyboard'
+        let viewFromXib = Bundle.main.loadNibNamed("CondensedKeyboardView", owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
         //other setup
