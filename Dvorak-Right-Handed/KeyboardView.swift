@@ -49,7 +49,10 @@ class KeyboardView: UIView {
                             keyD3, keyD3, keyD4, keyD5,
                             keyD6, keyD7, keyD8, keyD9,keyD10]
         if nibName.starts(with: "Full") {
-            self.regularKeys += [keyA2, keyA3]
+            self.regularKeys += [keyA2, keyA3,
+                                keyB0, keyB1,
+                                keyC0, keyC1,
+                                keyD1, keyD2]
         }
         insertButtonTitles()
     }

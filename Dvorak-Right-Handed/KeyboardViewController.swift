@@ -18,7 +18,7 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         // Perform custom UI setup here
         let rect = getKeyboardRectFromBounds()
-        let keyboardView = KeyboardView(frame: rect, kvc: self, state: "Full")
+        let keyboardView = KeyboardView(frame: rect, kvc: self, state: "Condensed")
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
     }
