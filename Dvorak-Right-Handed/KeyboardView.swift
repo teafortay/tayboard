@@ -14,6 +14,7 @@ import UIKit
 class KeyboardView: UIView {
     
     weak var kvc: KeyboardViewController?
+    var nibName: String = "KeyboardView"
     var shift: Bool = false
     var symbols: Bool = false
     var delete: Bool = false
@@ -22,8 +23,9 @@ class KeyboardView: UIView {
     let myFont = UIFont.systemFont(ofSize: 24.0)
     
     //initializers
-    init(frame: CGRect, kvc: KeyboardViewController) {
+    init(frame: CGRect, kvc: KeyboardViewController, state: String) {
         self.kvc = kvc
+        self.nibName = state + nibName //will this work?
         super.init(frame: frame)
         commonInit()
     }
@@ -34,8 +36,7 @@ class KeyboardView: UIView {
     }
     
     func commonInit(){
-        //TODO: make this work with 'condensed keyboard'
-        let viewFromXib = Bundle.main.loadNibNamed("CondensedKeyboardView", owner: self, options: nil)![0] as! UIView
+        let viewFromXib = Bundle.main.loadNibNamed(nibName, owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
         //other setup
@@ -47,6 +48,9 @@ class KeyboardView: UIView {
                             keyC6, keyC7, keyC8, keyC9,
                             keyD3, keyD3, keyD4, keyD5,
                             keyD6, keyD7, keyD8, keyD9,keyD10]
+        if nibName.starts(with: "Full") {
+            self.regularKeys += [keyA2, keyA3]
+        }
         insertButtonTitles()
     }
     

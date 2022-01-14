@@ -40,6 +40,7 @@ struct Keys {
                            "D1" : "9", "D2" : "0", "D3" : "x", "D4" : ",", "D5" : "i",
                            "D6" : "n", "D7" : "w", "D8" : "v", "D9" : "g", "D10" : "'"]
     
+    //TODO: make 2 different sym dictionaries, depending on full vs. condensed keyboard
     static let symKeys = ["A0" : "1", "A1" : "2", "A2" : "3", "A3" : "$", "A4" : "3",
                           "A5" : "+", "A6" : "\\", "A7" : "*", "A8" : "(", "A9" : ")",
                           "B0" : "4", "B1" : "5",  "B2" : "4", "B3" : "5", "B4" : "6",
@@ -48,7 +49,7 @@ struct Keys {
                           "C5" : "×", "C6" : "~", "C7" : "≥", "C8" : "{", "C9" : "}",
                         "D1" : "0", "D2" : "≤", "D3" : "0", "D4" : "≠",
                           "D5" : "÷","D6" : "`", "D7" : "≤", "D8" : "←", "D9" : "→", "D10" : "↔︎"]
-    //TODO: in progress
+    //TODO: implement greek letter keyboard
     static let greekKeys = ["A0" : "α", "A1" : "β", "A2" : "γ", "A3" : "δ", "A4" : "ε",
                             "A5" : "ζ", "A6" : "η", "A7" : "θ", "A8" : "λ", "A9" : "μ",
                             "B0" : "π", "B1" : "ρ", "B2" : "σ", "B3" : "τ", "B4" : "φ",
