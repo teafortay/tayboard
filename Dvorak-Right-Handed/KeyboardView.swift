@@ -172,7 +172,7 @@ class KeyboardView: UIView {
         symbols = !symbols
         if symbols {
             self.symKey.setTitle("ABC" , for: .normal)
-            let _ = keys.map({$0.setTitle(Keys.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = keys.map({$0.setTitle(Keys.symKeysCondensed[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         } else {
             let _ = keys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             self.symKey.setTitle("+=\\" , for: .normal)
