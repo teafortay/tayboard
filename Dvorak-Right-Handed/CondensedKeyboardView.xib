@@ -144,16 +144,14 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="SK5-WB-u0L"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-vn-Xz0">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-P9-NxP">
                                     <rect key="frame" x="402.5" y="0.0" width="47.5" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <gestureRecognizers/>
-                                    <state key="normal">
+                                    <state key="normal" title="'">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
-                                        <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9U0-Bh-sW8"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -258,7 +256,7 @@
                             <rect key="frame" x="0.0" y="98.5" width="450" height="43"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-30-jQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="47.5" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="z">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -268,7 +266,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-oW-8Sl">
-                                    <rect key="frame" x="50.5" y="0.0" width="47" height="43"/>
+                                    <rect key="frame" x="56.5" y="0.0" width="54" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="a">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -278,7 +276,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-JS-ZIo">
-                                    <rect key="frame" x="100.5" y="0.0" width="47.5" height="43"/>
+                                    <rect key="frame" x="113.5" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="e">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -288,7 +286,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12b-Ax-7oH">
-                                    <rect key="frame" x="151" y="0.0" width="47.5" height="43"/>
+                                    <rect key="frame" x="170" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="h">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -298,7 +296,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-kM-qw8">
-                                    <rect key="frame" x="201.5" y="0.0" width="47" height="43"/>
+                                    <rect key="frame" x="226.5" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="t">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -308,7 +306,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-Ka-gWa">
-                                    <rect key="frame" x="251.5" y="0.0" width="47.5" height="43"/>
+                                    <rect key="frame" x="283" y="0.0" width="54" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="d">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -318,7 +316,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93v-hV-zK8">
-                                    <rect key="frame" x="302" y="0.0" width="47.5" height="43"/>
+                                    <rect key="frame" x="340" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="c">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -328,23 +326,13 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-3q-kzd">
-                                    <rect key="frame" x="352.5" y="0.0" width="47" height="43"/>
+                                    <rect key="frame" x="396.5" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="k">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="16V-1H-wt9"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-Xb-QEF">
-                                    <rect key="frame" x="402.5" y="0.0" width="47.5" height="43"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <state key="normal">
-                                        <color key="titleColor" systemColor="labelColor"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="oUZ-mN-Vay"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -432,14 +420,16 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="flI-oy-sbO"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-P9-NxP">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-vn-Xz0">
                                     <rect key="frame" x="402.5" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <state key="normal" title="'">
+                                    <gestureRecognizers/>
+                                    <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9U0-Bh-sW8"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
+                                        <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -455,8 +445,18 @@
                         <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uCG-Nv-aR1" userLabel="row5">
                             <rect key="frame" x="0.0" y="197" width="450" height="43"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owF-0A-LSx">
+                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="43"/>
+                                    <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    <state key="normal" title="+=\">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="symKeyPress:" destination="-1" eventType="touchUpInside" id="Xjd-1P-NDm"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfl-Pf-bR2">
-                                    <rect key="frame" x="0.0" y="0.0" width="90" height="43"/>
+                                    <rect key="frame" x="77.5" y="0.0" width="67.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="Globe">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -466,7 +466,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYo-un-7Ft">
-                                    <rect key="frame" x="100" y="0.0" width="250" height="43"/>
+                                    <rect key="frame" x="155" y="0.0" width="172.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="Space">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -476,20 +476,21 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="j69-Sw-ukI"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owF-0A-LSx">
-                                    <rect key="frame" x="360" y="0.0" width="90" height="43"/>
-                                    <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                    <state key="normal" title="+=\">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-Xb-QEF">
+                                    <rect key="frame" x="337.5" y="0.0" width="112.5" height="43"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="symKeyPress:" destination="-1" eventType="touchUpInside" id="Xjd-1P-NDm"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="oUZ-mN-Vay"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="tfl-Pf-bR2" firstAttribute="width" secondItem="uCG-Nv-aR1" secondAttribute="width" multiplier="0.2" id="97G-u9-Tj4"/>
-                                <constraint firstItem="owF-0A-LSx" firstAttribute="width" secondItem="uCG-Nv-aR1" secondAttribute="width" multiplier="0.2" id="I4i-mt-V03"/>
+                                <constraint firstItem="xaM-Xb-QEF" firstAttribute="width" secondItem="uCG-Nv-aR1" secondAttribute="width" multiplier="0.25" id="3mJ-VK-vdU"/>
+                                <constraint firstItem="tfl-Pf-bR2" firstAttribute="width" secondItem="uCG-Nv-aR1" secondAttribute="width" multiplier="0.15" id="97G-u9-Tj4"/>
+                                <constraint firstItem="owF-0A-LSx" firstAttribute="width" secondItem="uCG-Nv-aR1" secondAttribute="width" multiplier="0.15" id="ihE-Rm-pcy"/>
                             </constraints>
                         </stackView>
                     </subviews>
