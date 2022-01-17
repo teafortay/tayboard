@@ -25,7 +25,7 @@ class KeyboardView: UIView {
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController, state: String) {
         self.kvc = kvc
-        self.nibName = state + nibName //will this work?
+        self.nibName = state + nibName 
         super.init(frame: frame)
         commonInit()
     }
@@ -172,8 +172,12 @@ class KeyboardView: UIView {
         symbols = !symbols
         if symbols {
             self.symKey.setTitle("ABC" , for: .normal)
-            let _ = keys.map({$0.setTitle(Keys.symKeysCondensed[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-        } else {
+            if self.nibName.starts(with: "Full") {
+                let _ = keys.map({$0.setTitle(Keys.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            } else { //condensed
+                let _ = keys.map({$0.setTitle(Keys.symKeysCondensed[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            }
+        } else { // symbols == false
             let _ = keys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             self.symKey.setTitle("+=\\" , for: .normal)
             self.shiftKey.setTitle("⇧" , for: .normal)
