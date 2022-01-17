@@ -127,7 +127,7 @@ class KeyboardViewController: UIInputViewController {
                 switch title {
                 case "⌫" :
                     proxy.deleteBackward()
-                case "⏎" :
+                case "enter" :
                     proxy.insertText("\n")
                 case "Space":
                     proxy.insertText(" ")
