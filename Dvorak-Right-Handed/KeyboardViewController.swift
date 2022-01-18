@@ -14,11 +14,19 @@ class KeyboardViewController: UIInputViewController {
     var keyboardHeightConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
-        //TODO: use viewwillload?
         super.viewDidLoad()
         // Perform custom UI setup here
+        
+        let nibPrefix: String
+        
         let rect = getKeyboardRectFromBounds()
-        let keyboardView = KeyboardView(frame: rect, kvc: self)
+        let size = max(rect.width, rect.height)
+        if size > 1000 {
+            nibPrefix = "Full"
+        } else {
+            nibPrefix = "Condensed"
+        }
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
     }
@@ -125,13 +133,13 @@ class KeyboardViewController: UIInputViewController {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
                 switch title {
-                case "⌫" :
+                case CONSTANTS.DELETE :
                     proxy.deleteBackward()
-                case "⏎" :
+                case CONSTANTS.ENTER :
                     proxy.insertText("\n")
-                case "Space":
+                case CONSTANTS.SPACE:
                     proxy.insertText(" ")
-                case "🌐" :
+                case CONSTANTS.GLOBE :
                     self.advanceToNextInputMode()
                 case "tab":
                     proxy.insertText("    ")
