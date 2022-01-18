@@ -1,5 +1,5 @@
 //
-//  Keys.swift
+//  Keys.swift later renamed KeysModel
 //  Dvorak-Right-Handed
 //
 //  Created by Taylor Shaw on 8/12/21.
@@ -20,7 +20,7 @@
 import Foundation
 import UIKit
 
-struct Keys {
+struct KeysModel {
     static let upKeys = ["A0" : "!", "A1" : "@", "A2" : "#", "A3" : "$", "A4" : "J",
                          "A5" : "L", "A6" : "M", "A7" : "F", "A8" : "P", "A9" : "?",
                          "B0" : "%", "B1" : "^", "B2" : "Q", "B3" : ">", "B4" : "O",

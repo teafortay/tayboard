@@ -6,8 +6,8 @@
 // used this tutorial to make xib: https://iostutorialjunction.com/2020/04/how-to-create-custom-uiview-class-with-xib-in-swift-tutorial.html
 //  Copyright © 2021 Taylor Shaw. All rights reserved.
 //
-/* This file contains the KeyboardView class, which owns both keyboard xib files.
- */
+// This file contains the KeyboardView class, which owns both keyboard xib files.
+ 
 
 import UIKit
 
@@ -23,9 +23,9 @@ class KeyboardView: UIView {
     let myFont = UIFont.systemFont(ofSize: 24.0)
     
     //initializers
-    init(frame: CGRect, kvc: KeyboardViewController, state: String) {
+    init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
-        self.nibName = state + nibName 
+        self.nibName = nibPrefix + nibName 
         super.init(frame: frame)
         commonInit()
     }
@@ -154,11 +154,11 @@ class KeyboardView: UIView {
             
             shift = !shift
             if shift {
-                self.shiftKey.setTitle("⇩" , for: .normal)
-                let _ = regularKeys.map({$0.setTitle(Keys.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                self.shiftKey.setTitle(CONSTANTS.SHIFT_DOWN , for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             } else {
-                self.shiftKey.setTitle("⇧" , for: .normal)
-                let _ = regularKeys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         } else { //on symbol keyboard
             kvc?.didTapButton(sender) //FIX
@@ -171,16 +171,16 @@ class KeyboardView: UIView {
         let keys: [UIButton] = regularKeys + [shiftKey] //FIX
         symbols = !symbols
         if symbols {
-            self.symKey.setTitle("ABC" , for: .normal)
+            self.symKey.setTitle(CONSTANTS.ABC , for: .normal)
             if self.nibName.starts(with: "Full") {
-                let _ = keys.map({$0.setTitle(Keys.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             } else { //condensed
-                let _ = keys.map({$0.setTitle(Keys.symKeysCondensed[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                let _ = keys.map({$0.setTitle(KeysModel.symKeysCondensed[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         } else { // symbols == false
-            let _ = keys.map({$0.setTitle(Keys.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-            self.symKey.setTitle("+=\\" , for: .normal)
-            self.shiftKey.setTitle("⇧" , for: .normal)
+            let _ = keys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            self.symKey.setTitle(CONSTANTS.SYMBOL_KEY , for: .normal)
+            self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
         }
     }
     
@@ -191,10 +191,10 @@ class KeyboardView: UIView {
     func insertButtonTitles() {
         let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey]
         let _ = allKeys.map({$0.titleLabel?.font = myFont})
-        self.globeKey.setTitle("🌐", for: .normal)
-        self.backspaceKey.setTitle("⌫", for: .normal)
-        self.enterKey.setTitle("enter", for: .normal)
-        self.shiftKey.setTitle("⇧" , for: .normal)
+        self.globeKey.setTitle(CONSTANTS.GLOBE, for: .normal)
+        self.backspaceKey.setTitle(CONSTANTS.DELETE, for: .normal)
+        self.enterKey.setTitle(CONSTANTS.ENTER, for: .normal)
+        self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
     }
     
    

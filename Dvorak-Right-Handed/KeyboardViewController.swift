@@ -17,16 +17,16 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         // Perform custom UI setup here
         
-        let kState: String
+        let nibPrefix: String
         
         let rect = getKeyboardRectFromBounds()
         let size = max(rect.width, rect.height)
         if size > 1000 {
-            kState = "Full"
+            nibPrefix = "Full"
         } else {
-            kState = "Condensed"
+            nibPrefix = "Condensed"
         }
-        let keyboardView = KeyboardView(frame: rect, kvc: self, state: kState)
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
     }
@@ -133,13 +133,13 @@ class KeyboardViewController: UIInputViewController {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
                 switch title {
-                case "⌫" :
+                case CONSTANTS.DELETE :
                     proxy.deleteBackward()
-                case "enter" :
+                case CONSTANTS.ENTER :
                     proxy.insertText("\n")
                 case "Space":
                     proxy.insertText(" ")
-                case "🌐" :
+                case CONSTANTS.GLOBE :
                     self.advanceToNextInputMode()
                 case "tab":
                     proxy.insertText("    ")

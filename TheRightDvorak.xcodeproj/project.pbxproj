@@ -17,6 +17,7 @@
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
+		4ACBFBC4279739D700E2D364 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* CONSTANTS.swift */; };
 		4ACFC6C626C6248800504F3A /* KeysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFC6C526C6248800504F3A /* KeysModel.swift */; };
 		4AFC1D2C2787F6130047DEBC /* FullKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		345BF98D2016B8DF00E3F9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A88EE9526991F8600B6A27D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedKeyboardView.xib; sourceTree = "<group>"; };
+		4ACBFBC3279739D700E2D364 /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
 		4ACFC6C526C6248800504F3A /* KeysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysModel.swift; sourceTree = "<group>"; };
 		4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullKeyboardView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 				4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */,
 				4A88EE9526991F8600B6A27D /* KeyboardView.swift */,
 				4ACFC6C526C6248800504F3A /* KeysModel.swift */,
+				4ACBFBC3279739D700E2D364 /* CONSTANTS.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
@@ -311,6 +314,7 @@
 				345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */,
 				4ACFC6C626C6248800504F3A /* KeysModel.swift in Sources */,
 				4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */,
+				4ACBFBC4279739D700E2D364 /* CONSTANTS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
