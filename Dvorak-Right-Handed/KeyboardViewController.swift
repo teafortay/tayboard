@@ -18,9 +18,9 @@ class KeyboardViewController: UIInputViewController {
         // Perform custom UI setup here
         
         let nibPrefix: String
-        
         let rect = getKeyboardRectFromBounds()
-        let size = max(rect.width, rect.height)
+        let screen = CONSTANTS.SCREEN
+        let size = max(screen.width, screen.height)
         if size > 1000 {
             nibPrefix = "Full"
         } else {
@@ -93,7 +93,7 @@ class KeyboardViewController: UIInputViewController {
     
     
     func getKeyboardRectFromBounds() -> CGRect {
-        let screen = UIScreen.main.bounds
+        let screen = CONSTANTS.SCREEN
         var rectHeight: CGFloat
         var rectWidth: CGFloat
         if screen.height < 500 {
