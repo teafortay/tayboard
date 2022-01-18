@@ -55,6 +55,7 @@
                 <outlet property="keyD8" destination="Z0f-bk-nse" id="AbC-8A-cXT"/>
                 <outlet property="keyD9" destination="Yr8-vR-ehM" id="wRR-9i-13l"/>
                 <outlet property="shiftKey" destination="khd-Yb-3AS" id="OE5-G0-opo"/>
+                <outlet property="spaceKey" destination="rYo-un-7Ft" id="xS8-aA-glZ"/>
                 <outlet property="symKey" destination="owF-0A-LSx" id="4iw-6p-zDg"/>
             </connections>
         </placeholder>

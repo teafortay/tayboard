@@ -18,5 +18,6 @@ struct CONSTANTS {
     static let SHIFT_DOWN = "⇩"
     static let SYMBOL_KEY = "+=\\"
     static let ABC = "ABC"
+    static let SPACE = "Space"
     
 }

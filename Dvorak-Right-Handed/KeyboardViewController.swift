@@ -137,7 +137,7 @@ class KeyboardViewController: UIInputViewController {
                     proxy.deleteBackward()
                 case CONSTANTS.ENTER :
                     proxy.insertText("\n")
-                case "Space":
+                case CONSTANTS.SPACE:
                     proxy.insertText(" ")
                 case CONSTANTS.GLOBE :
                     self.advanceToNextInputMode()

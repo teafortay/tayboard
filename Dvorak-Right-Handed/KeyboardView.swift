@@ -64,8 +64,9 @@ class KeyboardView: UIView {
     @IBOutlet weak var enterKey: UIButton!
     @IBOutlet weak var shiftKey: UIButton!
     @IBOutlet weak var symKey: UIButton!
+    @IBOutlet weak var spaceKey: UIButton!
     
-   //regular keyboard keys
+    //regular keyboard keys
     @IBOutlet weak var keyA0: UIButton!
     @IBOutlet weak var keyA1: UIButton!
     @IBOutlet weak var keyA2: UIButton!
@@ -189,12 +190,13 @@ class KeyboardView: UIView {
     }
     
     func insertButtonTitles() {
-        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey]
+        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
         let _ = allKeys.map({$0.titleLabel?.font = myFont})
         self.globeKey.setTitle(CONSTANTS.GLOBE, for: .normal)
         self.backspaceKey.setTitle(CONSTANTS.DELETE, for: .normal)
         self.enterKey.setTitle(CONSTANTS.ENTER, for: .normal)
         self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
+        self.spaceKey.setTitle(CONSTANTS.SPACE, for: .normal)
     }
     
    
