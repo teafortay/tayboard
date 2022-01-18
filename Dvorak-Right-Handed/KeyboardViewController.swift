@@ -14,11 +14,19 @@ class KeyboardViewController: UIInputViewController {
     var keyboardHeightConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
-        //TODO: use viewwillload?
         super.viewDidLoad()
         // Perform custom UI setup here
+        
+        let kState: String
+        
         let rect = getKeyboardRectFromBounds()
-        let keyboardView = KeyboardView(frame: rect, kvc: self, state: "Full")
+        let size = max(rect.width, rect.height)
+        if size > 1000 {
+            kState = "Full"
+        } else {
+            kState = "Condensed"
+        }
+        let keyboardView = KeyboardView(frame: rect, kvc: self, state: kState)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
     }
