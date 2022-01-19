@@ -155,10 +155,10 @@ class KeyboardView: UIView {
             
             shift = !shift
             if shift {
-                self.shiftKey.setTitle(CONSTANTS.SHIFT_DOWN , for: .normal)
+                self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             } else {
-                self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
+                self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         } else { //on symbol keyboard
@@ -172,7 +172,7 @@ class KeyboardView: UIView {
         let keys: [UIButton] = regularKeys + [shiftKey] //FIX
         symbols = !symbols
         if symbols {
-            self.symKey.setTitle(CONSTANTS.ABC , for: .normal)
+            self.symKey.setTitle(Constants.ABC , for: .normal)
             if self.nibName.starts(with: "Full") {
                 let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             } else { //condensed
@@ -180,8 +180,8 @@ class KeyboardView: UIView {
             }
         } else { // symbols == false
             let _ = keys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-            self.symKey.setTitle(CONSTANTS.SYMBOL_KEY , for: .normal)
-            self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
+            self.symKey.setTitle(Constants.SYMBOL_KEY , for: .normal)
+            self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
         }
     }
     
@@ -192,11 +192,11 @@ class KeyboardView: UIView {
     func insertButtonTitles() {
         let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
         let _ = allKeys.map({$0.titleLabel?.font = myFont})
-        self.globeKey.setTitle(CONSTANTS.GLOBE, for: .normal)
-        self.backspaceKey.setTitle(CONSTANTS.DELETE, for: .normal)
-        self.enterKey.setTitle(CONSTANTS.ENTER, for: .normal)
-        self.shiftKey.setTitle(CONSTANTS.SHIFT_UP , for: .normal)
-        self.spaceKey.setTitle(CONSTANTS.SPACE, for: .normal)
+        self.globeKey.setTitle(Constants.GLOBE, for: .normal)
+        self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
+        self.enterKey.setTitle(Constants.ENTER, for: .normal)
+        self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
+        self.spaceKey.setTitle(Constants.SPACE, for: .normal)
     }
     
    

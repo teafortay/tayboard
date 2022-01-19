@@ -19,7 +19,7 @@ class KeyboardViewController: UIInputViewController {
         
         let nibPrefix: String
         let rect = getKeyboardRectFromBounds()
-        let screen = CONSTANTS.SCREEN
+        let screen = Constants.SCREEN
         let size = max(screen.width, screen.height)
         if size > 1000 {
             nibPrefix = "Full"
@@ -93,7 +93,7 @@ class KeyboardViewController: UIInputViewController {
     
     
     func getKeyboardRectFromBounds() -> CGRect {
-        let screen = CONSTANTS.SCREEN
+        let screen = Constants.SCREEN
         var rectHeight: CGFloat
         var rectWidth: CGFloat
         if screen.height < 500 {
@@ -133,13 +133,13 @@ class KeyboardViewController: UIInputViewController {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
                 switch title {
-                case CONSTANTS.DELETE :
+                case Constants.DELETE :
                     proxy.deleteBackward()
-                case CONSTANTS.ENTER :
+                case Constants.ENTER :
                     proxy.insertText("\n")
-                case CONSTANTS.SPACE:
+                case Constants.SPACE:
                     proxy.insertText(" ")
-                case CONSTANTS.GLOBE :
+                case Constants.GLOBE :
                     self.advanceToNextInputMode()
                 case "tab":
                     proxy.insertText("    ")
