@@ -429,7 +429,9 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
+                                        <action selector="deleteTouchCancel:" destination="-1" eventType="touchCancel" id="Vcx-Xc-PAO"/>
+                                        <action selector="deleteTouchUpInside:" destination="-1" eventType="touchUpInside" id="s0C-mF-05y"/>
+                                        <action selector="deleteTouchUpOutside:" destination="-1" eventType="touchUpOutside" id="L4Z-Ks-1tU"/>
                                         <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
                                     </connections>
                                 </button>

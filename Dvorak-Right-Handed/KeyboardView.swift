@@ -22,6 +22,8 @@ class KeyboardView: UIView {
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)
     
+    var pp = 0
+    
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
@@ -126,16 +128,26 @@ class KeyboardView: UIView {
           - some : "A10"
         */
         
-        delete = !delete
-        if delete {
-            deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+//        delete = true
+        print(#function, pp)
+        pp += 1
+//        if delete {
+//        if deleteTimer == nil {
+//            deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
                 self.kvc?.textDocumentProxy.deleteBackward()
-            })
+                print("deleting")
+//            })
+//        } else {
+//        // turn off
+//        delete = false
+//            deleteTimer?.invalidate()
+//            deleteTimer = nil
 
-        } else {
-            //do I need to invalidate timer anywhere else?
-            deleteTimer?.invalidate()
-        }
+//        } else {
+//            //do I need to invalidate timer anywhere else?
+//            deleteTimer?.invalidate()
+//            deleteTimer = nil
+//        }
     }
     //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
@@ -144,8 +156,27 @@ class KeyboardView: UIView {
 //
 //    @IBAction func backspaceKeyPress(_ sender: Any) {
 //        kvc?.textDocumentProxy.deleteBackward()
+//        deleteTimer?.invalidate()
+//        deleteTimer = nil
 //    }
-//    @IBAction func enterKeyPree(_ sender: Any) {
+    @IBAction func deleteTouchUpInside(_ sender: Any) {
+        kvc?.textDocumentProxy.deleteBackward()
+        deleteTimer?.invalidate()
+        deleteTimer = nil
+        print(#function, pp)
+    }
+    
+    @IBAction func deleteTouchCancel(_ sender: Any) {
+        deleteTimer?.invalidate()
+        deleteTimer = nil
+        print(#function, pp)
+    }
+    @IBAction func deleteTouchUpOutside(_ sender: Any) {
+        deleteTimer?.invalidate()
+        deleteTimer = nil
+        print(#function, pp)
+    }
+    //    @IBAction func enterKeyPree(_ sender: Any) {
 //        kvc?.textDocumentProxy.insertText("\n")
 //    }
     
