@@ -127,27 +127,23 @@ class KeyboardView: UIView {
         ▿ Optional<String>
           - some : "A10"
         */
-        
-//        delete = true
         print(#function, pp)
         pp += 1
-//        if delete {
-//        if deleteTimer == nil {
-//            deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+        if deleteTimer == nil {
+            deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
                 self.kvc?.textDocumentProxy.deleteBackward()
                 print("deleting")
-//            })
-//        } else {
-//        // turn off
-//        delete = false
-//            deleteTimer?.invalidate()
-//            deleteTimer = nil
-
-//        } else {
-//            //do I need to invalidate timer anywhere else?
-//            deleteTimer?.invalidate()
-//            deleteTimer = nil
-//        }
+            })
+        }
+        if sender.state == .ended {
+            print("end")
+        deleteTimer?.invalidate()
+        deleteTimer = nil
+    }
+        
+        if sender.state == .began {
+            print("began")
+        }
     }
     //keep because might use when i implement TouchDown? taps
 //    @IBAction func globeKeyPress(_ sender: Any) {
@@ -165,17 +161,17 @@ class KeyboardView: UIView {
         deleteTimer = nil
         print(#function, pp)
     }
-    
+    //not sure why this function must be here
     @IBAction func deleteTouchCancel(_ sender: Any) {
         deleteTimer?.invalidate()
         deleteTimer = nil
         print(#function, pp)
     }
-    @IBAction func deleteTouchUpOutside(_ sender: Any) {
-        deleteTimer?.invalidate()
-        deleteTimer = nil
-        print(#function, pp)
-    }
+//    @IBAction func deleteTouchUpOutside(_ sender: Any) {
+//        deleteTimer?.invalidate()
+//        deleteTimer = nil
+//        print(#function, pp)
+//    }
     //    @IBAction func enterKeyPree(_ sender: Any) {
 //        kvc?.textDocumentProxy.insertText("\n")
 //    }
