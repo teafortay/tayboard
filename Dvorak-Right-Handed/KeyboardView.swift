@@ -21,9 +21,7 @@ class KeyboardView: UIView {
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)
-    
-    var pp = 0
-    
+        
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
@@ -127,22 +125,16 @@ class KeyboardView: UIView {
         ▿ Optional<String>
           - some : "A10"
         */
-        print(#function, pp)
-        pp += 1
+
         if deleteTimer == nil {
             deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
                 self.kvc?.textDocumentProxy.deleteBackward()
-                print("deleting")
             })
         }
-        if sender.state == .ended {
-            print("end")
-        deleteTimer?.invalidate()
-        deleteTimer = nil
-    }
         
-        if sender.state == .began {
-            print("began")
+        if sender.state == .ended {
+            deleteTimer?.invalidate()
+            deleteTimer = nil
         }
     }
     //keep because might use when i implement TouchDown? taps
@@ -152,26 +144,14 @@ class KeyboardView: UIView {
 //
 //    @IBAction func backspaceKeyPress(_ sender: Any) {
 //        kvc?.textDocumentProxy.deleteBackward()
-//        deleteTimer?.invalidate()
-//        deleteTimer = nil
 //    }
-    @IBAction func deleteTouchUpInside(_ sender: Any) {
-        kvc?.textDocumentProxy.deleteBackward()
-        deleteTimer?.invalidate()
-        deleteTimer = nil
-        print(#function, pp)
-    }
-    //not sure why this function must be here
-    @IBAction func deleteTouchCancel(_ sender: Any) {
-        deleteTimer?.invalidate()
-        deleteTimer = nil
-        print(#function, pp)
-    }
-//    @IBAction func deleteTouchUpOutside(_ sender: Any) {
+//    @IBAction func deleteTouchUpInside(_ sender: Any) {
+//        kvc?.textDocumentProxy.deleteBackward()
 //        deleteTimer?.invalidate()
 //        deleteTimer = nil
 //        print(#function, pp)
 //    }
+   
     //    @IBAction func enterKeyPree(_ sender: Any) {
 //        kvc?.textDocumentProxy.insertText("\n")
 //    }
