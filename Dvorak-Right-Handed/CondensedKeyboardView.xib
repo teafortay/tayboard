@@ -429,7 +429,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="igX-Pk-5zR"/>
+                                        <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="5YU-CZ-XpQ"/>
                                         <outletCollection property="gestureRecognizers" destination="op4-LL-f5o" appends="YES" id="JLH-uU-FIY"/>
                                     </connections>
                                 </button>

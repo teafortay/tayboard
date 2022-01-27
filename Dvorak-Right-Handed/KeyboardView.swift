@@ -21,7 +21,7 @@ class KeyboardView: UIView {
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)
-    
+        
     //initializers
     init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
@@ -125,16 +125,16 @@ class KeyboardView: UIView {
         ▿ Optional<String>
           - some : "A10"
         */
-        
-        delete = !delete
-        if delete {
+
+        if deleteTimer == nil {
             deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
                 self.kvc?.textDocumentProxy.deleteBackward()
             })
-
-        } else {
-            //do I need to invalidate timer anywhere else?
+        }
+        
+        if sender.state == .ended {
             deleteTimer?.invalidate()
+            deleteTimer = nil
         }
     }
     //keep because might use when i implement TouchDown? taps
@@ -145,7 +145,14 @@ class KeyboardView: UIView {
 //    @IBAction func backspaceKeyPress(_ sender: Any) {
 //        kvc?.textDocumentProxy.deleteBackward()
 //    }
-//    @IBAction func enterKeyPree(_ sender: Any) {
+//    @IBAction func deleteTouchUpInside(_ sender: Any) {
+//        kvc?.textDocumentProxy.deleteBackward()
+//        deleteTimer?.invalidate()
+//        deleteTimer = nil
+//        print(#function, pp)
+//    }
+   
+    //    @IBAction func enterKeyPree(_ sender: Any) {
 //        kvc?.textDocumentProxy.insertText("\n")
 //    }
     
