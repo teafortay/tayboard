@@ -17,7 +17,7 @@ class KeyboardView: UIView {
     var nibName: String = "KeyboardView"
     var shift: Bool = false
     var symbols: Bool = false
-    var delete: Bool = false
+//    var delete: Bool = false
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)

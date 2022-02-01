@@ -54,6 +54,7 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        print("transitioning")
         let rect = getKeyboardRectFromBounds()
         keyboardView?.frame = rect
         keyboardHeightConstraint?.constant = rect.height
@@ -94,6 +95,7 @@ class KeyboardViewController: UIInputViewController {
     
     func getKeyboardRectFromBounds() -> CGRect {
         let screen = Constants.SCREEN
+//        let screen = self.view.bounds
         var rectHeight: CGFloat
         var rectWidth: CGFloat
         if screen.height < 500 {
@@ -109,6 +111,7 @@ class KeyboardViewController: UIInputViewController {
             }
         } else {
             //landscape
+            print("landscape")
             if screen.height < 700 {
                 rectHeight = screen.height/2
             } else {
@@ -117,8 +120,11 @@ class KeyboardViewController: UIInputViewController {
             }
         }
         //make width match safe area
-//        print("screen: ", screen.height)
+//        print("screen height: ", screen.height)
+//        print("screen width: ", screen.width)
 //        print("rect: ", rectHeight)
+        print("bounds: '", self.view.bounds.width, self.view.bounds.height)
+        
         rectWidth = self.view.bounds.size.width
         if rectWidth == 0.0 {
             rectWidth = screen.width
