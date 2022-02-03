@@ -20,6 +20,5 @@ struct Constants {
     static let ABC = "ABC"
     static let SPACE = "Space"
     
-    static let SCREEN = UIScreen.main.bounds.size
     
 }
