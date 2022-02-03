@@ -13,13 +13,23 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: KeyboardView?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
+//    override func viewWillAppear(_ animated: Bool) {
+//            super.viewWillAppear(animated)
+//            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+//        }
+//
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//            UIDevice.current.endGeneratingDeviceOrientationNotifications()
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Perform custom UI setup here
         
+        // Perform custom UI setup here
         let nibPrefix: String
         let rect = getKeyboardRectFromBounds()
-        let screen = Constants.SCREEN
+        let screen = UIScreen.main.bounds
         let size = max(screen.width, screen.height)
         if size > 1000 {
             nibPrefix = "Full"
@@ -94,8 +104,7 @@ class KeyboardViewController: UIInputViewController {
     
     
     func getKeyboardRectFromBounds() -> CGRect {
-        let screen = Constants.SCREEN
-//        let screen = self.view.bounds
+        let screen = UIScreen.main.bounds
         var rectHeight: CGFloat
         var rectWidth: CGFloat
         if screen.height < 500 {
@@ -111,7 +120,6 @@ class KeyboardViewController: UIInputViewController {
             }
         } else {
             //landscape
-            print("landscape")
             if screen.height < 700 {
                 rectHeight = screen.height/2
             } else {
@@ -119,12 +127,13 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = screen.height * 0.45
             }
         }
-        //make width match safe area
-//        print("screen height: ", screen.height)
-//        print("screen width: ", screen.width)
-//        print("rect: ", rectHeight)
-        print("bounds: '", self.view.bounds.width, self.view.bounds.height)
+//        if UIDevice.current.orientation.isLandscape {
+//                       print("Landscape")
+//        } else if UIDevice.current.orientation.isPortrait {
+//                       print("Portrait")
+//        }
         
+        //make width match safe area
         rectWidth = self.view.bounds.size.width
         if rectWidth == 0.0 {
             rectWidth = screen.width
