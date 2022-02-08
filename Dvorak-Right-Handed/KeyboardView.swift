@@ -169,7 +169,8 @@ class KeyboardView: UIView {
                 let _ = regularKeys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         } else { //on symbol keyboard
-            kvc?.didTapButton(sender) //FIX
+            self.shiftKey.setTitle("+", for: .normal)
+            let _ = regularKeys.map({$0.setTitle(KeysModel.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         }
     }
     

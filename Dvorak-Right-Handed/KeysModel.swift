@@ -15,6 +15,9 @@
  Each button is given a restoration id in the xib file. These ids correspond to the keys
  in the following dictionaries. The values correspond to the appropriate button titles.
  KeyboardView.swift then uses a map function to insert the appropriate title.
+ 
+ Note: I swapped A10 (delete/ backspace) with D10. So D10 actually appears on the top row.
+ The condensed keyboard is missing keys A2, A3, B0, B1, C0, C1, D1, D2
  */
 
 import Foundation
