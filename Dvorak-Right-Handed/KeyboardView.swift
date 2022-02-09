@@ -15,14 +15,17 @@ class KeyboardView: UIView {
     
     weak var kvc: KeyboardViewController?
     var nibName: String = "KeyboardView"
-    var shift: Bool = false
-    var symbols: Bool = false
-//    var delete: Bool = false
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
     let myFont = UIFont.systemFont(ofSize: 24.0)
-        
-    //initializers
+    
+    //MARK: the following variables are used to determine which keyboard to display
+    var shift: Bool = false
+    var symbol: Bool = false
+    var greek: Bool = false
+    
+    
+    //MARK: initializers
     init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
         self.nibName = nibPrefix + nibName 
@@ -58,7 +61,7 @@ class KeyboardView: UIView {
     }
     
     
-    //special keys - outlet to insert titles
+    //MARK: special keys - outlet to insert titles
     @IBOutlet weak var globeKey: UIButton!
     @IBOutlet weak var backspaceKey: UIButton!
     @IBOutlet weak var enterKey: UIButton!
@@ -66,7 +69,7 @@ class KeyboardView: UIView {
     @IBOutlet weak var symKey: UIButton!
     @IBOutlet weak var spaceKey: UIButton!
     
-    //regular keyboard keys
+    //MARK: regular keyboard keys
     @IBOutlet weak var keyA0: UIButton!
     @IBOutlet weak var keyA1: UIButton!
     @IBOutlet weak var keyA2: UIButton!
@@ -112,7 +115,8 @@ class KeyboardView: UIView {
     @IBOutlet weak var keyD9: UIButton!
     @IBOutlet weak var keyD10: UIButton!
     
-    //begin key press actions
+    
+//    MARK: begin key press actions
     @IBAction func doubleTapSpace(_ sender: Any) {
         //get rid of space added by 1st click
         kvc?.textDocumentProxy.deleteBackward()
@@ -158,7 +162,7 @@ class KeyboardView: UIView {
     
     @IBAction func shiftKeyPress(_ sender: Any) {
 
-        if !symbols {
+        if !symbol {
             
             shift = !shift
             if shift {
@@ -169,18 +173,25 @@ class KeyboardView: UIView {
                 let _ = regularKeys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         } else { //on symbol keyboard
-            self.shiftKey.setTitle("+", for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeysModel.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            greek = !greek
+            if greek {
+                self.shiftKey.setTitle("123", for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeysModel.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            } else {
+                self.shiftKey.setTitle("αβ..", for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeysModel.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            }
         }
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
         
         //TODO: refactor
-        let keys: [UIButton] = regularKeys + [shiftKey] //FIX
-        symbols = !symbols
-        if symbols {
+        let keys: [UIButton] = regularKeys
+        symbol = !symbol
+        if symbol {
             self.symKey.setTitle(Constants.ABC , for: .normal)
+            self.shiftKey.setTitle("αβ..", for: .normal)
 //            if self.nibName.starts(with: "Full") {
 //                let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
 //            } else { //condensed
