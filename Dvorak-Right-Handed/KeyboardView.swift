@@ -181,12 +181,11 @@ class KeyboardView: UIView {
         symbols = !symbols
         if symbols {
             self.symKey.setTitle(Constants.ABC , for: .normal)
-            if self.nibName.starts(with: "Full") {
-                let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-            } else { //condensed
-                let _ = keys.map({$0.setTitle(KeysModel.symKeysCondensed[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-            }
-        } else { // symbols == false
+//            if self.nibName.starts(with: "Full") {
+//                let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+//            } else { //condensed
+            let _ = keys.map({$0.setTitle(KeysModel.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            } else { // symbols == false
             let _ = keys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             self.symKey.setTitle(Constants.SYMBOL_KEY , for: .normal)
             self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
