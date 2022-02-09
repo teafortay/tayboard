@@ -175,10 +175,10 @@ class KeyboardView: UIView {
         } else { //on symbol keyboard
             greek = !greek
             if greek {
-                self.shiftKey.setTitle("123", for: .normal)
+                self.shiftKey.setTitle(Constants.NUM, for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             } else {
-                self.shiftKey.setTitle("αβ..", for: .normal)
+                self.shiftKey.setTitle(Constants.GREEK, for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         }
@@ -191,7 +191,7 @@ class KeyboardView: UIView {
         symbol = !symbol
         if symbol {
             self.symKey.setTitle(Constants.ABC , for: .normal)
-            self.shiftKey.setTitle("αβ..", for: .normal)
+            self.shiftKey.setTitle(Constants.GREEK, for: .normal)
 //            if self.nibName.starts(with: "Full") {
 //                let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
 //            } else { //condensed
