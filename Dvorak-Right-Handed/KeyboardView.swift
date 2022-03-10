@@ -17,7 +17,6 @@ class KeyboardView: UIView {
     var nibName: String = "KeyboardView"
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
-//    let myFont = UIFont.systemFont(ofSize: 24.0)
     
     //MARK: the following variables are used to determine which keyboard to display
     var shift: Bool = false
@@ -208,7 +207,10 @@ class KeyboardView: UIView {
     }
     
     func insertButtonTitles() {
-//        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
+        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
+        let myFont = UIFont.systemFont(ofSize: 24.0)
+        let _ = allKeys.map({$0.titleLabel?.font = myFont})
+        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
 //        let _ = allKeys.map({$0.titleLabel?.font = myFont})
         self.globeKey.setTitle(Constants.GLOBE, for: .normal)
         self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
