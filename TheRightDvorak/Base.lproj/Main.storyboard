@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pao-QT-9dP">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="551.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="516.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Right Dvorak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-AV-t1o">
                                                 <rect key="frame" x="118" y="0.0" width="178" height="50"/>
@@ -32,12 +32,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the text box below to test your keyboards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-Uh-xmv">
-                                                <rect key="frame" x="33" y="59.999999999999993" width="348" height="20.666666666666664"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the text box below to test your keyboards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-Uh-xmv">
+                                                <rect key="frame" x="59" y="59.999999999999993" width="296" height="20.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20.670000000000002" id="gmB-D4-PQ0"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -49,21 +49,21 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-sl-nFF">
-                                                <rect key="frame" x="30" y="130.66666666666663" width="354" height="162.33333333333337"/>
-                                                <string key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-sl-nFF">
+                                                <rect key="frame" x="30" y="130.66666666666666" width="354" height="149.99999999999997"/>
+                                                <mutableString key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</mutableString>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <string key="userLabel">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</string>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-kx-T3f">
-                                                <rect key="frame" x="15" y="303" width="384" height="248.33333333333337"/>
-                                                <mutableString key="text">Privacy Policy:
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-kx-T3f">
+                                                <rect key="frame" x="15" y="290.66666666666669" width="384" height="226.00000000000006"/>
+                                                <string key="text">Privacy Policy:
 Privacy is very important to us. To the best of our knowledge, The Right Dvorak does not collect any information from the user. We do not use or share user data, because we do not collect any. We will update this document if we start collecting information, of any kind. We will also update this document if we find out that we actually are collecting information.  
 
-Anyone can access this document, our privacy policy, by visiting this website: http://taylorcodeshop.com/theRightDvorak </mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+Anyone can access this document, our privacy policy, by visiting this website: http://taylorcodeshop.com/theRightDvorak </string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
