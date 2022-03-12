@@ -477,7 +477,7 @@
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -497,7 +497,7 @@
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
 				PROVISIONING_PROFILE_SPECIFIER = theRightDvorakAppStoreDist;
