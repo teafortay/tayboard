@@ -20,7 +20,7 @@ struct Constants {
     static let ABC = "ABC"
     static let NUM = "+="
     static let GREEK = "αβ"
-    static let SPACE = "Space"
+    static let SPACE = "space"
     
     
 }
