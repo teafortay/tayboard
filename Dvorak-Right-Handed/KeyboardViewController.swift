@@ -141,6 +141,12 @@ class KeyboardViewController: UIInputViewController {
         let rect = CGRect(x: 0.0, y: 0.0, width: rectWidth, height: rectHeight)
         return rect
     }
+    
+    func doubleTapSpace(_ sender: Any) {
+        //get rid of space added by 1st click
+        self.textDocumentProxy.deleteBackward()
+        self.textDocumentProxy.insertText(".")
+    }
 
     func didTapButton(_ sender: Any) {
         

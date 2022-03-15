@@ -117,9 +117,11 @@ class KeyboardView: UIView {
     
 //    MARK: begin key press actions
     @IBAction func doubleTapSpace(_ sender: Any) {
-        //get rid of space added by 1st click
-        kvc?.textDocumentProxy.deleteBackward()
-        kvc?.textDocumentProxy.insertText(".")
+        kvc?.doubleTapSpace(sender)
+        //change to upKeys
+        self.shift = true
+        self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
+        let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
     }
 
     @IBAction func deleteKeyLongPress(sender: UILongPressGestureRecognizer) {
@@ -162,20 +164,23 @@ class KeyboardView: UIView {
     @IBAction func shiftKeyPress(_ sender: Any) {
 
         if !symbol {
-            
             shift = !shift
+            
             if shift {
                 self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                
             } else {
                 self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
+            
         } else { //on symbol keyboard
             greek = !greek
             if greek {
                 self.shiftKey.setTitle(Constants.NUM, for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                
             } else {
                 self.shiftKey.setTitle(Constants.GREEK, for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
@@ -184,18 +189,15 @@ class KeyboardView: UIView {
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
-        
-        //TODO: refactor
         let keys: [UIButton] = regularKeys
         symbol = !symbol
+        
         if symbol {
             self.symKey.setTitle(Constants.ABC , for: .normal)
             self.shiftKey.setTitle(Constants.GREEK, for: .normal)
-//            if self.nibName.starts(with: "Full") {
-//                let _ = keys.map({$0.setTitle(KeysModel.symKeysFull[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-//            } else { //condensed
             let _ = keys.map({$0.setTitle(KeysModel.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-            } else { // symbols == false
+            
+        } else { // symbols == false
             let _ = keys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             self.symKey.setTitle(Constants.SYMBOL_KEY , for: .normal)
             self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
