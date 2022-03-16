@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="y0b-rm-UMJ">
             <objects>
-                <viewController id="nkB-DE-B4z" sceneMemberID="viewController">
+                <viewController id="nkB-DE-B4z" customClass="ViewController" customModule="The_Right_Dvorak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2NP-qo-1EZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-sl-nFF">
                                                 <rect key="frame" x="30" y="124.33333333333334" width="354" height="150.00000000000003"/>
-                                                <mutableString key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</mutableString>
+                                                <string key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
