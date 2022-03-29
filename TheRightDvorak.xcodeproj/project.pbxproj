@@ -15,11 +15,14 @@
 		345BF97B2016B87700E3F9CB /* TheRightDvorakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF97A2016B87700E3F9CB /* TheRightDvorakTests.swift */; };
 		345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3DFDF726BA3DB99971E53FE1 /* Pods_TheRightDvorak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F66566BBB3178A878EDB93 /* Pods_TheRightDvorak.framework */; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
 		4ACFC6C626C6248800504F3A /* KeysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFC6C526C6248800504F3A /* KeysModel.swift */; };
 		4AFC1D2C2787F6130047DEBC /* FullKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
+		4C185FDA572C0C7B51A3377A /* Pods_TheRightDvorakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2D3C69D3C27BCD95469C1A /* Pods_TheRightDvorakTests.framework */; };
+		C030A857468236D5877CA566 /* Pods_Dvorak_Right_Handed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFAFE8E3D250529435BD4BC /* Pods_Dvorak_Right_Handed.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		109A618BD6B549A8C5AEC8FD /* Pods-TheRightDvorakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRightDvorakTests.release.xcconfig"; path = "Target Support Files/Pods-TheRightDvorakTests/Pods-TheRightDvorakTests.release.xcconfig"; sourceTree = "<group>"; };
+		19F66566BBB3178A878EDB93 /* Pods_TheRightDvorak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheRightDvorak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345BF9622016B87600E3F9CB /* The Right Dvorak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Right Dvorak.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		345BF9652016B87600E3F9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		345BF9672016B87600E3F9CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +77,13 @@
 		4ACBFBC3279739D700E2D364 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4ACFC6C526C6248800504F3A /* KeysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysModel.swift; sourceTree = "<group>"; };
 		4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullKeyboardView.xib; sourceTree = "<group>"; };
+		5318F3E5D08BD22188AD3B41 /* Pods-TheRightDvorakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRightDvorakTests.debug.xcconfig"; path = "Target Support Files/Pods-TheRightDvorakTests/Pods-TheRightDvorakTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB3CC8D23D01A41F628DD44 /* Pods-TheRightDvorak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRightDvorak.debug.xcconfig"; path = "Target Support Files/Pods-TheRightDvorak/Pods-TheRightDvorak.debug.xcconfig"; sourceTree = "<group>"; };
+		6E2D3C69D3C27BCD95469C1A /* Pods_TheRightDvorakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheRightDvorakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A75579D1B9405EC83FD701 /* Pods-Dvorak-Right-Handed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dvorak-Right-Handed.release.xcconfig"; path = "Target Support Files/Pods-Dvorak-Right-Handed/Pods-Dvorak-Right-Handed.release.xcconfig"; sourceTree = "<group>"; };
+		8FFAFE8E3D250529435BD4BC /* Pods_Dvorak_Right_Handed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dvorak_Right_Handed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC261B6105653D324BFB6C9F /* Pods-Dvorak-Right-Handed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dvorak-Right-Handed.debug.xcconfig"; path = "Target Support Files/Pods-Dvorak-Right-Handed/Pods-Dvorak-Right-Handed.debug.xcconfig"; sourceTree = "<group>"; };
+		F4E7E14F159ED6A2C537D62C /* Pods-TheRightDvorak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRightDvorak.release.xcconfig"; path = "Target Support Files/Pods-TheRightDvorak/Pods-TheRightDvorak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFDF726BA3DB99971E53FE1 /* Pods_TheRightDvorak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C185FDA572C0C7B51A3377A /* Pods_TheRightDvorakTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C030A857468236D5877CA566 /* Pods_Dvorak_Right_Handed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +121,8 @@
 				345BF9792016B87700E3F9CB /* TheRightDvorakTests */,
 				345BF98A2016B8DF00E3F9CB /* Dvorak-Right-Handed */,
 				345BF9632016B87600E3F9CB /* Products */,
+				8071FC57864574526421F403 /* Pods */,
+				67B0DAB779EEF72ED10979C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +172,30 @@
 			path = "Dvorak-Right-Handed";
 			sourceTree = "<group>";
 		};
+		67B0DAB779EEF72ED10979C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FFAFE8E3D250529435BD4BC /* Pods_Dvorak_Right_Handed.framework */,
+				19F66566BBB3178A878EDB93 /* Pods_TheRightDvorak.framework */,
+				6E2D3C69D3C27BCD95469C1A /* Pods_TheRightDvorakTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8071FC57864574526421F403 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC261B6105653D324BFB6C9F /* Pods-Dvorak-Right-Handed.debug.xcconfig */,
+				81A75579D1B9405EC83FD701 /* Pods-Dvorak-Right-Handed.release.xcconfig */,
+				5FB3CC8D23D01A41F628DD44 /* Pods-TheRightDvorak.debug.xcconfig */,
+				F4E7E14F159ED6A2C537D62C /* Pods-TheRightDvorak.release.xcconfig */,
+				5318F3E5D08BD22188AD3B41 /* Pods-TheRightDvorakTests.debug.xcconfig */,
+				109A618BD6B549A8C5AEC8FD /* Pods-TheRightDvorakTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,10 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 345BF97F2016B87700E3F9CB /* Build configuration list for PBXNativeTarget "TheRightDvorak" */;
 			buildPhases = (
+				C991A967FB09464F31795879 /* [CP] Check Pods Manifest.lock */,
 				345BF95E2016B87600E3F9CB /* Sources */,
 				345BF95F2016B87600E3F9CB /* Frameworks */,
 				345BF9602016B87600E3F9CB /* Resources */,
 				345BF9942016B8DF00E3F9CB /* Embed App Extensions */,
+				27C6FCE1684D2482B5BECDE1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 345BF9822016B87700E3F9CB /* Build configuration list for PBXNativeTarget "TheRightDvorakTests" */;
 			buildPhases = (
+				67DFD25C62162C6105F44937 /* [CP] Check Pods Manifest.lock */,
 				345BF9722016B87700E3F9CB /* Sources */,
 				345BF9732016B87700E3F9CB /* Frameworks */,
 				345BF9742016B87700E3F9CB /* Resources */,
@@ -199,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 345BF9912016B8DF00E3F9CB /* Build configuration list for PBXNativeTarget "Dvorak-Right-Handed" */;
 			buildPhases = (
+				2B0249B1303833927CAA6AEB /* [CP] Check Pods Manifest.lock */,
 				345BF9852016B8DF00E3F9CB /* Sources */,
 				345BF9862016B8DF00E3F9CB /* Frameworks */,
 				345BF9872016B8DF00E3F9CB /* Resources */,
@@ -288,6 +333,93 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27C6FCE1684D2482B5BECDE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheRightDvorak/Pods-TheRightDvorak-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheRightDvorak/Pods-TheRightDvorak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B0249B1303833927CAA6AEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dvorak-Right-Handed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67DFD25C62162C6105F44937 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheRightDvorakTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C991A967FB09464F31795879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheRightDvorak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		345BF95E2016B87600E3F9CB /* Sources */ = {
@@ -468,6 +600,7 @@
 		};
 		345BF9802016B87700E3F9CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB3CC8D23D01A41F628DD44 /* Pods-TheRightDvorak.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -488,6 +621,7 @@
 		};
 		345BF9812016B87700E3F9CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E7E14F159ED6A2C537D62C /* Pods-TheRightDvorak.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -508,6 +642,7 @@
 		};
 		345BF9832016B87700E3F9CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5318F3E5D08BD22188AD3B41 /* Pods-TheRightDvorakTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +660,7 @@
 		};
 		345BF9842016B87700E3F9CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 109A618BD6B549A8C5AEC8FD /* Pods-TheRightDvorakTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,6 +678,7 @@
 		};
 		345BF9922016B8DF00E3F9CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC261B6105653D324BFB6C9F /* Pods-Dvorak-Right-Handed.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -561,6 +698,7 @@
 		};
 		345BF9932016B8DF00E3F9CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81A75579D1B9405EC83FD701 /* Pods-Dvorak-Right-Handed.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
