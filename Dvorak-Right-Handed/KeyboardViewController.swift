@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import DeviceKit
 
 class KeyboardViewController: UIInputViewController {
     
     var keyboardView: KeyboardView?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
+    let device = Device.current
+//    print(device)
 //    override func viewWillAppear(_ animated: Bool) {
 //            super.viewWillAppear(animated)
 //            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
@@ -28,15 +31,19 @@ class KeyboardViewController: UIInputViewController {
         
         // Perform custom UI setup here
         let nibPrefix: String
-        let rect = getKeyboardRectFromBounds()
-        let screen = UIScreen.main.bounds
-        let size = max(screen.width, screen.height)
+        var needGlobe: Bool = true
+        let rect: CGRect = getKeyboardRectFromBounds()
+        let screen: CGRect = UIScreen.main.bounds
+        let size: CGFloat = max(screen.width, screen.height)
         if size > 1000 {
             nibPrefix = "Full"
         } else {
             nibPrefix = "Condensed"
         }
-        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
+        if device.isOneOf(Constants.devicesWithBuiltInGlobe) {
+            needGlobe = false
+        }
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix, needGlobeKey: needGlobe)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
     }
@@ -160,8 +167,10 @@ class KeyboardViewController: UIInputViewController {
                     proxy.insertText("\n")
                 case Constants.SPACE:
                     proxy.insertText(" ")
-                case Constants.GLOBE :
+                case Constants.GLOBE:
                     self.advanceToNextInputMode()
+                case Constants.ESCAPE :
+                    self.dismissKeyboard()
                 case "tab":
                     proxy.insertText("    ")
                 default :

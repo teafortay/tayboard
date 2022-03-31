@@ -19,15 +19,17 @@ class KeyboardView: UIView {
     var regularKeys: [UIButton] = []
     
     //MARK: the following variables are used to determine which keyboard to display
-    var shift: Bool = false
+    var shifted: Bool = false
     var symbol: Bool = false
     var greek: Bool = false
+    var needGlobeKey: Bool = true
     
     
     //MARK: initializers
-    init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
+    init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String, needGlobeKey: Bool) {
         self.kvc = kvc
-        self.nibName = nibPrefix + nibName 
+        self.nibName = nibPrefix + nibName
+        self.needGlobeKey = needGlobeKey
         super.init(frame: frame)
         commonInit()
     }
@@ -119,7 +121,7 @@ class KeyboardView: UIView {
     @IBAction func doubleTapSpace(_ sender: Any) {
         kvc?.doubleTapSpace(sender)
         //change to upKeys
-        self.shift = true
+        self.shifted = true
         self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
         let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
     }
@@ -164,9 +166,9 @@ class KeyboardView: UIView {
     @IBAction func shiftKeyPress(_ sender: Any) {
 
         if !symbol {
-            shift = !shift
+            shifted = !shifted
             
-            if shift {
+            if shifted {
                 self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
                 let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
                 
@@ -209,6 +211,16 @@ class KeyboardView: UIView {
     }
     
     func insertButtonTitles() {
+        
+        if needGlobeKey {
+            self.globeKey.setTitle(Constants.GLOBE, for: .normal)
+        } else {
+            self.globeKey.setTitle(Constants.ESCAPE, for: .normal)
+        }
+        self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
+        self.enterKey.setTitle(Constants.ENTER, for: .normal)
+        self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
+        self.spaceKey.setTitle(Constants.SPACE, for: .normal)
         let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
         let myFont = UIFont.systemFont(ofSize: 24.0)
         
@@ -217,11 +229,7 @@ class KeyboardView: UIView {
         let _ = allKeys.map({$0.layer.cornerRadius = 6.0})
         let _ = allKeys.map({$0.layer.masksToBounds = true})
         
-        self.globeKey.setTitle(Constants.GLOBE, for: .normal)
-        self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
-        self.enterKey.setTitle(Constants.ENTER, for: .normal)
-        self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
-        self.spaceKey.setTitle(Constants.SPACE, for: .normal)
+        
     }
     
    
