@@ -169,6 +169,7 @@ class KeyboardViewController: UIInputViewController {
                     proxy.insertText(" ")
                 case Constants.GLOBE:
                     self.advanceToNextInputMode()
+//                    self.handleInputModeList(from: keyboardView!, with: UIEvent())
                 case Constants.ESCAPE :
                     self.dismissKeyboard()
                 case "tab":

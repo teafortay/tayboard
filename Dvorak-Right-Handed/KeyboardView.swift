@@ -217,6 +217,7 @@ class KeyboardView: UIView {
         } else {
             self.globeKey.setTitle(Constants.ESCAPE, for: .normal)
         }
+//        self.globeKey.addTarget(self, action: #selector(kvc?.handleInputModeList(from:with:)), for: .allTouchEvents)
         self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
         self.enterKey.setTitle(Constants.ENTER, for: .normal)
         self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
