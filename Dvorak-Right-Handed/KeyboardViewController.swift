@@ -180,6 +180,13 @@ class KeyboardViewController: UIInputViewController {
             }
         }
     }
+    
+    func didDragButton(_ sender: Any, shifted: Bool, symbols: Bool, greek: Bool) {
+        //instead of dtermining proper insertion text based on boolean values,
+        //will create button class with alternative hitle displayed on button
+        //then can determine alternative title based on sender?
+        self.textDocumentProxy.insertText("%")
+    }
 
 //end class
 }
