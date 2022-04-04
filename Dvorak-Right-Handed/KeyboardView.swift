@@ -60,7 +60,28 @@ class KeyboardView: UIView {
         }
         insertButtonTitles()
     }
-    
+    func insertButtonTitles() {
+        
+        if needGlobeKey {
+            self.globeKey.setTitle(Constants.GLOBE, for: .normal)
+        } else {
+            self.globeKey.setTitle(Constants.ESCAPE, for: .normal)
+        }
+//        self.globeKey.addTarget(self, action: #selector(kvc?.handleInputModeList(from:with:)), for: .allTouchEvents)
+        self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
+        self.enterKey.setTitle(Constants.ENTER, for: .normal)
+        self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
+        self.spaceKey.setTitle(Constants.SPACE, for: .normal)
+        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
+        let myFont = UIFont.systemFont(ofSize: 24.0)
+        
+        let _ = allKeys.map({$0.titleLabel?.font = myFont})
+        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
+        let _ = allKeys.map({$0.layer.cornerRadius = 6.0})
+        let _ = allKeys.map({$0.layer.masksToBounds = true})
+        
+        
+    }
     
     //MARK: special keys - outlet to insert titles
     @IBOutlet weak var globeKey: UIButton!
@@ -206,33 +227,30 @@ class KeyboardView: UIView {
         }
     }
     
+    @IBAction func touchDragOutside(_ sender: Any) {
+        //fires ~15 times
+        kvc?.textDocumentProxy.insertText("!")
+    }
+    
+    @IBAction func touchUpOutside(_ sender: Any) {
+        kvc?.textDocumentProxy.insertText("%")
+        //insersts when you release button
+    }
+    @IBAction func touchDown(_ sender: Any) {
+        kvc?.textDocumentProxy.insertText("@")
+        //also inserts from touchupinside, regardless of hold
+    }
+    @IBAction func touchDragEnter(_ sender: Any) {
+        kvc?.textDocumentProxy.insertText("#")
+        //never trigured
+    }
+    @IBAction func touchDragExit(_ sender: Any) {
+        kvc?.textDocumentProxy.insertText("$")
+        //inserts when you drag out of button bounds
+    }
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
     }
-    
-    func insertButtonTitles() {
-        
-        if needGlobeKey {
-            self.globeKey.setTitle(Constants.GLOBE, for: .normal)
-        } else {
-            self.globeKey.setTitle(Constants.ESCAPE, for: .normal)
-        }
-//        self.globeKey.addTarget(self, action: #selector(kvc?.handleInputModeList(from:with:)), for: .allTouchEvents)
-        self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
-        self.enterKey.setTitle(Constants.ENTER, for: .normal)
-        self.shiftKey.setTitle(Constants.SHIFT_UP , for: .normal)
-        self.spaceKey.setTitle(Constants.SPACE, for: .normal)
-        let allKeys: [UIButton] = regularKeys + [globeKey, backspaceKey, enterKey, shiftKey, symKey, spaceKey]
-        let myFont = UIFont.systemFont(ofSize: 24.0)
-        
-        let _ = allKeys.map({$0.titleLabel?.font = myFont})
-        let _ = allKeys.map({$0.titleLabel?.adjustsFontSizeToFitWidth = true})
-        let _ = allKeys.map({$0.layer.cornerRadius = 6.0})
-        let _ = allKeys.map({$0.layer.masksToBounds = true})
-        
-        
-    }
-    
-   
+
 
 }
