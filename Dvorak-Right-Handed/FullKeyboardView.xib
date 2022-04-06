@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -79,7 +78,6 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Gla-uF-pwf"/>
-                                        <action selector="touchDragOutside:" destination="-1" eventType="touchDragOutside" id="ceJ-Ay-JQk"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zV-5N-oxw">
@@ -91,7 +89,6 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="U5C-8S-zcn"/>
-                                        <action selector="touchDown:" destination="-1" eventType="touchDown" id="ffh-Sy-ahc"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-LU-Ksd">
@@ -102,7 +99,6 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="6WB-z3-DMt"/>
-                                        <action selector="touchDragEnter:" destination="-1" eventType="touchDragEnter" id="hdY-v4-WUQ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eJ-CI-YWO">
@@ -113,7 +109,6 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="xg4-fJ-DOU"/>
-                                        <action selector="touchDragExit:" destination="-1" eventType="touchDragExit" id="nJb-DV-2z3"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-2l-bMz">
@@ -199,6 +194,9 @@
                                     <state key="normal" title="5">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <buttonConfiguration key="configuration" style="plain" title="5">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    </buttonConfiguration>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="44p-zP-vpO"/>
                                         <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="ZJH-LB-ZJY"/>

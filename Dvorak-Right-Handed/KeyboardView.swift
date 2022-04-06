@@ -11,6 +11,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension 15.0, *)
 class KeyboardView: UIView {
     
     weak var kvc: KeyboardViewController?
@@ -80,6 +81,7 @@ class KeyboardView: UIView {
         let _ = allKeys.map({$0.layer.cornerRadius = 6.0})
         let _ = allKeys.map({$0.layer.masksToBounds = true})
         
+        self.keyB0.subtitleLabel?.text = "%"
         
     }
     
