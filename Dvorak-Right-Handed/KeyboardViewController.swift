@@ -156,36 +156,49 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func didTapButton(_ sender: Any) {
-        
-        if let button = sender as? UIButton {
-            if let title = button.title(for: .normal) {
-                let proxy = textDocumentProxy as UITextDocumentProxy
-                switch title {
-                case Constants.DELETE :
-                    proxy.deleteBackward()
-                case Constants.ENTER :
-                    proxy.insertText("\n")
-                case Constants.SPACE:
-                    proxy.insertText(" ")
-                case Constants.GLOBE:
-                    self.advanceToNextInputMode()
-//                    self.handleInputModeList(from: keyboardView!, with: UIEvent())
-                case Constants.ESCAPE :
-                    self.dismissKeyboard()
-                case "tab":
-                    proxy.insertText("    ")
-                default :
-                    proxy.insertText(title)
-                }
-            }
+        let proxy = textDocumentProxy as UITextDocumentProxy
+//        if let button = sender as? UIButton {
+        guard let button = sender as? UIButton else { return }
+        guard let title = button.title(for: .normal) else { return }
+                
+        switch title {
+        case Constants.DELETE :
+            proxy.deleteBackward()
+        case Constants.ENTER :
+            proxy.insertText("\n")
+        case Constants.SPACE:
+            proxy.insertText(" ")
+        case Constants.GLOBE:
+            self.advanceToNextInputMode()
+//          self.handleInputModeList(from: keyboardView!, with: UIEvent())
+        case Constants.ESCAPE :
+            self.dismissKeyboard()
+        case "tab":
+            proxy.insertText("    ")
+        default :
+            proxy.insertText(title)
         }
     }
     
     func didDragButton(_ sender: Any, shifted: Bool, symbols: Bool, greek: Bool) {
-        //instead of dtermining proper insertion text based on boolean values,
-        //will create button class with alternative hitle displayed on button
-        //then can determine alternative title based on sender?
-        self.textDocumentProxy.insertText("%")
+        let proxy = textDocumentProxy as UITextDocumentProxy
+        var insertionText: String = "☂︎"
+        guard let button = sender as? UIButton else { return }
+        if let id = button.restorationIdentifier {
+            if symbols {
+                if greek { //on greek keyboard, alternative is symbols
+                    insertionText = KeysModel.symKeys[id] ?? insertionText
+                } else { // on symbol keyboard, alternative is greek
+                    insertionText = KeysModel.greekKeys[id] ?? insertionText
+                } //on regular keyboard
+            } else if shifted {
+                insertionText = KeysModel.downKeys[id] ?? insertionText
+            } else {
+                insertionText = KeysModel.upKeys[id] ?? insertionText
+            }
+        }
+        
+        proxy.insertText(insertionText)
     }
 
 //end class
