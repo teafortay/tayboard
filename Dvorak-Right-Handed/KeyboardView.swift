@@ -229,20 +229,11 @@ class KeyboardView: UIView {
         }
     }
     
-    
     @IBAction func touchUpOutside(_ sender: Any) {
         kvc?.didDragButton(sender, shifted: self.shifted, symbols: self.symbol, greek: self.greek)
         //insersts when you release button
     }
   
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func keysPress(_ sender: Any) {
         //touchUpInside
         kvc?.didTapButton(sender)

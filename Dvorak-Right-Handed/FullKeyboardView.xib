@@ -78,6 +78,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Gla-uF-pwf"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="7DE-ty-ASY"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zV-5N-oxw">
@@ -100,6 +101,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="6WB-z3-DMt"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="HQ6-z4-ff4"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eJ-CI-YWO">
@@ -110,6 +112,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="xg4-fJ-DOU"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="Kog-57-z3r"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-2l-bMz">
@@ -120,6 +123,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Taw-jb-oIM"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="uDo-MX-ujh"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6Q-Vj-AeX">
@@ -130,6 +134,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Xkn-jd-jew"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="8fH-Qc-Wdh"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-cB-jjI">
@@ -140,6 +145,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="XMp-oi-WBn"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="VU2-CK-M4i"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-Q0-VSS">
@@ -150,6 +156,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="d9K-22-nym"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="fck-Vj-R57"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-sl-OwL">
@@ -161,6 +168,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="ZPp-fa-Z8V"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="s4E-Bv-zVe"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7O-3L-ULF">
@@ -171,6 +179,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="SK5-WB-u0L"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="yjs-1v-LI5"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-P9-NxP">
@@ -181,6 +190,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9U0-Bh-sW8"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="Nhk-Ux-6p1"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -211,6 +221,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="uIp-kH-iMc"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="llL-1O-NfX"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-5Z-gQX">
@@ -221,6 +232,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="NqX-Bw-bmY"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="oeK-l6-1ey"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-6M-d3E">
@@ -231,6 +243,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="gRN-gp-Cqw"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="6cR-io-Dl6"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-nI-AMP">
@@ -241,6 +254,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="vMc-yR-3yH"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="QV0-7w-AT6"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-Cy-ijr">
@@ -251,6 +265,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="JHo-bs-s8e"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="wsy-Tb-HlI"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntv-QY-8gz">
@@ -261,6 +276,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="lld-ss-MHb"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="K3e-R4-7ED"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-Kh-0hf">
@@ -271,6 +287,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="fBv-b5-RPA"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="EUq-YK-z1B"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSZ-tt-JpR">
@@ -281,6 +298,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="JfI-LT-8Yx"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="O9p-6k-P8A"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-Ba-kuj">
@@ -291,6 +309,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="y3X-5d-NhG"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="Nm5-BW-x47"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZW-m8-soG">
@@ -301,6 +320,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="wGO-to-g2b"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="pix-wt-cYy"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -316,6 +336,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="fis-f6-HhJ"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="MvZ-1g-gsP"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-tc-V8U">
@@ -326,6 +347,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="2uo-Cs-hq2"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="oKB-0k-hBG"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-30-jQF">
@@ -336,6 +358,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="hzD-Em-LCc"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="DI0-Pv-nRf"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-oW-8Sl">
@@ -346,6 +369,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="tYd-PQ-laF"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="LBe-NP-fLC"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-JS-ZIo">
@@ -356,6 +380,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="jxo-qZ-QhM"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="AXV-NY-uOj"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12b-Ax-7oH">
@@ -366,6 +391,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="67d-7W-738"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="9X2-rB-7PO"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-kM-qw8">
@@ -376,6 +402,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="gPz-WO-VJA"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="vo2-OL-2ug"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-Ka-gWa">
@@ -386,6 +413,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9ig-hy-Dh7"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="yrU-Sv-hXg"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93v-hV-zK8">
@@ -396,6 +424,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="k4k-qO-k2U"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="1Qo-T5-dRN"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-3q-kzd">
@@ -406,6 +435,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="16V-1H-wt9"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="ROr-xK-Gxe"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -431,6 +461,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="7XG-xa-548"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="nIL-9W-MkH"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="854-cg-PwL">
@@ -441,6 +472,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Wl2-G9-vrM"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="o0g-Yp-SR0"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRn-YM-QSe">
@@ -451,6 +483,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="uel-11-GwT"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="V8a-gr-eoY"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-ST-Qsd">
@@ -461,6 +494,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="1T8-Rj-NzT"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="d8N-7G-2Rr"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-dp-ABM">
@@ -471,6 +505,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="x1e-oo-HxO"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="sZc-eP-GNM"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-HG-X8g">
@@ -481,6 +516,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="jP3-TC-cyJ"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="LkV-Uk-4JY"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-nE-YL9">
@@ -491,6 +527,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Z1F-EH-gF0"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="lkc-Sk-G7z"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0f-bk-nse">
@@ -501,6 +538,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="i1U-Ue-Kyl"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="Nc0-PT-lzU"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-vR-ehM">
@@ -511,6 +549,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="flI-oy-sbO"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="KO3-bj-4lq"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-vn-Xz0">
