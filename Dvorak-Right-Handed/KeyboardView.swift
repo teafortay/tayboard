@@ -229,27 +229,20 @@ class KeyboardView: UIView {
         }
     }
     
-    @IBAction func touchDragOutside(_ sender: Any) {
-        //fires ~15 times
-        kvc?.textDocumentProxy.insertText("!")
-    }
     
     @IBAction func touchUpOutside(_ sender: Any) {
         kvc?.didDragButton(sender, shifted: self.shifted, symbols: self.symbol, greek: self.greek)
         //insersts when you release button
     }
-    @IBAction func touchDown(_ sender: Any) {
-        kvc?.textDocumentProxy.insertText("@")
-        //also inserts from touchupinside, regardless of hold
-    }
-    @IBAction func touchDragEnter(_ sender: Any) {
-        kvc?.textDocumentProxy.insertText("#")
-        //never trigured
-    }
-    @IBAction func touchDragExit(_ sender: Any) {
-        kvc?.textDocumentProxy.insertText("$")
-        //inserts when you drag out of button bounds
-    }
+  
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func keysPress(_ sender: Any) {
         //touchUpInside
         kvc?.didTapButton(sender)

@@ -89,6 +89,7 @@
                                     </state>
                                     <connections>
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="U5C-8S-zcn"/>
+                                        <action selector="touchUpOutside:" destination="-1" eventType="touchUpOutside" id="HXD-JX-bgM"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-LU-Ksd">
