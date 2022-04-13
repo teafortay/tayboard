@@ -46,6 +46,7 @@ class KeyboardViewController: UIInputViewController {
         let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix, needGlobeKey: needGlobe)
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
+        //TODO: is this ok with memory?
     }
     
     override func updateViewConstraints() {

@@ -11,7 +11,7 @@
 
 import UIKit
 
-@available(iOSApplicationExtension 15.0, *)
+//@available(iOSApplicationExtension 15.0, *)
 class KeyboardView: UIView {
     
     weak var kvc: KeyboardViewController?
@@ -81,7 +81,7 @@ class KeyboardView: UIView {
         let _ = allKeys.map({$0.layer.cornerRadius = 6.0})
         let _ = allKeys.map({$0.layer.masksToBounds = true})
         
-        self.keyB0.subtitleLabel?.text = "%"
+//        self.keyB0.subtitleLabel?.text = "%"
         
     }
     
@@ -167,24 +167,7 @@ class KeyboardView: UIView {
             deleteTimer = nil
         }
     }
-    //keep because might use when i implement TouchDown? taps
-//    @IBAction func globeKeyPress(_ sender: Any) {
-//        kvc?.advanceToNextInputMode()
-//    }
-//
-//    @IBAction func backspaceKeyPress(_ sender: Any) {
-//        kvc?.textDocumentProxy.deleteBackward()
-//    }
-//    @IBAction func deleteTouchUpInside(_ sender: Any) {
-//        kvc?.textDocumentProxy.deleteBackward()
-//        deleteTimer?.invalidate()
-//        deleteTimer = nil
-//        print(#function, pp)
-//    }
-   
-    //    @IBAction func enterKeyPree(_ sender: Any) {
-//        kvc?.textDocumentProxy.insertText("\n")
-//    }
+    
     
     @IBAction func shiftKeyPress(_ sender: Any) {
 
