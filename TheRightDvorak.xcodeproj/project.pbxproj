@@ -491,8 +491,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
@@ -500,7 +500,7 @@
 				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
-				PROVISIONING_PROFILE_SPECIFIER = theRightDvorakAppStoreDist;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -562,7 +562,8 @@
 		345BF9932016B8DF00E3F9CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = "Dvorak-Right-Handed/Info.plist";
@@ -570,7 +571,7 @@
 				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right";
 				PRODUCT_NAME = "Dvorak-Right-Handed";
-				PROVISIONING_PROFILE_SPECIFIER = "Dvorak right keyboard extension App Store dist";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
