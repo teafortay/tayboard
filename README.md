@@ -4,7 +4,7 @@ dvorvak right keyboard for iPad/ iPhone.
 dvorak-left-handed coming soon
 
 please see LICENSE
-
+ 
 release 1.4:
 -created compact layout for smaller screen sizes (ie. iPhone). Larger screens (ie. the iPad) still have the full dvorak-right-handed keyboard.
 - fixed delete key bug (previously when users held down the delete key, they could trigger repeated deleting, even when the user released the key)
