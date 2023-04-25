@@ -11,7 +11,7 @@ import UIKit
 
 struct Constants {
     
-    static let GLOBE = "⌨↶"
+    static let GLOBE = "←⌨"
     static let ENTER = "enter"
     static let DELETE = "⌫"
     static let SHIFT_UP = "⇧"
