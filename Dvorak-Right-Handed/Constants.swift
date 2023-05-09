@@ -15,6 +15,7 @@ struct Constants {
     static let ENTER = "enter"
     static let DELETE = "⌫"
     static let SHIFT_UP = "⇧"
+    static let CAPS_LOCK = "⇪"
     static let SHIFT_DOWN = "⇩"
     static let SYMBOL_KEY = "+=\\"
     static let ABC = "ABC"
