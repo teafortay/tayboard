@@ -189,7 +189,7 @@ class KeyboardView: UIView {
     
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
-        if !capsLock {
+        if keyboard == .up && !capsLock {
             keyboard = .down
         }
             updateButtonTitles()
