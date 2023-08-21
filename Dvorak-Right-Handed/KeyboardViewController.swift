@@ -11,6 +11,7 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
     
     var keyboardView: KeyboardView?
+    private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +26,7 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        hapticManager = HapticManager()
         // Perform custom UI setup here
         let nibPrefix: String
         let rect = getKeyboardRectFromBounds()
@@ -149,7 +150,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func didTapButton(_ sender: Any) {
-        
+//        hapticManager?.playTapHaptic()
         if let button = sender as? UIButton {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
