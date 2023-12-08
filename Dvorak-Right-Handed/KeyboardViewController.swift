@@ -13,20 +13,24 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: KeyboardView?
     private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
+//    var selctionFeedbackGenerator: UISelectionFeedbackGenerator?
     
 //    override func viewWillAppear(_ animated: Bool) {
 //            super.viewWillAppear(animated)
 //            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
 //        }
 //
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//            UIDevice.current.endGeneratingDeviceOrientationNotifications()
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+            hapticManager = nil
+        keyboardHeightConstraint = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        hapticManager = HapticManager()
+        hapticManager = HapticManager()
+//        selctionFeedbackGenerator = UISelectionFeedbackGenerator()
+        
         // Perform custom UI setup here
         let nibPrefix: String
         let rect = getKeyboardRectFromBounds()
@@ -95,13 +99,25 @@ class KeyboardViewController: UIInputViewController {
     override func textWillChange(_ textInput: UITextInput?) {
         super.textWillChange(textInput)
         // The app is about to change the document's contents. Perform any preparation here.
+//        selctionFeedbackGenerator?.prepare()
     }
     
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
         super.textDidChange(textInput)
+//        selctionFeedbackGenerator?.prepare()
     }
+//    
+//    override func selectionWillChange(_ textInput: UITextInput?) {
+//        super.selectionWillChange(textInput)
+//        selctionFeedbackGenerator?.prepare()
+//    }
+////    
+//    override func selectionDidChange(_ textInput: UITextInput?) {
+//        super.selectionDidChange(textInput)
+//        selctionFeedbackGenerator?.selectionChanged()
+//    }
     
     
     func getKeyboardRectFromBounds() -> CGRect {
@@ -150,7 +166,9 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func didTapButton(_ sender: Any) {
-//        hapticManager?.playTapHaptic()
+        hapticManager?.playTapHaptic()
+//        selctionFeedbackGenerator?.selectionChanged()
+        let vrai = hasFullAccess
         if let button = sender as? UIButton {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy

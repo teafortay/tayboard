@@ -66,7 +66,7 @@
 		345BF97A2016B87700E3F9CB /* TheRightDvorakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRightDvorakTests.swift; sourceTree = "<group>"; };
 		345BF97C2016B87700E3F9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dvorak-Right-Handed.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		345BF98D2016B8DF00E3F9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A88EE9526991F8600B6A27D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedKeyboardView.xib; sourceTree = "<group>"; };
