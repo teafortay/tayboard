@@ -13,23 +13,16 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: KeyboardView?
     private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
-//    var selctionFeedbackGenerator: UISelectionFeedbackGenerator?
     
-//    override func viewWillAppear(_ animated: Bool) {
-//            super.viewWillAppear(animated)
-//            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-//        }
-//
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-            hapticManager = nil
+        hapticManager = nil
         keyboardHeightConstraint = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hapticManager = HapticManager()
-//        selctionFeedbackGenerator = UISelectionFeedbackGenerator()
         
         // Perform custom UI setup here
         let nibPrefix: String
@@ -66,15 +59,13 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        print("transitioning")
         let rect = getKeyboardRectFromBounds()
         keyboardView?.frame = rect
         keyboardHeightConstraint?.constant = rect.height
     }
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let rect = getKeyboardRectFromBounds()
@@ -84,41 +75,15 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-//        let rect = getKeyboardRectFromBounds(from: "viewLayoutMarginsDidChange")
-//        keyboardView?.frame = rect
-//        keyboardHeightConstraint?.constant = rect.height
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
-    }  
- 
-    
-    override func textWillChange(_ textInput: UITextInput?) {
-        super.textWillChange(textInput)
-        // The app is about to change the document's contents. Perform any preparation here.
-//        selctionFeedbackGenerator?.prepare()
     }
     
-    
-    override func textDidChange(_ textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
-        super.textDidChange(textInput)
-//        selctionFeedbackGenerator?.prepare()
-    }
-//    
-//    override func selectionWillChange(_ textInput: UITextInput?) {
-//        super.selectionWillChange(textInput)
-//        selctionFeedbackGenerator?.prepare()
-//    }
-////    
-//    override func selectionDidChange(_ textInput: UITextInput?) {
-//        super.selectionDidChange(textInput)
-//        selctionFeedbackGenerator?.selectionChanged()
-//    }
-    
+    // MARK: custom functions
     
     func getKeyboardRectFromBounds() -> CGRect {
         let screen = UIScreen.main.bounds
@@ -132,8 +97,8 @@ class KeyboardViewController: UIInputViewController {
                 //between 500 and 730
                 rectHeight = CGFloat(250.0)
             } else {
-                    // > 730
-                    rectHeight = screen.height * 0.34
+                // > 730
+                rectHeight = screen.height * 0.34
             }
         } else {
             //landscape
@@ -144,11 +109,6 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = screen.height * 0.45
             }
         }
-//        if UIDevice.current.orientation.isLandscape {
-//                       print("Landscape")
-//        } else if UIDevice.current.orientation.isPortrait {
-//                       print("Portrait")
-//        }
         
         //make width match safe area
         rectWidth = self.view.bounds.size.width
@@ -160,14 +120,14 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func doubleTapSpace(_ sender: Any) {
+        hapticManager?.playTapHaptic()
         //get rid of space added by 1st click
         self.textDocumentProxy.deleteBackward()
         self.textDocumentProxy.insertText(".")
     }
-
+    
     func didTapButton(_ sender: Any) {
         hapticManager?.playTapHaptic()
-//        selctionFeedbackGenerator?.selectionChanged()
         let vrai = hasFullAccess
         if let button = sender as? UIButton {
             if let title = button.title(for: .normal) {
@@ -189,6 +149,6 @@ class KeyboardViewController: UIInputViewController {
             }
         }
     }
+    
+}//end class
 
-//end class
-}
