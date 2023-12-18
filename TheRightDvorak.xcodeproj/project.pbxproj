@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		345BF9702016B87600E3F9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345BF96E2016B87600E3F9CB /* LaunchScreen.storyboard */; };
 		345BF97B2016B87700E3F9CB /* TheRightDvorakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF97A2016B87700E3F9CB /* TheRightDvorakTests.swift */; };
 		345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
-		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
@@ -41,15 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		345BF9942016B8DF00E3F9CB /* Embed App Extensions */ = {
+		345BF9942016B8DF00E3F9CB /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed App Extensions */,
+				345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -168,7 +168,7 @@
 				345BF95E2016B87600E3F9CB /* Sources */,
 				345BF95F2016B87600E3F9CB /* Frameworks */,
 				345BF9602016B87600E3F9CB /* Resources */,
-				345BF9942016B8DF00E3F9CB /* Embed App Extensions */,
+				345BF9942016B8DF00E3F9CB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -221,8 +221,9 @@
 		345BF95A2016B87600E3F9CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "Taylor Shaw";
 				TargetAttributes = {
 					345BF9612016B87600E3F9CB = {
@@ -394,6 +395,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -454,6 +456,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -465,7 +468,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -481,7 +485,10 @@
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
@@ -502,7 +509,10 @@
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
@@ -520,7 +530,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorakTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorakTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -537,7 +551,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = TheRightDvorakTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorakTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -555,7 +573,11 @@
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = "Dvorak-Right-Handed/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right";
 				PRODUCT_NAME = "Dvorak-Right-Handed";
@@ -575,7 +597,11 @@
 				DEVELOPMENT_TEAM = 6P422K3WMK;
 				INFOPLIST_FILE = "Dvorak-Right-Handed/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right";
 				PRODUCT_NAME = "Dvorak-Right-Handed";
