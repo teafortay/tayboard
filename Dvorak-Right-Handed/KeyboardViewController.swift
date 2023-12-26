@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import AudioToolbox
 
 class KeyboardViewController: UIInputViewController {
     
@@ -124,6 +125,7 @@ class KeyboardViewController: UIInputViewController {
     func tryHaptic() {
         if hasFullAccess {
             hapticManager?.playTapHaptic()
+//            AudioServicesPlaySystemSound(1104)
         }
     }
     
