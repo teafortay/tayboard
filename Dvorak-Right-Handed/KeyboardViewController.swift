@@ -15,6 +15,8 @@ class KeyboardViewController: UIInputViewController {
     private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
+    //MARK: override functions
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         hapticManager = nil

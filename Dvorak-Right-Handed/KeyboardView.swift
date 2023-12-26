@@ -129,6 +129,7 @@ class KeyboardView: UIView {
     }
 
     @IBAction func doubleTapShift(_ sender: Any) {
+        kvc?.tryHaptic()
         if keyboard != .symbol && keyboard != .greek {
             // begin caps lock
             capsLock = true
@@ -147,6 +148,7 @@ class KeyboardView: UIView {
         
         if deleteTimer == nil {
             deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+                self.kvc?.tryHaptic()
                 self.kvc?.textDocumentProxy.deleteBackward()
             })
         }
@@ -159,6 +161,7 @@ class KeyboardView: UIView {
     
     @IBAction func shiftKeyPress(_ sender: Any) {
         // touch down
+        kvc?.tryHaptic()
         capsLock = false
         switch keyboard {
         case .up:
@@ -174,6 +177,7 @@ class KeyboardView: UIView {
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
+        kvc?.tryHaptic()
         switch keyboard {
         case .up:
             keyboard = .symbol
