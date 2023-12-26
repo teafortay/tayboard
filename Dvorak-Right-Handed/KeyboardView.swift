@@ -70,6 +70,7 @@ class KeyboardView: UIView {
     @IBOutlet weak var backspaceKey: UIButton!
     @IBOutlet weak var enterKey: UIButton!
     @IBOutlet weak var shiftKey: UIButton!
+    @IBOutlet weak var gearKey: UIButton!
     @IBOutlet weak var symKey: UIButton!
     @IBOutlet weak var spaceKey: UIButton!
     
@@ -211,6 +212,8 @@ class KeyboardView: UIView {
         let _ = allKeys.map({$0.layer.masksToBounds = true})
         
         self.globeKey.setTitle(Constants.GLOBE, for: .normal)
+        self.gearKey.setTitle(Constants.GEAR, for: .normal)
+        self.symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
         self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
         self.enterKey.setTitle(Constants.ENTER, for: .normal)
         self.spaceKey.setTitle(Constants.SPACE, for: .normal)

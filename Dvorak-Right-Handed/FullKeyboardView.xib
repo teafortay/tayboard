@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="backspaceKey" destination="avL-vn-Xz0" id="fbh-pb-dhL"/>
                 <outlet property="enterKey" destination="xaM-Xb-QEF" id="79G-k3-gr1"/>
+                <outlet property="gearKey" destination="KP8-TT-bYw" id="ne2-vM-Hb6"/>
                 <outlet property="globeKey" destination="tfl-Pf-bR2" id="dzG-Tr-Nt6"/>
                 <outlet property="keyA0" destination="UaI-BE-Tmb" id="Und-4g-xKs"/>
                 <outlet property="keyA1" destination="1zV-5N-oxw" id="CB6-ez-DW3"/>
@@ -545,8 +546,15 @@
                                         <action selector="symKeyPress:" destination="-1" eventType="touchUpInside" id="Xjd-1P-NDm"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-TT-bYw">
+                                    <rect key="frame" x="77.5" y="0.0" width="61.5" height="43"/>
+                                    <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    <state key="normal" title="gear">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfl-Pf-bR2">
-                                    <rect key="frame" x="77.5" y="0.0" width="67.5" height="43"/>
+                                    <rect key="frame" x="149" y="0.0" width="67.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="Globe">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -556,7 +564,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYo-un-7Ft">
-                                    <rect key="frame" x="155" y="0.0" width="184" height="43"/>
+                                    <rect key="frame" x="226.5" y="0.0" width="112.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="Space">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -618,10 +626,10 @@
     </objects>
     <resources>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -630,7 +638,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
