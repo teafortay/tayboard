@@ -22,7 +22,9 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hapticManager = HapticManager()
+        if hasFullAccess {
+            hapticManager = HapticManager()
+        }
         
         // Perform custom UI setup here
         let nibPrefix: String
@@ -119,16 +121,21 @@ class KeyboardViewController: UIInputViewController {
         return rect
     }
     
+    func tryHaptic() {
+        if hasFullAccess {
+            hapticManager?.playTapHaptic()
+        }
+    }
+    
     func doubleTapSpace(_ sender: Any) {
-        hapticManager?.playTapHaptic()
+        tryHaptic()
         //get rid of space added by 1st click
         self.textDocumentProxy.deleteBackward()
         self.textDocumentProxy.insertText(".")
     }
     
     func didTapButton(_ sender: Any) {
-        hapticManager?.playTapHaptic()
-        let vrai = hasFullAccess
+        tryHaptic()
         if let button = sender as? UIButton {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
