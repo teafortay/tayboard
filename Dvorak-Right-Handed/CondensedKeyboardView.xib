@@ -459,16 +459,16 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dol-E0-Zf8">
-                                    <rect key="frame" x="77.5" y="0.0" width="65" height="43"/>
+                                    <rect key="frame" x="77.5" y="0.0" width="66" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="gear">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfl-Pf-bR2">
-                                    <rect key="frame" x="152.5" y="0.0" width="67.5" height="43"/>
+                                    <rect key="frame" x="153.5" y="0.0" width="67.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <state key="normal" title="Globe">
+                                    <state key="normal" title="globe">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
@@ -476,9 +476,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYo-un-7Ft">
-                                    <rect key="frame" x="230" y="0.0" width="97.5" height="43"/>
+                                    <rect key="frame" x="231" y="0.0" width="96.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                    <state key="normal" title="Space">
+                                    <state key="normal" title="space">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
