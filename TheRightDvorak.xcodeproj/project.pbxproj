@@ -154,10 +154,10 @@
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
 				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
-				4AF3D1BD2B3E540A00C4CEB9 /* Keyboard */,
+				4AF3D1BD2B3E540A00C4CEB9 /* KeyboardView */,
 				4ACFC6C526C6248800504F3A /* Keys.swift */,
 				4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */,
-				4AF3D1BE2B3E54CB00C4CEB9 /* Settings */,
+				4AF3D1BE2B3E54CB00C4CEB9 /* SettingsView */,
 				4ACBFBC3279739D700E2D364 /* Constants.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
@@ -172,23 +172,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		4AF3D1BD2B3E540A00C4CEB9 /* Keyboard */ = {
+		4AF3D1BD2B3E540A00C4CEB9 /* KeyboardView */ = {
 			isa = PBXGroup;
 			children = (
 				4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */,
 				4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */,
 				4A88EE9526991F8600B6A27D /* KeyboardView.swift */,
 			);
-			path = Keyboard;
+			path = KeyboardView;
 			sourceTree = "<group>";
 		};
-		4AF3D1BE2B3E54CB00C4CEB9 /* Settings */ = {
+		4AF3D1BE2B3E54CB00C4CEB9 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
 				4A2098412B3CEAC300F09A0E /* SettingsView.swift */,
 				4A2098432B3CEC0500F09A0E /* SettingsView.xib */,
 			);
-			path = Settings;
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
