@@ -154,10 +154,9 @@
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
 				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
-				4AF3D1BD2B3E540A00C4CEB9 /* KeyboardView */,
+				4A6202BF2B3E7A740054106C /* Views */,
 				4A6202BE2B3E78BD0054106C /* KeyButtonTitles */,
 				4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */,
-				4AF3D1BE2B3E54CB00C4CEB9 /* SettingsView */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
@@ -170,6 +169,15 @@
 				4ACBFBC3279739D700E2D364 /* Constants.swift */,
 			);
 			path = KeyButtonTitles;
+			sourceTree = "<group>";
+		};
+		4A6202BF2B3E7A740054106C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AF3D1BD2B3E540A00C4CEB9 /* KeyboardView */,
+				4AF3D1BE2B3E54CB00C4CEB9 /* SettingsView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4AF3D1BC2B3E50B300C4CEB9 /* Utilities */ = {
