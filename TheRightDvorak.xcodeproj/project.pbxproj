@@ -20,8 +20,9 @@
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
-		4ACFC6C626C6248800504F3A /* KeysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFC6C526C6248800504F3A /* KeysModel.swift */; };
+		4ACFC6C626C6248800504F3A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFC6C526C6248800504F3A /* Keys.swift */; };
 		4AE19C832A93071A001F9CAC /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE19C822A93071A001F9CAC /* HapticManager.swift */; };
+		4AF3D1C02B3E56BF00C4CEB9 /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */; };
 		4AFC1D2C2787F6130047DEBC /* FullKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +76,9 @@
 		4A88EE9526991F8600B6A27D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedKeyboardView.xib; sourceTree = "<group>"; };
 		4ACBFBC3279739D700E2D364 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4ACFC6C526C6248800504F3A /* KeysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysModel.swift; sourceTree = "<group>"; };
+		4ACFC6C526C6248800504F3A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4AE19C822A93071A001F9CAC /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
 		4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullKeyboardView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,17 +153,42 @@
 			isa = PBXGroup;
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
-				4AE19C822A93071A001F9CAC /* HapticManager.swift */,
-				4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */,
-				4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */,
-				4A88EE9526991F8600B6A27D /* KeyboardView.swift */,
-				4ACFC6C526C6248800504F3A /* KeysModel.swift */,
-				4A2098412B3CEAC300F09A0E /* SettingsView.swift */,
-				4A2098432B3CEC0500F09A0E /* SettingsView.xib */,
+				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
+				4AF3D1BD2B3E540A00C4CEB9 /* Keyboard */,
+				4ACFC6C526C6248800504F3A /* Keys.swift */,
+				4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */,
+				4AF3D1BE2B3E54CB00C4CEB9 /* Settings */,
 				4ACBFBC3279739D700E2D364 /* Constants.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
+			sourceTree = "<group>";
+		};
+		4AF3D1BC2B3E50B300C4CEB9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4AE19C822A93071A001F9CAC /* HapticManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4AF3D1BD2B3E540A00C4CEB9 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */,
+				4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */,
+				4A88EE9526991F8600B6A27D /* KeyboardView.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		4AF3D1BE2B3E54CB00C4CEB9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4A2098412B3CEAC300F09A0E /* SettingsView.swift */,
+				4A2098432B3CEC0500F09A0E /* SettingsView.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,8 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AF3D1C02B3E56BF00C4CEB9 /* KeyboardState.swift in Sources */,
 				345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */,
-				4ACFC6C626C6248800504F3A /* KeysModel.swift in Sources */,
+				4ACFC6C626C6248800504F3A /* Keys.swift in Sources */,
 				4AE19C832A93071A001F9CAC /* HapticManager.swift in Sources */,
 				4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */,
 				4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */,

@@ -5,7 +5,7 @@
 //  Created by Taylor Shaw on 8/12/21.
 //  Copyright © 2021 Taylor Shaw. All rights reserved.
 //
-/* This file represents the Model in this MVC design pattern.
+/* 
  Think of the keyboard as 4 rows with 11 buttons each. The buttons are labeled:
  A0...A10
  B0...B10
