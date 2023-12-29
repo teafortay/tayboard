@@ -219,7 +219,7 @@ class KeyboardView: UIView {
         self.spaceKey.setTitle(Constants.SPACE, for: .normal)
         
         self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
-        let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+        let _ = regularKeys.map({$0.setTitle(KeyTitles.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
     }
     
     func updateButtonTitles() {
@@ -229,20 +229,20 @@ class KeyboardView: UIView {
                 shiftKey.setTitle(Constants.SHIFT_DOWN, for: .normal)
             }
             symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeysModel.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = regularKeys.map({$0.setTitle(KeyTitles.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             
         case .down:
             shiftKey.setTitle(Constants.SHIFT_UP, for: .normal )
             symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeysModel.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = regularKeys.map({$0.setTitle(KeyTitles.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         case .symbol:
             shiftKey.setTitle(Constants.GREEK, for: .normal)
             symKey.setTitle(Constants.ABC, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeysModel.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = regularKeys.map({$0.setTitle(KeyTitles.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         case .greek:
             shiftKey.setTitle(Constants.NUM, for: .normal)
             symKey.setTitle(Constants.ABC, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeysModel.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            let _ = regularKeys.map({$0.setTitle(KeyTitles.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         }
     }
     
