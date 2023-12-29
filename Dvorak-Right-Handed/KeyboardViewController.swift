@@ -11,7 +11,7 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
     
-    var keyboardView: KeyboardView?
+    var keyboardView: UIView?
     private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
     
@@ -21,6 +21,7 @@ class KeyboardViewController: UIInputViewController {
         super.viewWillDisappear(animated)
         hapticManager = nil
         keyboardHeightConstraint = nil
+        keyboardView = nil
     }
     
     override func viewDidLoad() {
