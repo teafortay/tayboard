@@ -138,6 +138,17 @@ class KeyboardViewController: UIInputViewController {
         self.textDocumentProxy.deleteBackward()
         self.textDocumentProxy.insertText(".")
     }
+    func doubleTapShift(_ sender: Any) {
+        tryHaptic()
+    }
+    
+    func shiftKeyPress(_ sender: Any) {
+        tryHaptic()
+    }
+    
+    func symKeyPress(_ sender: Any) {
+        tryHaptic()
+    }
     
     func didTapButton(_ sender: Any) {
         tryHaptic()

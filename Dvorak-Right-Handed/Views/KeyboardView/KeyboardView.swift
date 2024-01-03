@@ -130,7 +130,8 @@ class KeyboardView: UIView {
     }
 
     @IBAction func doubleTapShift(_ sender: Any) {
-        kvc?.tryHaptic()
+        kvc?.doubleTapShift(sender)
+        
         if keyboard != .symbol && keyboard != .greek {
             // begin caps lock
             capsLock = true
@@ -162,7 +163,7 @@ class KeyboardView: UIView {
     
     @IBAction func shiftKeyPress(_ sender: Any) {
         // touch down
-        kvc?.tryHaptic()
+        kvc?.shiftKeyPress(sender)
         capsLock = false
         switch keyboard {
         case .up:
@@ -178,7 +179,7 @@ class KeyboardView: UIView {
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
-        kvc?.tryHaptic()
+        kvc?.symKeyPress(sender)
         switch keyboard {
         case .up:
             keyboard = .symbol
