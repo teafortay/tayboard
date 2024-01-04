@@ -17,18 +17,7 @@ class KeyboardView: UIView {
     var nibName: String = "KeyboardView"
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
-    
-    //MARK: the following variables are used to determine which keyboard to display
-    enum keyboardType {
-        case up
-        case down
-        case symbol
-        case greek
-    }
-    
-    var capsLock: Bool = false
-    var keyboard: keyboardType = .up
-    
+        
     //MARK: initializers
     init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
@@ -124,21 +113,13 @@ class KeyboardView: UIView {
 //    MARK: begin key press actions
     @IBAction func doubleTapSpace(_ sender: Any) {
         kvc?.doubleTapSpace(sender)
-        //change to upKeys
-        self.keyboard = .up
         updateButtonTitles()
     }
 
     @IBAction func doubleTapShift(_ sender: Any) {
         kvc?.doubleTapShift(sender)
-        
-        if keyboard != .symbol && keyboard != .greek {
-            // begin caps lock
-            capsLock = true
             shiftKey.setTitle(Constants.CAPS_LOCK, for: .normal )
-            keyboard = .up
             updateButtonTitles()
-        }
     }
     
     @IBAction func deleteKeyLongPress(sender: UILongPressGestureRecognizer) {
@@ -164,40 +145,16 @@ class KeyboardView: UIView {
     @IBAction func shiftKeyPress(_ sender: Any) {
         // touch down
         kvc?.shiftKeyPress(sender)
-        capsLock = false
-        switch keyboard {
-        case .up:
-            keyboard = .down
-        case .down:
-            keyboard = .up
-        case .symbol:
-            keyboard = .greek
-        case .greek:
-            keyboard = .symbol
-        }
         updateButtonTitles()
     }
     
     @IBAction func symKeyPress(_ sender: Any) {
         kvc?.symKeyPress(sender)
-        switch keyboard {
-        case .up:
-            keyboard = .symbol
-        case .down:
-            keyboard = .symbol
-        case .symbol:
-            keyboard = .up
-        case .greek:
-            keyboard = .up
-        }
         updateButtonTitles()
     }
     
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
-        if keyboard == .up && !capsLock {
-            keyboard = .down
-        }
             updateButtonTitles()
         
       
@@ -214,36 +171,36 @@ class KeyboardView: UIView {
         
         self.globeKey.setTitle(Constants.GLOBE, for: .normal)
         self.gearKey.setTitle(Constants.GEAR, for: .normal)
-        self.symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
         self.backspaceKey.setTitle(Constants.DELETE, for: .normal)
         self.enterKey.setTitle(Constants.ENTER, for: .normal)
         self.spaceKey.setTitle(Constants.SPACE, for: .normal)
+        updateButtonTitles()
         
-        self.shiftKey.setTitle(Constants.SHIFT_DOWN , for: .normal)
-        let _ = regularKeys.map({$0.setTitle(KeyTitles.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
     }
     
     func updateButtonTitles() {
-        switch keyboard {
-        case .up:
-            if !capsLock {
-                shiftKey.setTitle(Constants.SHIFT_DOWN, for: .normal)
+        if let state = kvc?.state {
+            switch state.type {
+            case .up:
+                if !state.capsLock {
+                    shiftKey.setTitle(Constants.SHIFT_DOWN, for: .normal)
+                }
+                symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeyTitles.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                
+            case .down:
+                shiftKey.setTitle(Constants.SHIFT_UP, for: .normal )
+                symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeyTitles.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            case .symbol:
+                shiftKey.setTitle(Constants.GREEK, for: .normal)
+                symKey.setTitle(Constants.ABC, for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeyTitles.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+            case .greek:
+                shiftKey.setTitle(Constants.NUM, for: .normal)
+                symKey.setTitle(Constants.ABC, for: .normal)
+                let _ = regularKeys.map({$0.setTitle(KeyTitles.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
-            symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeyTitles.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-            
-        case .down:
-            shiftKey.setTitle(Constants.SHIFT_UP, for: .normal )
-            symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeyTitles.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-        case .symbol:
-            shiftKey.setTitle(Constants.GREEK, for: .normal)
-            symKey.setTitle(Constants.ABC, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeyTitles.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
-        case .greek:
-            shiftKey.setTitle(Constants.NUM, for: .normal)
-            symKey.setTitle(Constants.ABC, for: .normal)
-            let _ = regularKeys.map({$0.setTitle(KeyTitles.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
         }
     }
     

@@ -14,6 +14,7 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: UIView?
     private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
+    var state: KeyboardState = .init()
     
     //MARK: override functions
     
@@ -137,21 +138,53 @@ class KeyboardViewController: UIInputViewController {
         //get rid of space added by 1st click
         self.textDocumentProxy.deleteBackward()
         self.textDocumentProxy.insertText(".")
+        //change to upKeys
+        state.type = .up
     }
+    
     func doubleTapShift(_ sender: Any) {
         tryHaptic()
+        if state.type != .symbol && state.type != .greek {
+            // begin caps lock
+            state.capsLock = true
+            state.type = .up
+        }
     }
     
     func shiftKeyPress(_ sender: Any) {
         tryHaptic()
+        state.capsLock = false
+        switch state.type {
+                case .up:
+            state.type = .down
+                case .down:
+            state.type = .up
+                case .symbol:
+            state.type = .greek
+                case .greek:
+            state.type = .symbol
+                }
     }
     
     func symKeyPress(_ sender: Any) {
         tryHaptic()
+        switch state.type {
+               case .up:
+            state.type = .symbol
+               case .down:
+            state.type = .symbol
+               case .symbol:
+            state.type = .up
+               case .greek:
+            state.type = .up
+               }
     }
     
     func didTapButton(_ sender: Any) {
         tryHaptic()
+        if state.type == .up && !state.capsLock {
+            state.type = .down
+                }
         if let button = sender as? UIButton {
             if let title = button.title(for: .normal) {
                 let proxy = textDocumentProxy as UITextDocumentProxy
