@@ -153,6 +153,10 @@ class KeyboardView: UIView {
         updateButtonTitles()
     }
     
+    @IBAction func gearKeyPress(_ sender: Any) {
+        kvc?.goToSettings(sender)
+    }
+    
     @IBAction func keysPress(_ sender: Any) {
         kvc?.didTapButton(sender)
             updateButtonTitles()

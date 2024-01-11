@@ -552,6 +552,9 @@
                                     <state key="normal" title="gear">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="gearKeyPress:" destination="-1" eventType="touchUpInside" id="uXP-Rj-Yvg"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfl-Pf-bR2">
                                     <rect key="frame" x="150" y="0.0" width="67.5" height="43"/>

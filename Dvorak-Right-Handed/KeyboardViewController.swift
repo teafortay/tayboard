@@ -15,6 +15,7 @@ class KeyboardViewController: UIInputViewController {
     private var hapticManager: HapticManager?
     var keyboardHeightConstraint: NSLayoutConstraint?
     var state: KeyboardState = .init()
+    var nibPrefix: String = "Full"
     
     //MARK: override functions
     
@@ -32,7 +33,6 @@ class KeyboardViewController: UIInputViewController {
         }
         
         // Perform custom UI setup here
-        let nibPrefix: String
         let rect = getKeyboardRectFromBounds()
         let screen = UIScreen.main.bounds
         let size = max(screen.width, screen.height)
@@ -178,6 +178,23 @@ class KeyboardViewController: UIInputViewController {
                case .greek:
             state.type = .up
                }
+    }
+    func goToSettings(_ sender: Any) {
+        tryHaptic()
+        let rect = getKeyboardRectFromBounds()
+        self.keyboardView = nil
+        let settingsView = SettingsView(frame: rect, kvc: self)
+        self.view.addSubview(settingsView)
+        self.keyboardView = settingsView
+    }
+    
+    func exitSettings(_ sender: Any) {
+        tryHaptic()
+        let rect = getKeyboardRectFromBounds()
+        self.keyboardView = nil
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
+        self.view.addSubview(keyboardView)
+        self.keyboardView = keyboardView
     }
     
     func didTapButton(_ sender: Any) {

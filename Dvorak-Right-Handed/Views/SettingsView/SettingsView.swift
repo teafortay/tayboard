@@ -9,13 +9,26 @@
 import UIKit
 
 class SettingsView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+    
+    weak var kvc: KeyboardViewController?
+    
+    init(frame: CGRect, kvc: KeyboardViewController) {
+        super.init(frame: frame)
+        self.kvc = kvc
+        let table = UITableView()
+        table.frame = self.bounds
+        self.addSubview(table)
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+//        fatalError("init(coder:) has not been implemented")
+    }
 }
