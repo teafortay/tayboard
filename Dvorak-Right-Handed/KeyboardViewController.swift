@@ -183,7 +183,7 @@ class KeyboardViewController: UIInputViewController {
         tryHaptic()
         let rect = getKeyboardRectFromBounds()
         self.keyboardView = nil
-        let settingsView = SettingsView(frame: rect, kvc: self)
+        let settingsView = SettingsView(frame: rect)
         self.view.addSubview(settingsView)
         self.keyboardView = settingsView
     }

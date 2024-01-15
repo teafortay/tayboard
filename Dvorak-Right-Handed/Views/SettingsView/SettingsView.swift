@@ -17,18 +17,34 @@ class SettingsView: UIView {
 //        <#code#>
 //    }
     
-    weak var kvc: KeyboardViewController?
+//    weak var kvc: KeyboardViewController?
     
-    init(frame: CGRect, kvc: KeyboardViewController) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        self.kvc = kvc
-        let table = UITableView()
-        table.frame = self.bounds
-        self.addSubview(table)
+        var frame = CGRect(x: 10, y: 100, width: 300, height: 50)
+        frame.origin.y += 50
+        frame.origin.x = 10
+        frame.size.width = 300
+        let closeButon = UIButton(frame: frame)
+        closeButon.setTitle("Close", for: .normal)
+        closeButon.backgroundColor = .magenta
+        closeButon.addTarget(
+            self,
+            action: #selector(closePressed),
+            for: .touchUpInside)
+        self.addSubview(closeButon)
+//        self.kvc = kvc
+//        let table = UITableView()
+//        table.frame = self.bounds
+//        self.addSubview(table)
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-//        fatalError("init(coder:) has not been implemented")
+//        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func closePressed(_ sender: UIButton) {
+        self.removeFromSuperview()
     }
 }
