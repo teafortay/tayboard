@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsView: UIView {
+    var settings: Settings
+var save: (Settings) -> Void
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        <#code#>
 //    }
@@ -19,8 +21,13 @@ class SettingsView: UIView {
     
 //    weak var kvc: KeyboardViewController?
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, settings: Settings, callback: @escaping (Settings) -> Void) {
+        self.settings = settings
+        self.save = callback
         super.init(frame: frame)
+        let table = UITableView()
+        table.frame = self.bounds
+        self.addSubview(table)
         var frame = CGRect(x: 10, y: 100, width: 300, height: 50)
         frame.origin.y += 50
         frame.origin.x = 10
@@ -33,10 +40,6 @@ class SettingsView: UIView {
             action: #selector(closePressed),
             for: .touchUpInside)
         self.addSubview(closeButon)
-//        self.kvc = kvc
-//        let table = UITableView()
-//        table.frame = self.bounds
-//        self.addSubview(table)
     }
     
     required init?(coder: NSCoder) {
@@ -45,6 +48,8 @@ class SettingsView: UIView {
     }
     
     @objc func closePressed(_ sender: UIButton) {
+        settings.haptics.value = true
+        save(settings)
         self.removeFromSuperview()
     }
 }

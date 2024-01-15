@@ -183,9 +183,17 @@ class KeyboardViewController: UIInputViewController {
         tryHaptic()
         let rect = getKeyboardRectFromBounds()
         self.keyboardView = nil
-        let settingsView = SettingsView(frame: rect)
+        let settingsView = SettingsView(
+            frame: rect,
+            settings: self.state.settings,
+            callback: saveSettings(newSettings:)
+        )
         self.view.addSubview(settingsView)
         self.keyboardView = settingsView
+    }
+    
+    func saveSettings(newSettings: Settings) {
+        state.settings = newSettings
     }
     
     func exitSettings(_ sender: Any) {
