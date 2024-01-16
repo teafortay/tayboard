@@ -10,24 +10,17 @@ import UIKit
 
 class SettingsView: UIView {
     var settings: Settings
-var save: (Settings) -> Void
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-    
-//    weak var kvc: KeyboardViewController?
+    var save: (Settings) -> Void
     
     init(frame: CGRect, settings: Settings, callback: @escaping (Settings) -> Void) {
         self.settings = settings
         self.save = callback
         super.init(frame: frame)
+        
         let table = UITableView()
         table.frame = self.bounds
         self.addSubview(table)
+        
         var frame = CGRect(x: 10, y: 100, width: 300, height: 50)
         frame.origin.y += 50
         frame.origin.x = 10
