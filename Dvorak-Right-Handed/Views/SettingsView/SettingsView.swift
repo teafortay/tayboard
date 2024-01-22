@@ -25,7 +25,7 @@ class SettingsView: UIView {
         super.init(frame: frame)
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
-        scrollViewContainer.addArrangedSubview(redView)
+        scrollViewContainer.addArrangedSubview(drawSetting(setting: settings.enableCapsLock, sw: self.enableCapsLockSwitch))
         scrollViewContainer.addArrangedSubview(blueView)
         scrollViewContainer.addArrangedSubview(greenView)
         
@@ -57,6 +57,30 @@ class SettingsView: UIView {
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
+    
+    func drawSetting(setting: Setting, sw: UISwitch) -> UIView {
+        let view = UIView()
+        let name = UILabel()
+        let detail = UILabel()
+        
+        name.text = setting.name
+        name.translatesAutoresizingMaskIntoConstraints = false
+        name.textColor = .label
+        name.textAlignment = .natural
+        
+        sw.setOn(setting.value, animated: false)
+        sw.translatesAutoresizingMaskIntoConstraints = false
+//        sw.contentHorizontalAlignment = .trailing
+        
+        view.backgroundColor = .systemBackground
+        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        view.addSubview(name)
+        view.addSubview(sw)
+        
+        name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        sw.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
+        return view
+    }
         
         let redView: UIView = {
             let view = UIView()
@@ -67,14 +91,14 @@ class SettingsView: UIView {
         
         let blueView: UIView = {
             let view = UIView()
-            view.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            view.heightAnchor.constraint(equalToConstant: 150).isActive = true
             view.backgroundColor = .blue
             return view
         }()
         
         let greenView: UIView = {
             let view = UIView()
-            view.heightAnchor.constraint(equalToConstant: 1200).isActive = true
+            view.heightAnchor.constraint(equalToConstant: 150).isActive = true
             view.backgroundColor = .green
             return view
         }()
