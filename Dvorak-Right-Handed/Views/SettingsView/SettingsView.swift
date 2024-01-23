@@ -34,6 +34,21 @@ class SettingsView: UIView {
         header.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         header.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
         
+        //close button footer
+        let closeButton = UIButton()
+        closeButton.setTitle("Close", for: .normal)
+        closeButton.addTarget(
+            self,
+            action: #selector(closePressed),
+            for: .touchUpInside)
+        closeButton.backgroundColor = .darkGray
+        closeButton.layer.cornerRadius = 10
+        addSubview(closeButton)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        closeButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
+        closeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
+        
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
         let caps = drawSetting(setting: settings.enableCapsLock, sw: enableCapsLockSwitch)
@@ -44,9 +59,9 @@ class SettingsView: UIView {
         scrollViewContainer.addArrangedSubview(haptics)
         let sound = drawSetting(setting: settings.keyboardClicks, sw: keyboardClicksSwitch)
         scrollViewContainer.addArrangedSubview(sound)
-        scrollViewContainer.addArrangedSubview(redView)
-        scrollViewContainer.addArrangedSubview(blueView)
-        scrollViewContainer.addArrangedSubview(greenView)
+//        scrollViewContainer.addArrangedSubview(redView)
+//        scrollViewContainer.addArrangedSubview(blueView)
+//        scrollViewContainer.addArrangedSubview(greenView)
         
         scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -120,10 +135,6 @@ class SettingsView: UIView {
             view.backgroundColor = .green
             return view
         }()
-        //        closeButon.addTarget(
-        //            self,
-        //            action: #selector(closePressed),
-        //            for: .touchUpInside)
     
 
     
@@ -133,7 +144,10 @@ class SettingsView: UIView {
     }
     
     @objc func closePressed(_ sender: UIButton) {
-        settings.haptics.value = true
+        settings.enableCapsLock.value = enableCapsLockSwitch.isOn
+        settings.periodShortcut.value = periodShortcutSwitch.isOn
+        settings.haptics.value = hapticsSwitch.isOn
+        settings.keyboardClicks.value = keyboardClicksSwitch.isOn
         save(settings)
         self.removeFromSuperview()
     }
