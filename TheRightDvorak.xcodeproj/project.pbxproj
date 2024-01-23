@@ -155,20 +155,20 @@
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
 				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
 				4A6202BF2B3E7A740054106C /* Views */,
-				4A6202BE2B3E78BD0054106C /* KeyButtonTitles */,
+				4A6202BE2B3E78BD0054106C /* Strings */,
 				4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
 			sourceTree = "<group>";
 		};
-		4A6202BE2B3E78BD0054106C /* KeyButtonTitles */ = {
+		4A6202BE2B3E78BD0054106C /* Strings */ = {
 			isa = PBXGroup;
 			children = (
 				4ACFC6C526C6248800504F3A /* KeyTitles.swift */,
 				4ACBFBC3279739D700E2D364 /* Constants.swift */,
 			);
-			path = KeyButtonTitles;
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		4A6202BF2B3E7A740054106C /* Views */ = {

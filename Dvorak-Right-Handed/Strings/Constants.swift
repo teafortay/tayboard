@@ -25,4 +25,7 @@ struct Constants {
     static let SPACE = "space"
     
     
+    // settings view
+    static let headerLabel = "Settings"
+    static let close = "Close"
 }
