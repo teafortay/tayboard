@@ -59,7 +59,7 @@ class SettingsView: UIView {
         scrollViewContainer.addArrangedSubview(haptics)
         let sound = drawSetting(setting: settings.keyboardClicks, sw: keyboardClicksSwitch)
         scrollViewContainer.addArrangedSubview(sound)
-//        scrollViewContainer.addArrangedSubview(redView)
+        scrollViewContainer.addArrangedSubview(redView)
 //        scrollViewContainer.addArrangedSubview(blueView)
 //        scrollViewContainer.addArrangedSubview(greenView)
         
@@ -105,34 +105,33 @@ class SettingsView: UIView {
         sw.setOn(setting.value, animated: false)
         sw.translatesAutoresizingMaskIntoConstraints = false
         
+        if let detailText = setting.detail {
+            detail.text = detailText
+            detail.font = UIFont.systemFont(ofSize: 12)
+            detail.numberOfLines = 3
+            detail.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
         view.backgroundColor = .systemBackground
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.addSubview(name)
         view.addSubview(sw)
+        view.addSubview(detail)
         
         name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        name.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
         sw.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        sw.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
+        detail.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -5).isActive = true
+        detail.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        detail.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         return view
     }
         
         let redView: UIView = {
             let view = UIView()
-            view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+            view.heightAnchor.constraint(equalToConstant: 150).isActive = true
             view.backgroundColor = .red
-            return view
-        }()
-        
-        let blueView: UIView = {
-            let view = UIView()
-            view.heightAnchor.constraint(equalToConstant: 150).isActive = true
-            view.backgroundColor = .blue
-            return view
-        }()
-        
-        let greenView: UIView = {
-            let view = UIView()
-            view.heightAnchor.constraint(equalToConstant: 150).isActive = true
-            view.backgroundColor = .green
             return view
         }()
     
