@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import AudioToolbox
+import AudioToolbox
 
 class KeyboardViewController: UIInputViewController {
     
@@ -16,6 +16,7 @@ class KeyboardViewController: UIInputViewController {
     var keyboardHeightConstraint: NSLayoutConstraint?
     var state: KeyboardState = .init()
     var nibPrefix: String = "Full"
+    
     
     //MARK: override functions
     
@@ -90,6 +91,7 @@ class KeyboardViewController: UIInputViewController {
         // Dispose of any resources that can be recreated
     }
     
+    
     // MARK: custom functions
     
     func getKeyboardRectFromBounds() -> CGRect {
@@ -105,7 +107,7 @@ class KeyboardViewController: UIInputViewController {
                 rectHeight = CGFloat(250.0)
             } else {
                 // > 730
-                rectHeight = screen.height * 0.34
+                rectHeight = screen.height * 0.33
             }
         } else {
             //landscape
@@ -126,25 +128,29 @@ class KeyboardViewController: UIInputViewController {
         return rect
     }
     
-    func tryHaptic() {
-        if hasFullAccess {
-            hapticManager?.playTapHaptic()
-//            AudioServicesPlaySystemSound(1104)
+        func trySoundAndHaptics() {
+            if state.settings.haptics.value {
+                hapticManager?.playTapHaptic()
+            }
+            if state.settings.keyboardClicks.value {
+                            AudioServicesPlaySystemSound(1104)
+            }
+        }
+    
+    func doubleTapSpace(_ sender: Any) {
+        trySoundAndHaptics()
+        if state.settings.periodShortcut.value {
+            //get rid of space added by 1st click
+            self.textDocumentProxy.deleteBackward()
+            self.textDocumentProxy.insertText(".")
+            //change to upKeys
+            state.type = .up
         }
     }
     
-    func doubleTapSpace(_ sender: Any) {
-        tryHaptic()
-        //get rid of space added by 1st click
-        self.textDocumentProxy.deleteBackward()
-        self.textDocumentProxy.insertText(".")
-        //change to upKeys
-        state.type = .up
-    }
-    
     func doubleTapShift(_ sender: Any) {
-        tryHaptic()
-        if state.type != .symbol && state.type != .greek {
+        trySoundAndHaptics()
+        if state.type != .symbol && state.type != .greek && state.settings.enableCapsLock.value {
             // begin caps lock
             state.capsLock = true
             state.type = .up
@@ -152,7 +158,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func shiftKeyPress(_ sender: Any) {
-        tryHaptic()
+        trySoundAndHaptics()
         state.capsLock = false
         switch state.type {
                 case .up:
@@ -167,7 +173,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func symKeyPress(_ sender: Any) {
-        tryHaptic()
+        trySoundAndHaptics()
         switch state.type {
                case .up:
             state.type = .symbol
@@ -180,7 +186,7 @@ class KeyboardViewController: UIInputViewController {
                }
     }
     func goToSettings(_ sender: Any) {
-        tryHaptic()
+        trySoundAndHaptics()
         let rect = getKeyboardRectFromBounds()
         self.keyboardView?.removeFromSuperview()
         self.keyboardView = nil
@@ -194,7 +200,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func saveAndExitSettings(newSettings: Settings) {
-        tryHaptic()
+        trySoundAndHaptics()
         state.settings = newSettings
         let rect = getKeyboardRectFromBounds()
         self.keyboardView = nil
@@ -205,7 +211,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func didTapButton(_ sender: Any) {
-        tryHaptic()
+        trySoundAndHaptics()
         if state.type == .up && !state.capsLock {
             state.type = .down
                 }

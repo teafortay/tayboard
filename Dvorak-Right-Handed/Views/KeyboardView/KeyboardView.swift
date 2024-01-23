@@ -131,7 +131,7 @@ class KeyboardView: UIView {
         
         if deleteTimer == nil {
             deleteTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
-                self.kvc?.tryHaptic()
+                self.kvc?.trySoundAndHaptics()
                 self.kvc?.textDocumentProxy.deleteBackward()
             })
         }
