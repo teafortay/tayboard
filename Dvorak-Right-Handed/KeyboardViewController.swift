@@ -29,9 +29,11 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if hasFullAccess {
+        
+        if hasFullAccess { //TODO: test if works without full access
             hapticManager = HapticManager()
         }
+        state.settings = settingsFromUserDefauts()
         
         // Perform custom UI setup here
         let rect = getKeyboardRectFromBounds()
@@ -128,11 +130,45 @@ class KeyboardViewController: UIInputViewController {
         return rect
     }
     
+    func settingsFromUserDefauts() -> Settings {
+        var newSettings = state.settings
+        if UserDefaults.standard.bool(forKey: Constants.hasUserDefaults) {
+            newSettings.enableCapsLock.value = UserDefaults.standard.bool(forKey: Constants.enableCaps)
+            newSettings.periodShortcut.value = UserDefaults.standard.bool(forKey: Constants.periodShortcut)
+            newSettings.haptics.value = UserDefaults.standard.bool(forKey: Constants.haptics)
+            newSettings.sound.value = UserDefaults.standard.bool(forKey: Constants.sound)
+        }
+        return newSettings
+    }
+    
+    func configureUserDefaults(from: Settings) {
+        UserDefaults.standard.setValue(true, forKey: Constants.hasUserDefaults)
+        //enable caps lock
+        UserDefaults.standard.removeObject(forKey: Constants.enableCaps)
+        if from.enableCapsLock.value {
+            UserDefaults.standard.setValue(true, forKey: Constants.enableCaps)
+        }
+        //periodShortcut
+        UserDefaults.standard.removeObject(forKey: Constants.periodShortcut)
+        if from.periodShortcut.value {
+            UserDefaults.standard.setValue(true, forKey: Constants.periodShortcut)
+        }
+        // haptics
+        UserDefaults.standard.removeObject(forKey: Constants.haptics)
+        if from.haptics.value {
+            UserDefaults.standard.setValue(true, forKey: Constants.haptics)
+        }
+        // sound
+        UserDefaults.standard.removeObject(forKey: Constants.sound)
+        if from.sound.value {
+            UserDefaults.standard.setValue(true, forKey: Constants.sound)
+        }
+    }
         func trySoundAndHaptics() {
             if state.settings.haptics.value {
                 hapticManager?.playTapHaptic()
             }
-            if state.settings.keyboardClicks.value {
+            if state.settings.sound.value {
                             AudioServicesPlaySystemSound(1104)
             }
         }
@@ -202,6 +238,7 @@ class KeyboardViewController: UIInputViewController {
     func saveAndExitSettings(newSettings: Settings) {
         trySoundAndHaptics()
         state.settings = newSettings
+        configureUserDefaults(from: newSettings)
         let rect = getKeyboardRectFromBounds()
         self.keyboardView = nil
         self.keyboardView?.removeFromSuperview()

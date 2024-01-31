@@ -28,4 +28,11 @@ struct Constants {
     // settings view
     static let headerLabel = "Settings"
     static let close = "Close"
+    
+    // user defaults keys
+    static let hasUserDefaults = "hasUserDefaults"
+    static let enableCaps = "enableCaps"
+    static let periodShortcut = "periodShortcut"
+    static let haptics = "haptics"
+    static let sound = "sound"
 }
