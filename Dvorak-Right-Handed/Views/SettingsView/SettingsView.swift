@@ -18,7 +18,7 @@ class SettingsView: UIView {
     var enableCapsLockSwitch = UISwitch()
     var periodShortcutSwitch = UISwitch()
     var hapticsSwitch = UISwitch()
-    var keyboardClicksSwitch = UISwitch()
+    var soundSwitch = UISwitch()
     
     init(frame: CGRect, settings: Settings, callback: @escaping (Settings) -> Void) {
         self.settings = settings
@@ -49,7 +49,7 @@ class SettingsView: UIView {
         scrollViewContainer.addArrangedSubview(shortcut)
         let haptics = drawSetting(setting: settings.haptics, sw: hapticsSwitch)
         scrollViewContainer.addArrangedSubview(haptics)
-        let sound = drawSetting(setting: settings.sound, sw: keyboardClicksSwitch)
+        let sound = drawSetting(setting: settings.sound, sw: soundSwitch)
         scrollViewContainer.addArrangedSubview(sound)
         
         scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -153,7 +153,7 @@ class SettingsView: UIView {
         settings.enableCapsLock.value = enableCapsLockSwitch.isOn
         settings.periodShortcut.value = periodShortcutSwitch.isOn
         settings.haptics.value = hapticsSwitch.isOn
-        settings.sound.value = keyboardClicksSwitch.isOn
+        settings.sound.value = soundSwitch.isOn
         save(settings)
         self.removeFromSuperview()
     }
