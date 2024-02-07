@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nkB-DE-B4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nkB-DE-B4z">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pao-QT-9dP">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="596.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="376.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Right Dvorak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-AV-t1o">
                                                 <rect key="frame" x="118" y="0.0" width="178" height="50"/>
@@ -48,18 +48,17 @@
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-sl-nFF">
                                                 <rect key="frame" x="30" y="128" width="354" height="174.33333333333337"/>
-                                                <mutableString key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press the ←⌨ key to switch between keyboards.</mutableString>
+                                                <string key="text">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press the ←⌨ key to switch between keyboards.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <string key="userLabel">How to use this keyboard: 1. Open Settings 2. Go to General &gt; Keyboard &gt; Keyboards 3. Click "Add New Keyboard" 4. Select "Right Dvorak" 5. Congrats! You should now be able to access this keyboard on this device. Press and hold the 🌐 key to switch between keyboards.</string>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-kx-T3f">
-                                                <rect key="frame" x="15" y="312.33333333333337" width="384" height="284.33333333333337"/>
-                                                <string key="text">Privacy Policy:
-Privacy is very important to us. To the best of our knowledge, The Right Dvorak does not collect any information from the user. We do not use or share user data, because we do not collect any. We will update this document if we start collecting information, of any kind. We will also update this document if we find out that we actually are collecting information.  
+                                                <rect key="frame" x="15" y="312.33333333333331" width="384" height="64.333333333333314"/>
+                                                <string key="text">privacy policy text
 
-Anyone can access this document, our privacy policy, by visiting this website: http://taylorcodeshop.com/theRightDvorak </string>
+</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -95,6 +94,10 @@ Anyone can access this document, our privacy policy, by visiting this website: h
                             <constraint firstItem="KwZ-aP-XDW" firstAttribute="leading" secondItem="2NP-qo-1EZ" secondAttribute="leading" id="hsl-1G-6TM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instructions" destination="Hia-sl-nFF" id="zQR-5c-7fq"/>
+                        <outlet property="privacyPolicy" destination="bDz-kx-T3f" id="86i-y5-GYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmG-Oz-Ubr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
