@@ -12,6 +12,7 @@ import UIKit
 struct Constants {
     
     static let GLOBE = "🌐" //←⌨
+    //Image(systemName: "globe")
     static let GEAR = "⚙"
     static let ENTER = "enter"
     static let DELETE = "⌫"
@@ -29,7 +30,7 @@ struct Constants {
     static let headerLabel = "Settings"
     static let close = "Close"
     
-    // user defaults keys
+    // user defaults internal
     static let hasUserDefaults = "hasUserDefaults"
     static let enableCaps = "enableCaps"
     static let periodShortcut = "periodShortcut"

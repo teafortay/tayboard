@@ -30,7 +30,7 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if hasFullAccess { //TODO: test if works without full access
+        if hasFullAccess {
             hapticManager = HapticManager()
         }
         state.settings = settingsFromUserDefauts()
@@ -169,7 +169,7 @@ class KeyboardViewController: UIInputViewController {
                 hapticManager?.playTapHaptic()
             }
             if state.settings.sound.value {
-                            AudioServicesPlaySystemSound(1104)
+                AudioServicesPlaySystemSound(1104)
             }
         }
     
