@@ -37,7 +37,7 @@ class SettingsView: UIView {
             for: .touchUpInside
         )
         addSubview(closeButton)
-        closeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        closeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -3).isActive = true
         closeButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
         closeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
         
