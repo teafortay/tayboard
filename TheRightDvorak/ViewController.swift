@@ -25,7 +25,9 @@ class ViewController: UIViewController {
              4. Select "Right Dvorak"
              5. Congrats! You should now be able to access this keyboard on this device. Press the 🌐 key to switch between keyboards.
             
-            6. In order to use haptics, you also need to "Allow Full Access" by selecting "Dvorak-Right-Handed__Right Dvorak" and hitting the toggle.
+            6. Press the ⚙ key to edit settings.
+            
+            7. In order to use haptics, you also need to "Allow Full Access" by selecting "Dvorak-Right-Handed__Right Dvorak" and hitting the toggle.
             
             View our privacy policy anytime by visiting our website:taylorcodeshop.com/theRightDvorak
             """
