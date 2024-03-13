@@ -16,6 +16,8 @@
 		345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
+		4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */; };
+		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
@@ -40,6 +42,13 @@
 			remoteGlobalIDString = 345BF9882016B8DF00E3F9CB;
 			remoteInfo = taylorDvor;
 		};
+		4A54FBDD2BA21A1000D8930A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 345BF95A2016B87600E3F9CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A54FBD72BA21A1000D8930A;
+			remoteInfo = "Dvorak-Left-Handed";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */,
 				345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -71,7 +81,10 @@
 		345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		345BF98D2016B8DF00E3F9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A2098412B3CEAC300F09A0E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = file; path = PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
+		4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
+		4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dvorak-Left-Handed.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		4A54FBDC2BA21A1000D8930A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A88EE9526991F8600B6A27D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedKeyboardView.xib; sourceTree = "<group>"; };
 		4ACBFBC3279739D700E2D364 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -103,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4A54FBD52BA21A1000D8930A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,6 +132,7 @@
 				345BF9642016B87600E3F9CB /* TheRightDvorak */,
 				345BF9792016B87700E3F9CB /* TheRightDvorakTests */,
 				345BF98A2016B8DF00E3F9CB /* Dvorak-Right-Handed */,
+				4A54FBD92BA21A1000D8930A /* Dvorak-Left-Handed */,
 				345BF9632016B87600E3F9CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,6 +143,7 @@
 				345BF9622016B87600E3F9CB /* The Right Dvorak.app */,
 				345BF9762016B87700E3F9CB /* TheRightDvorakTests.xctest */,
 				345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */,
+				4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +182,15 @@
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
+			sourceTree = "<group>";
+		};
+		4A54FBD92BA21A1000D8930A /* Dvorak-Left-Handed */ = {
+			isa = PBXGroup;
+			children = (
+				4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */,
+				4A54FBDC2BA21A1000D8930A /* Info.plist */,
+			);
+			path = "Dvorak-Left-Handed";
 			sourceTree = "<group>";
 		};
 		4A6202BE2B3E78BD0054106C /* Strings */ = {
@@ -222,6 +253,7 @@
 			);
 			dependencies = (
 				345BF98F2016B8DF00E3F9CB /* PBXTargetDependency */,
+				4A54FBDE2BA21A1000D8930A /* PBXTargetDependency */,
 			);
 			name = TheRightDvorak;
 			productName = containerAppv3;
@@ -263,6 +295,23 @@
 			productReference = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		4A54FBD72BA21A1000D8930A /* Dvorak-Left-Handed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A54FBE22BA21A1000D8930A /* Build configuration list for PBXNativeTarget "Dvorak-Left-Handed" */;
+			buildPhases = (
+				4A54FBD42BA21A1000D8930A /* Sources */,
+				4A54FBD52BA21A1000D8930A /* Frameworks */,
+				4A54FBD62BA21A1000D8930A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dvorak-Left-Handed";
+			productName = "Dvorak-Left-Handed";
+			productReference = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -270,7 +319,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Taylor Shaw";
 				TargetAttributes = {
@@ -290,6 +339,9 @@
 						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 					};
+					4A54FBD72BA21A1000D8930A = {
+						CreatedOnToolsVersion = 15.3;
+					};
 				};
 			};
 			buildConfigurationList = 345BF95D2016B87600E3F9CB /* Build configuration list for PBXProject "TheRightDvorak" */;
@@ -308,6 +360,7 @@
 				345BF9612016B87600E3F9CB /* TheRightDvorak */,
 				345BF9752016B87700E3F9CB /* TheRightDvorakTests */,
 				345BF9882016B8DF00E3F9CB /* Dvorak-Right-Handed */,
+				4A54FBD72BA21A1000D8930A /* Dvorak-Left-Handed */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +389,13 @@
 			files = (
 				4AFC1D2C2787F6130047DEBC /* FullKeyboardView.xib in Resources */,
 				4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A54FBD62BA21A1000D8930A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +433,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4A54FBD42BA21A1000D8930A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -385,6 +453,11 @@
 			isa = PBXTargetDependency;
 			target = 345BF9882016B8DF00E3F9CB /* Dvorak-Right-Handed */;
 			targetProxy = 345BF98E2016B8DF00E3F9CB /* PBXContainerItemProxy */;
+		};
+		4A54FBDE2BA21A1000D8930A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A54FBD72BA21A1000D8930A /* Dvorak-Left-Handed */;
+			targetProxy = 4A54FBDD2BA21A1000D8930A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -662,6 +735,74 @@
 			};
 			name = Release;
 		};
+		4A54FBE02BA21A1000D8930A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dvorak-Left-Handed/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dvorak-Left-Handed";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Taylor Shaw. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.Dvorak-Left-Handed";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A54FBE12BA21A1000D8930A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P422K3WMK;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dvorak-Left-Handed/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dvorak-Left-Handed";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Taylor Shaw. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.Dvorak-Left-Handed";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -697,6 +838,15 @@
 			buildConfigurations = (
 				345BF9922016B8DF00E3F9CB /* Debug */,
 				345BF9932016B8DF00E3F9CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A54FBE22BA21A1000D8930A /* Build configuration list for PBXNativeTarget "Dvorak-Left-Handed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A54FBE02BA21A1000D8930A /* Debug */,
+				4A54FBE12BA21A1000D8930A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
