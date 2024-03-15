@@ -18,6 +18,7 @@
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBED2BA4D6E200D8930A /* KeyTitles.swift */; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* CondensedKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
@@ -85,6 +86,7 @@
 		4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dvorak-Left-Handed.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		4A54FBDC2BA21A1000D8930A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A54FBED2BA4D6E200D8930A /* KeyTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyTitles.swift; path = "Dvorak-Left-Handed/KeyTitles.swift"; sourceTree = SOURCE_ROOT; };
 		4A88EE9526991F8600B6A27D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CondensedKeyboardView.xib; sourceTree = "<group>"; };
 		4ACBFBC3279739D700E2D364 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		4A54FBD92BA21A1000D8930A /* Dvorak-Left-Handed */ = {
 			isa = PBXGroup;
 			children = (
+				4A54FBED2BA4D6E200D8930A /* KeyTitles.swift */,
 				4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */,
 				4A54FBDC2BA21A1000D8930A /* Info.plist */,
 			);
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */,
 				4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -638,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taylorcodeshop.therightdvorak;
 				PRODUCT_NAME = "The Right Dvorak";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -703,7 +707,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right";
 				PRODUCT_NAME = "Dvorak-Right-Handed";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -727,7 +731,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-right";
 				PRODUCT_NAME = "Dvorak-Right-Handed";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -759,7 +763,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-left";
@@ -794,7 +798,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taylorcodeshop.therightdvorak.dvorak-left";
 				PRODUCT_NAME = "$(TARGET_NAME)";
