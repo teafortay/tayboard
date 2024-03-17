@@ -23,6 +23,9 @@ import Foundation
 import UIKit
 
 struct KeyTitles {
+    
+    static let keyboard = "right"
+    
     static let upKeys = ["A0" : "!", "A1" : "@", "A2" : "#", "A3" : "$", "A4" : "J",
                          "A5" : "L", "A6" : "M", "A7" : "F", "A8" : "P", "A9" : "?", "A10" : "\"",
                          "B0" : "%", "B1" : "^", "B2" : "Q", "B3" : ">", "B4" : "O",
