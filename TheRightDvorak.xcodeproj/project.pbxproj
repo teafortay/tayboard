@@ -24,9 +24,10 @@
 		4A54FBF52BA4F9E000D8930A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A54FBF62BA4FA0100D8930A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
 		4A54FBF72BA4FA1400D8930A /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */; };
+		4A80B94E2BAB8B0E0059352A /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ABD103C2BAA67480051C46E /* LeftKeyboardView.xib */; };
+		4A80B94F2BAB8B1E0059352A /* FullKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* RightKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* RightKeyboardView.xib */; };
-		4ABD103D2BAA67480051C46E /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ABD103C2BAA67480051C46E /* LeftKeyboardView.xib */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
 		4ACFC6C626C6248800504F3A /* KeyTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFC6C526C6248800504F3A /* KeyTitles.swift */; };
 		4AE19C832A93071A001F9CAC /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE19C822A93071A001F9CAC /* HapticManager.swift */; };
@@ -399,7 +400,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AFC1D2C2787F6130047DEBC /* FullKeyboardView.xib in Resources */,
-				4ABD103D2BAA67480051C46E /* LeftKeyboardView.xib in Resources */,
 				4A88EE982699201300B6A27D /* RightKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +408,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A80B94F2BAB8B1E0059352A /* FullKeyboardView.xib in Resources */,
+				4A80B94E2BAB8B0E0059352A /* LeftKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

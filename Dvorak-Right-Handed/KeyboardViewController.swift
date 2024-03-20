@@ -42,7 +42,7 @@ class KeyboardViewController: UIInputViewController {
         if size > 1000 {
             nibPrefix = "Full"
         } else {
-            nibPrefix = "Condensed"
+            nibPrefix = KeyTitles.keyboard
         }
         let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
         self.view.addSubview(keyboardView)

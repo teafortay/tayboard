@@ -21,21 +21,20 @@ class KeyboardView: UIView {
     //MARK: initializers
     init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
         self.kvc = kvc
-        if nibPrefix == "Condensed" {
-            self.nibName = KeyTitles.keyboard + nibName
-        } else {
-            self.nibName = nibPrefix + nibName
-        }
+        self.nibName = nibPrefix + nibName
         super.init(frame: frame)
+        print("init frame")
         commonInit()
     }
     
     required init?(coder: NSCoder) {
+        print("init coder")
         super.init(coder: coder)
         commonInit()
     }
     
     func commonInit(){
+        print(nibName)
         let viewFromXib = Bundle.main.loadNibNamed(nibName, owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
