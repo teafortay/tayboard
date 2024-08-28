@@ -155,6 +155,7 @@
 			children = (
 				345BF9652016B87600E3F9CB /* AppDelegate.swift */,
 				345BF9672016B87600E3F9CB /* ViewController.swift */,
+				4AEA77382C7FD06D00A280CF /* Shared */,
 				345BF9692016B87600E3F9CB /* Main.storyboard */,
 				345BF96C2016B87600E3F9CB /* Assets.xcassets */,
 				345BF96E2016B87600E3F9CB /* LaunchScreen.storyboard */,
@@ -176,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */,
-				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
 				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
 				4A6202BF2B3E7A740054106C /* Views */,
 				4A6202BE2B3E78BD0054106C /* Strings */,
@@ -212,6 +212,14 @@
 				4AF3D1BE2B3E54CB00C4CEB9 /* SettingsView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4AEA77382C7FD06D00A280CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		4AF3D1BC2B3E50B300C4CEB9 /* Utilities */ = {
