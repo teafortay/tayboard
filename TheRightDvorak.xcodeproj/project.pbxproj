@@ -15,6 +15,7 @@
 		345BF97B2016B87700E3F9CB /* TheRightDvorakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF97A2016B87700E3F9CB /* TheRightDvorakTests.swift */; };
 		345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A1545622C813262009BF800 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -200,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				4ACFC6C526C6248800504F3A /* KeyTitles.swift */,
-				4ACBFBC3279739D700E2D364 /* Constants.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -218,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
+				4ACBFBC3279739D700E2D364 /* Constants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -448,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1545622C813262009BF800 /* Constants.swift in Sources */,
 				4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */,
 				4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */,
 			);
