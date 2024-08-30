@@ -16,6 +16,13 @@
 		345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A1545622C813262009BF800 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
+		4A1545672C814D1B009BF800 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
+		4A1545682C814D2A009BF800 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE19C822A93071A001F9CAC /* HapticManager.swift */; };
+		4A1545692C814D36009BF800 /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */; };
+		4A15456A2C814D4A009BF800 /* CondensedKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* CondensedKeyboardView.xib */; };
+		4A15456B2C814D5B009BF800 /* FullKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
+		4A15456C2C814D69009BF800 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
+		4A15456D2C814D7B009BF800 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -178,10 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */,
-				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
-				4A6202BF2B3E7A740054106C /* Views */,
 				4A6202BE2B3E78BD0054106C /* Strings */,
-				4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
@@ -218,7 +222,10 @@
 			isa = PBXGroup;
 			children = (
 				345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */,
+				4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */,
 				4ACBFBC3279739D700E2D364 /* Constants.swift */,
+				4AF3D1BC2B3E50B300C4CEB9 /* Utilities */,
+				4A6202BF2B3E7A740054106C /* Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -449,6 +456,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A15456D2C814D7B009BF800 /* SettingsView.swift in Sources */,
+				4A15456C2C814D69009BF800 /* KeyboardView.swift in Sources */,
+				4A15456B2C814D5B009BF800 /* FullKeyboardView.xib in Sources */,
+				4A15456A2C814D4A009BF800 /* CondensedKeyboardView.xib in Sources */,
+				4A1545692C814D36009BF800 /* KeyboardState.swift in Sources */,
+				4A1545682C814D2A009BF800 /* HapticManager.swift in Sources */,
+				4A1545672C814D1B009BF800 /* KeyboardViewController.swift in Sources */,
 				4A1545622C813262009BF800 /* Constants.swift in Sources */,
 				4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */,
 				4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */,
