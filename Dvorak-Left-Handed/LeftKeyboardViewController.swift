@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeftKeyboardViewController: UIInputViewController {
+class LeftKeyboardViewController: KeyboardViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
     
