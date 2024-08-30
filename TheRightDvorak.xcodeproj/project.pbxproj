@@ -17,7 +17,7 @@
 		345BF9902016B8DF00E3F9CB /* Dvorak-Right-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 345BF9892016B8DF00E3F9CB /* Dvorak-Right-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A1545622C813262009BF800 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
-		4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */; };
+		4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBED2BA4D6E200D8930A /* KeyTitles.swift */; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
@@ -85,7 +85,7 @@
 		4A2098412B3CEAC300F09A0E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
 		4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dvorak-Left-Handed.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftKeyboardViewController.swift; sourceTree = "<group>"; };
 		4A54FBDC2BA21A1000D8930A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A54FBED2BA4D6E200D8930A /* KeyTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyTitles.swift; path = "Dvorak-Left-Handed/KeyTitles.swift"; sourceTree = SOURCE_ROOT; };
 		4A88EE9526991F8600B6A27D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				4A54FBED2BA4D6E200D8930A /* KeyTitles.swift */,
-				4A54FBDA2BA21A1000D8930A /* KeyboardViewController.swift */,
+				4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */,
 				4A54FBDC2BA21A1000D8930A /* Info.plist */,
 			);
 			path = "Dvorak-Left-Handed";
@@ -451,7 +451,7 @@
 			files = (
 				4A1545622C813262009BF800 /* Constants.swift in Sources */,
 				4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */,
-				4A54FBDB2BA21A1000D8930A /* KeyboardViewController.swift in Sources */,
+				4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
