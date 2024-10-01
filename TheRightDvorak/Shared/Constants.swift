@@ -37,3 +37,10 @@ struct Constants {
     static let haptics = "haptics"
     static let sound = "sound"
 }
+
+struct KTitles {
+    let up: [String: String]
+    let down: [String: String]
+    let num: [String: String]
+    let sym: [String: String]
+}
