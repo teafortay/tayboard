@@ -26,6 +26,9 @@
 		4A1F20222CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
 		4A1F20232CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
 		4A1F20242CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
+		4A1F20262CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
+		4A1F20272CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
+		4A1F20282CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -93,6 +96,7 @@
 		345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		345BF98D2016B8DF00E3F9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftKeyboardView.xib; sourceTree = "<group>"; };
+		4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightKeyboardViewController.swift; sourceTree = "<group>"; };
 		4A2098412B3CEAC300F09A0E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
 		4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dvorak-Left-Handed.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */,
-				4A6202BE2B3E78BD0054106C /* Strings */,
+				4ACFC6C526C6248800504F3A /* KeyTitles.swift */,
+				4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
 			);
 			path = "Dvorak-Right-Handed";
@@ -203,14 +208,6 @@
 				4A54FBDC2BA21A1000D8930A /* Info.plist */,
 			);
 			path = "Dvorak-Left-Handed";
-			sourceTree = "<group>";
-		};
-		4A6202BE2B3E78BD0054106C /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-				4ACFC6C526C6248800504F3A /* KeyTitles.swift */,
-			);
-			path = Strings;
 			sourceTree = "<group>";
 		};
 		4A6202BF2B3E7A740054106C /* Views */ = {
@@ -433,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1F20262CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */,
 				345BF9682016B87600E3F9CB /* ViewController.swift in Sources */,
 				345BF9662016B87600E3F9CB /* AppDelegate.swift in Sources */,
 			);
@@ -456,6 +454,7 @@
 				4AE19C832A93071A001F9CAC /* HapticManager.swift in Sources */,
 				4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */,
 				4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */,
+				4A1F20272CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */,
 				4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +471,7 @@
 				4A1545682C814D2A009BF800 /* HapticManager.swift in Sources */,
 				4A1545672C814D1B009BF800 /* KeyboardViewController.swift in Sources */,
 				4A1545622C813262009BF800 /* Constants.swift in Sources */,
+				4A1F20282CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */,
 				4A54FBEF2BA4D71200D8930A /* KeyTitles.swift in Sources */,
 				4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */,
 			);
