@@ -38,9 +38,9 @@ struct Constants {
     static let sound = "sound"
 }
 
-struct KTitles {
-    let up: [String: String]
-    let down: [String: String]
-    let num: [String: String]
-    let sym: [String: String]
+protocol KeyTitles {
+    var upKeys: [String: String] { get }
+    var downKeys: [String: String] { get }
+    var symKeys: [String: String] { get }
+    var greekKeys: [String: String] { get }
 }
