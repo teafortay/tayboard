@@ -17,11 +17,13 @@ class KeyboardView: UIView {
     var nibName: String = "KeyboardView"
     var deleteTimer: Timer?
     var regularKeys: [UIButton] = []
+    var keyTitles: KeyTitles?
         
     //MARK: initializers
-    init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String) {
+    init(frame: CGRect, kvc: KeyboardViewController, nibPrefix: String, keyTitles: KeyTitles) {
         self.kvc = kvc
-        self.nibName = nibPrefix + nibName 
+        self.nibName = nibPrefix + nibName
+        self.keyTitles = keyTitles
         super.init(frame: frame)
         commonInit()
     }
@@ -36,19 +38,34 @@ class KeyboardView: UIView {
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
         //other setup
-        self.regularKeys = [keyA0, keyA1, keyA4, keyA5,
-                            keyA6, keyA7, keyA8, keyA9,
-                            keyB2, keyB3, keyB4, keyB5,
-                            keyB6, keyB7, keyB8, keyB9, keyB10,
-                            keyC2, keyC3, keyC4, keyC5,
-                            keyC6, keyC7, keyC8, keyC9,
-                            keyD3, keyD3, keyD4, keyD5,
-                            keyD6, keyD7, keyD8, keyD9,keyD10]
+        if nibName.starts(with: "Right") {
+            self.regularKeys = [keyA0, keyA1, keyA4, keyA5,
+                                keyA6, keyA7, keyA8, keyA9,
+                                keyB2, keyB3, keyB4, keyB5,
+                                keyB6, keyB7, keyB8, keyB9, keyB10,
+                                keyC2, keyC3, keyC4, keyC5,
+                                keyC6, keyC7, keyC8, keyC9,
+                                keyD3, keyD3, keyD4, keyD5,
+                                keyD6, keyD7, keyD8, keyD9,keyD10]
+        }
+        if nibName.starts(with: "Left") {
+            self.regularKeys = [keyA0, keyA1, keyD10, keyA4, keyA5, keyA6, keyA7,keyA8, keyA9,
+                keyB2, keyB3, keyB4, keyB5, keyB6, keyB7, keyB8, keyB9, keyB10,
+                    keyC2, keyC3, keyC4, keyC5, keyC6, keyC7, keyC8,
+            keyC9, keyD3, keyD4, keyD5, keyD6, keyD7, keyD8, keyD9]
+        }
         if nibName.starts(with: "Full") {
-            self.regularKeys += [keyA2, keyA3,
+            self.regularKeys = [keyA2, keyA3,
                                 keyB0, keyB1,
                                 keyC0, keyC1,
-                                keyD1, keyD2]
+                                keyD1, keyD2, keyA0, keyA1, keyA4, keyA5,
+                                keyA6, keyA7, keyA8, keyA9,
+                                keyB2, keyB3, keyB4, keyB5,
+                                keyB6, keyB7, keyB8, keyB9, keyB10,
+                                keyC2, keyC3, keyC4, keyC5,
+                                keyC6, keyC7, keyC8, keyC9,
+                                keyD3, keyD3, keyD4, keyD5,
+                                keyD6, keyD7, keyD8, keyD9,keyD10]
         }
         insertButtonTitles()
     }
@@ -190,20 +207,20 @@ class KeyboardView: UIView {
                     shiftKey.setTitle(Constants.SHIFT_DOWN, for: .normal)
                 }
                 symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
-                let _ = regularKeys.map({$0.setTitle(KeyTitles.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                let _ = regularKeys.map({$0.setTitle(keyTitles?.upKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
                 
             case .down:
                 shiftKey.setTitle(Constants.SHIFT_UP, for: .normal )
                 symKey.setTitle(Constants.SYMBOL_KEY, for: .normal)
-                let _ = regularKeys.map({$0.setTitle(KeyTitles.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                let _ = regularKeys.map({$0.setTitle(keyTitles?.downKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             case .symbol:
                 shiftKey.setTitle(Constants.GREEK, for: .normal)
                 symKey.setTitle(Constants.ABC, for: .normal)
-                let _ = regularKeys.map({$0.setTitle(KeyTitles.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                let _ = regularKeys.map({$0.setTitle(keyTitles?.symKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             case .greek:
                 shiftKey.setTitle(Constants.NUM, for: .normal)
                 symKey.setTitle(Constants.ABC, for: .normal)
-                let _ = regularKeys.map({$0.setTitle(KeyTitles.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
+                let _ = regularKeys.map({$0.setTitle(keyTitles?.greekKeys[($0.restorationIdentifier ?? "☂︎")], for: .normal)})
             }
         }
     }
