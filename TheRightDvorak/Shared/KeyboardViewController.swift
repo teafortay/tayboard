@@ -44,9 +44,9 @@ class KeyboardViewController: UIInputViewController {
         } else {
             nibPrefix = "Condensed"
         }
-        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
-        self.view.addSubview(keyboardView)
-        self.keyboardView = keyboardView
+//        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
+//        self.view.addSubview(keyboardView)
+//        self.keyboardView = keyboardView
     }
     
     override func updateViewConstraints() {
@@ -242,9 +242,9 @@ class KeyboardViewController: UIInputViewController {
         let rect = getKeyboardRectFromBounds()
         self.keyboardView = nil
         self.keyboardView?.removeFromSuperview()
-        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
-        self.view.addSubview(keyboardView)
-        self.keyboardView = keyboardView
+//        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
+//        self.view.addSubview(keyboardView)
+//        self.keyboardView = keyboardView
     }
     
     func didTapButton(_ sender: Any) {

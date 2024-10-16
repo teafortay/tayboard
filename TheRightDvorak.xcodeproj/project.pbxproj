@@ -19,18 +19,13 @@
 		4A1545672C814D1B009BF800 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		4A1545682C814D2A009BF800 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE19C822A93071A001F9CAC /* HapticManager.swift */; };
 		4A1545692C814D36009BF800 /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */; };
-		4A15456A2C814D4A009BF800 /* RightKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* RightKeyboardView.xib */; };
 		4A15456B2C814D5B009BF800 /* FullKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
 		4A15456C2C814D69009BF800 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A15456D2C814D7B009BF800 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A1F20222CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
-		4A1F20232CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
 		4A1F20242CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
 		4A1F20262CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
 		4A1F20272CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
-		4A1F20292CB8338600F9E59F /* LeftKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20212CAF37FF00F9E59F /* LeftKeyboardView.xib */; };
-		4A1F202A2CB833F200F9E59F /* RightKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* RightKeyboardView.xib */; };
-		4A1F202B2CB8340E00F9E59F /* FullKeyboardView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC1D2B2787F6130047DEBC /* FullKeyboardView.xib */; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -413,7 +408,6 @@
 			files = (
 				4AFC1D2C2787F6130047DEBC /* FullKeyboardView.xib in Resources */,
 				4A88EE982699201300B6A27D /* RightKeyboardView.xib in Resources */,
-				4A1F20232CAF37FF00F9E59F /* LeftKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,8 +444,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1F202B2CB8340E00F9E59F /* FullKeyboardView.xib in Sources */,
-				4A1F202A2CB833F200F9E59F /* RightKeyboardView.xib in Sources */,
 				4AF3D1C02B3E56BF00C4CEB9 /* KeyboardState.swift in Sources */,
 				345BF98C2016B8DF00E3F9CB /* KeyboardViewController.swift in Sources */,
 				4ACFC6C626C6248800504F3A /* RightKeyTitles.swift in Sources */,
@@ -467,11 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1F20292CB8338600F9E59F /* LeftKeyboardView.xib in Sources */,
 				4A15456D2C814D7B009BF800 /* SettingsView.swift in Sources */,
 				4A15456C2C814D69009BF800 /* KeyboardView.swift in Sources */,
 				4A15456B2C814D5B009BF800 /* FullKeyboardView.xib in Sources */,
-				4A15456A2C814D4A009BF800 /* RightKeyboardView.xib in Sources */,
 				4A1545692C814D36009BF800 /* KeyboardState.swift in Sources */,
 				4A1545682C814D2A009BF800 /* HapticManager.swift in Sources */,
 				4A1545672C814D1B009BF800 /* KeyboardViewController.swift in Sources */,
