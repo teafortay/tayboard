@@ -27,6 +27,7 @@
 		4A1F20262CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
 		4A1F20272CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */; };
 		4A2098422B3CEAC300F09A0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
+		4A2880702CC081DC0064121F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BF98B2016B8DF00E3F9CB /* KeyboardViewController.swift */; };
 		4A54FBDB2BA21A1000D8930A /* LeftKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBDA2BA21A1000D8930A /* LeftKeyboardViewController.swift */; };
 		4A54FBDF2BA21A1000D8930A /* Dvorak-Left-Handed.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A54FBD82BA21A1000D8930A /* Dvorak-Left-Handed.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A54FBEF2BA4D71200D8930A /* LeftKeyTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBED2BA4D6E200D8930A /* LeftKeyTitles.swift */; };
@@ -429,6 +430,7 @@
 				4A1F20262CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */,
 				345BF9682016B87600E3F9CB /* ViewController.swift in Sources */,
 				345BF9662016B87600E3F9CB /* AppDelegate.swift in Sources */,
+				4A2880702CC081DC0064121F /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
