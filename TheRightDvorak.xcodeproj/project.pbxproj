@@ -33,6 +33,10 @@
 		4A54FBEF2BA4D71200D8930A /* LeftKeyTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54FBED2BA4D6E200D8930A /* LeftKeyTitles.swift */; };
 		4A88EE9626991F8600B6A27D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88EE9526991F8600B6A27D /* KeyboardView.swift */; };
 		4A88EE982699201300B6A27D /* RightKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A88EE972699201300B6A27D /* RightKeyboardView.xib */; };
+		4AABA09F2CE90CCB00FEE64C /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF3D1BF2B3E56BF00C4CEB9 /* KeyboardState.swift */; };
+		4AABA0A02CE90CDA00FEE64C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
+		4AABA0A12CE90CE600FEE64C /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE19C822A93071A001F9CAC /* HapticManager.swift */; };
+		4AABA0A22CE90E9D00FEE64C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2098412B3CEAC300F09A0E /* SettingsView.swift */; };
 		4ACBFBC4279739D700E2D364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBFBC3279739D700E2D364 /* Constants.swift */; };
 		4ACFC6C626C6248800504F3A /* RightKeyTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFC6C526C6248800504F3A /* RightKeyTitles.swift */; };
 		4AE19C832A93071A001F9CAC /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE19C822A93071A001F9CAC /* HapticManager.swift */; };
@@ -427,6 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AABA0A22CE90E9D00FEE64C /* SettingsView.swift in Sources */,
+				4AABA0A12CE90CE600FEE64C /* HapticManager.swift in Sources */,
+				4AABA0A02CE90CDA00FEE64C /* Constants.swift in Sources */,
+				4AABA09F2CE90CCB00FEE64C /* KeyboardState.swift in Sources */,
 				4A1F20262CB8310500F9E59F /* RightKeyboardViewController.swift in Sources */,
 				345BF9682016B87600E3F9CB /* ViewController.swift in Sources */,
 				345BF9662016B87600E3F9CB /* AppDelegate.swift in Sources */,
