@@ -22,6 +22,18 @@ class LeftKeyboardViewController: KeyboardViewController {
         super.viewDidLoad()
         
         // Perform custom UI setup here
+        let rect = super.getKeyboardRectFromBounds()
+        let screen = UIScreen.main.bounds
+        let size = max(screen.width, screen.height)
+        if size > 1000 {
+            nibPrefix = "Full"
+        } else {
+            nibPrefix = "Left"
+        }
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix, keyTitles: leftKeyTitles)
+        self.view.addSubview(keyboardView)
+        self.keyboardView = keyboardView
+    
 //        self.nextKeyboardButton = UIButton(type: .system)
 //        
 //        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
@@ -43,11 +55,12 @@ class LeftKeyboardViewController: KeyboardViewController {
     
     override func textWillChange(_ textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
+        super.textWillChange(textInput)
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        
+        super.textDidChange(textInput)
         var textColor: UIColor
         let proxy = self.textDocumentProxy
         if proxy.keyboardAppearance == UIKeyboardAppearance.dark {

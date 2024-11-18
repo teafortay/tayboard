@@ -35,18 +35,6 @@ class KeyboardViewController: UIInputViewController {
         }
         state.settings = settingsFromUserDefauts()
         
-        // Perform custom UI setup here
-        let rect = getKeyboardRectFromBounds()
-        let screen = UIScreen.main.bounds
-        let size = max(screen.width, screen.height)
-        if size > 1000 {
-            nibPrefix = "Full"
-        } else {
-            nibPrefix = "Condensed"
-        }
-//        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
-//        self.view.addSubview(keyboardView)
-//        self.keyboardView = keyboardView
     }
     
     override func updateViewConstraints() {
