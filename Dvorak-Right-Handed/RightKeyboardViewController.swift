@@ -33,4 +33,12 @@ class RightKeyboardViewController: KeyboardViewController {
         self.view.addSubview(keyboardView)
         self.keyboardView = keyboardView
     }
+    
+    override func saveAndExitSettings(newSettings: Settings) {
+        super.saveAndExitSettings(newSettings: newSettings)
+        let rect = super.getKeyboardRectFromBounds()
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix, keyTitles: rightKeyTitles)
+                self.view.addSubview(keyboardView)
+                self.keyboardView = keyboardView
+    }
 }

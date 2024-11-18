@@ -227,7 +227,7 @@ class KeyboardViewController: UIInputViewController {
         trySoundAndHaptics()
         state.settings = newSettings
         configureUserDefaults(from: newSettings)
-        let rect = getKeyboardRectFromBounds()
+//        let rect = getKeyboardRectFromBounds()
         self.keyboardView = nil
         self.keyboardView?.removeFromSuperview()
 //        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix)
