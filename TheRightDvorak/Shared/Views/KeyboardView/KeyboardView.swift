@@ -30,7 +30,7 @@ class KeyboardView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
+//        commonInit()
     }
     
     func commonInit(){
