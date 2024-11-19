@@ -255,6 +255,7 @@ class KeyboardViewController: UIInputViewController {
                 case "tab":
                     proxy.insertText("    ")
                 default :
+//                    proxy.insertText(button.restorationIdentifier ?? "☂︎")
                     proxy.insertText(title)
                 }
             }
