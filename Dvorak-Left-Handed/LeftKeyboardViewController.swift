@@ -70,5 +70,13 @@ class LeftKeyboardViewController: KeyboardViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
+    
+    override func saveAndExitSettings(newSettings: Settings) {
+        super.saveAndExitSettings(newSettings: newSettings)
+        let rect = super.getKeyboardRectFromBounds()
+        let keyboardView = KeyboardView(frame: rect, kvc: self, nibPrefix: nibPrefix, keyTitles: leftKeyTitles)
+                self.view.addSubview(keyboardView)
+                self.keyboardView = keyboardView
+    }
 
 }
