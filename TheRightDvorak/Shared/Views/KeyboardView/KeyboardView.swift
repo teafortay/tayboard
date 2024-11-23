@@ -64,7 +64,7 @@ class KeyboardView: UIView {
                                 keyB6, keyB7, keyB8, keyB9, keyB10,
                                 keyC2, keyC3, keyC4, keyC5,
                                 keyC6, keyC7, keyC8, keyC9,
-                                keyD3, keyD3, keyD4, keyD5,
+                                keyD3, keyD4, keyD5,
                                 keyD6, keyD7, keyD8, keyD9,keyD10]
         }
         insertButtonTitles()
