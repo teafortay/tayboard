@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardView" customModule="Dvorak_Right_Handed" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardView" customModule="Dvorak_Left_Handed" customModuleProvider="target">
             <connections>
                 <outlet property="backspaceKey" destination="avL-vn-Xz0" id="fbh-pb-dhL"/>
                 <outlet property="enterKey" destination="xaM-Xb-QEF" id="79G-k3-gr1"/>
@@ -16,44 +15,44 @@
                 <outlet property="globeKey" destination="tfl-Pf-bR2" id="dzG-Tr-Nt6"/>
                 <outlet property="keyA0" destination="UaI-BE-Tmb" id="Und-4g-xKs"/>
                 <outlet property="keyA1" destination="1zV-5N-oxw" id="CB6-ez-DW3"/>
-                <outlet property="keyA4" destination="3cd-2l-bMz" id="VMM-e9-g6V"/>
-                <outlet property="keyA5" destination="W6Q-Vj-AeX" id="IBJ-QX-pgC"/>
-                <outlet property="keyA6" destination="MDH-cB-jjI" id="BLI-yW-uPV"/>
-                <outlet property="keyA7" destination="M3Q-Q0-VSS" id="q9L-aR-DoC"/>
-                <outlet property="keyA8" destination="w9z-sl-OwL" id="CXm-jA-o9I"/>
+                <outlet property="keyA2" destination="3cd-2l-bMz" id="hUJ-Ir-8sC"/>
+                <outlet property="keyA3" destination="W6Q-Vj-AeX" id="Oh9-OS-zpo"/>
+                <outlet property="keyA4" destination="MDH-cB-jjI" id="0ud-wQ-Pxe"/>
+                <outlet property="keyA5" destination="M3Q-Q0-VSS" id="OVb-Hi-w9G"/>
+                <outlet property="keyA6" destination="w9z-sl-OwL" id="fI1-7w-qx2"/>
                 <outlet property="keyA9" destination="B7O-3L-ULF" id="NC7-rc-Eo5"/>
-                <outlet property="keyB10" destination="LZW-m8-soG" id="rsN-L2-Tu6"/>
-                <outlet property="keyB2" destination="E9J-5Z-gQX" id="NTo-fL-9qQ"/>
-                <outlet property="keyB3" destination="sXm-6M-d3E" id="js8-CI-Mlc"/>
-                <outlet property="keyB4" destination="u9K-nI-AMP" id="pBM-bx-lE4"/>
-                <outlet property="keyB5" destination="gaV-Cy-ijr" id="sqP-7t-ysw"/>
-                <outlet property="keyB6" destination="Ntv-QY-8gz" id="EkT-ld-ePT"/>
-                <outlet property="keyB7" destination="Qv2-Kh-0hf" id="9xu-Hu-8nF"/>
-                <outlet property="keyB8" destination="QSZ-tt-JpR" id="9b7-9h-JZo"/>
-                <outlet property="keyB9" destination="Dcw-Ba-kuj" id="Oqg-8x-xsA"/>
-                <outlet property="keyC2" destination="fQV-30-jQF" id="IPu-5i-7RY"/>
-                <outlet property="keyC3" destination="GRd-oW-8Sl" id="URL-S7-tD1"/>
-                <outlet property="keyC4" destination="MqL-JS-ZIo" id="gcU-dQ-OGm"/>
-                <outlet property="keyC5" destination="12b-Ax-7oH" id="x3z-Hw-FLz"/>
-                <outlet property="keyC6" destination="FOf-kM-qw8" id="XUa-9m-Ypr"/>
-                <outlet property="keyC7" destination="wLt-Ka-gWa" id="R9M-Fo-Iu8"/>
-                <outlet property="keyC8" destination="93v-hV-zK8" id="3e1-GB-2fk"/>
-                <outlet property="keyC9" destination="sVA-3q-kzd" id="y4J-Oj-Fog"/>
+                <outlet property="keyB0" destination="E9J-5Z-gQX" id="klZ-YC-qEI"/>
+                <outlet property="keyB1" destination="sXm-6M-d3E" id="f2u-MX-rfY"/>
+                <outlet property="keyB2" destination="u9K-nI-AMP" id="Raj-4T-9kz"/>
+                <outlet property="keyB3" destination="gaV-Cy-ijr" id="fYd-hD-s8A"/>
+                <outlet property="keyB4" destination="Ntv-QY-8gz" id="HPs-ff-s7x"/>
+                <outlet property="keyB5" destination="Qv2-Kh-0hf" id="gtV-aW-uNR"/>
+                <outlet property="keyB6" destination="QSZ-tt-JpR" id="JEY-VY-t3D"/>
+                <outlet property="keyB7" destination="Dcw-Ba-kuj" id="sUa-A4-9b1"/>
+                <outlet property="keyB8" destination="LZW-m8-soG" id="3r4-Rg-7OM"/>
+                <outlet property="keyC0" destination="fQV-30-jQF" id="Qm0-wl-BUV"/>
+                <outlet property="keyC1" destination="GRd-oW-8Sl" id="4Q6-WK-7Oa"/>
+                <outlet property="keyC2" destination="MqL-JS-ZIo" id="duX-RY-yI6"/>
+                <outlet property="keyC3" destination="12b-Ax-7oH" id="Ypw-hC-9SF"/>
+                <outlet property="keyC4" destination="FOf-kM-qw8" id="h4T-33-suf"/>
+                <outlet property="keyC5" destination="wLt-Ka-gWa" id="miH-qj-fyy"/>
+                <outlet property="keyC6" destination="93v-hV-zK8" id="vSk-ge-9OT"/>
+                <outlet property="keyC7" destination="sVA-3q-kzd" id="MSA-A3-a5B"/>
+                <outlet property="keyD1" destination="ZRn-YM-QSe" id="tQq-dK-Sat"/>
                 <outlet property="keyD10" destination="mD3-P9-NxP" id="zJm-aC-Tv0"/>
-                <outlet property="keyD3" destination="ZRn-YM-QSe" id="5Q1-O0-ia6"/>
-                <outlet property="keyD4" destination="GPc-ST-Qsd" id="sJ9-a2-ROl"/>
-                <outlet property="keyD5" destination="LvK-dp-ABM" id="QkC-au-XmB"/>
-                <outlet property="keyD6" destination="Msw-HG-X8g" id="1dO-2K-kQU"/>
-                <outlet property="keyD7" destination="UBk-nE-YL9" id="5EC-dp-vx2"/>
-                <outlet property="keyD8" destination="Z0f-bk-nse" id="AbC-8A-cXT"/>
-                <outlet property="keyD9" destination="Yr8-vR-ehM" id="wRR-9i-13l"/>
+                <outlet property="keyD2" destination="GPc-ST-Qsd" id="0Tj-IF-hhS"/>
+                <outlet property="keyD3" destination="LvK-dp-ABM" id="h9l-pq-MES"/>
+                <outlet property="keyD4" destination="Msw-HG-X8g" id="Fca-Fs-70o"/>
+                <outlet property="keyD5" destination="UBk-nE-YL9" id="bJ2-nu-fsL"/>
+                <outlet property="keyD6" destination="Z0f-bk-nse" id="teC-S2-ZiX"/>
+                <outlet property="keyD7" destination="Yr8-vR-ehM" id="3hr-7F-loK"/>
                 <outlet property="shiftKey" destination="khd-Yb-3AS" id="OE5-G0-opo"/>
                 <outlet property="spaceKey" destination="rYo-un-7Ft" id="2Hh-LC-9xe"/>
                 <outlet property="symKey" destination="owF-0A-LSx" id="4iw-6p-zDg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyboardView" customModule="Dvorak_Right_Handed" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyboardView" customModule="Dvorak_Left_Handed" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="470" height="260"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -85,7 +84,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="U5C-8S-zcn"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-2l-bMz">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-2l-bMz">
                                     <rect key="frame" x="100.5" y="0.0" width="47.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="p">
@@ -95,7 +94,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Taw-jb-oIM"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6Q-Vj-AeX">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6Q-Vj-AeX">
                                     <rect key="frame" x="151" y="0.0" width="47.5" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="f">
@@ -105,7 +104,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Xkn-jd-jew"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-cB-jjI">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-cB-jjI">
                                     <rect key="frame" x="201.5" y="0.0" width="47" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="m">
@@ -115,7 +114,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="XMp-oi-WBn"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-Q0-VSS">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-Q0-VSS">
                                     <rect key="frame" x="251.5" y="0.0" width="47.5" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="l">
@@ -125,7 +124,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="d9K-22-nym"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-sl-OwL">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="A6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-sl-OwL">
                                     <rect key="frame" x="302" y="0.0" width="47.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <gestureRecognizers/>
@@ -162,7 +161,7 @@
                         <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="R2E-3i-UvG" userLabel="row2">
                             <rect key="frame" x="0.0" y="49" width="450" height="43.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-5Z-gQX">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-5Z-gQX">
                                     <rect key="frame" x="0.0" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title=";">
@@ -172,7 +171,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="NqX-Bw-bmY"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-6M-d3E">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-6M-d3E">
                                     <rect key="frame" x="50.5" y="0.0" width="47" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="q">
@@ -182,7 +181,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="gRN-gp-Cqw"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-nI-AMP">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-nI-AMP">
                                     <rect key="frame" x="100.5" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="b">
@@ -192,7 +191,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="vMc-yR-3yH"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-Cy-ijr">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-Cy-ijr">
                                     <rect key="frame" x="151" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="y">
@@ -202,7 +201,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="JHo-bs-s8e"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntv-QY-8gz">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntv-QY-8gz">
                                     <rect key="frame" x="201.5" y="0.0" width="47" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="u">
@@ -212,7 +211,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="lld-ss-MHb"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-Kh-0hf">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-Kh-0hf">
                                     <rect key="frame" x="251.5" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="r">
@@ -222,7 +221,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="fBv-b5-RPA"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSZ-tt-JpR">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSZ-tt-JpR">
                                     <rect key="frame" x="302" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="s">
@@ -232,7 +231,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="JfI-LT-8Yx"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-Ba-kuj">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-Ba-kuj">
                                     <rect key="frame" x="352.5" y="0.0" width="47" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="o">
@@ -242,7 +241,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="y3X-5d-NhG"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZW-m8-soG">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="B8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZW-m8-soG">
                                     <rect key="frame" x="402.5" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title=".">
@@ -257,7 +256,7 @@
                         <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-TC-zob" userLabel="row3">
                             <rect key="frame" x="0.0" y="98.5" width="450" height="43"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-30-jQF">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-30-jQF">
                                     <rect key="frame" x="0.0" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="k">
@@ -267,7 +266,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="hzD-Em-LCc"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-oW-8Sl">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-oW-8Sl">
                                     <rect key="frame" x="56.5" y="0.0" width="54" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="c">
@@ -277,7 +276,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="tYd-PQ-laF"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-JS-ZIo">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-JS-ZIo">
                                     <rect key="frame" x="113.5" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="d">
@@ -287,7 +286,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="jxo-qZ-QhM"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12b-Ax-7oH">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12b-Ax-7oH">
                                     <rect key="frame" x="170" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="t">
@@ -297,7 +296,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="67d-7W-738"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-kM-qw8">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-kM-qw8">
                                     <rect key="frame" x="226.5" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="h">
@@ -307,7 +306,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="gPz-WO-VJA"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-Ka-gWa">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-Ka-gWa">
                                     <rect key="frame" x="283" y="0.0" width="54" height="43"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="e">
@@ -317,7 +316,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="9ig-hy-Dh7"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93v-hV-zK8">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93v-hV-zK8">
                                     <rect key="frame" x="340" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="a">
@@ -327,7 +326,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="k4k-qO-k2U"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-3q-kzd">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="C7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-3q-kzd">
                                     <rect key="frame" x="396.5" y="0.0" width="53.5" height="43"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="z">
@@ -353,7 +352,7 @@
                                         <action selector="shiftKeyPress:" destination="-1" eventType="touchDown" id="21c-H0-hcI"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRn-YM-QSe">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRn-YM-QSe">
                                     <rect key="frame" x="50.5" y="0.0" width="47" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="x">
@@ -363,7 +362,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="uel-11-GwT"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-ST-Qsd">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-ST-Qsd">
                                     <rect key="frame" x="100.5" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <state key="normal" title="g">
@@ -373,7 +372,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="1T8-Rj-NzT"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-dp-ABM">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-dp-ABM">
                                     <rect key="frame" x="151" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="v">
@@ -383,7 +382,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="x1e-oo-HxO"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-HG-X8g">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-HG-X8g">
                                     <rect key="frame" x="201.5" y="0.0" width="47" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="w">
@@ -393,7 +392,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="jP3-TC-cyJ"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-nE-YL9">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-nE-YL9">
                                     <rect key="frame" x="251.5" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <state key="normal" title="n">
@@ -403,7 +402,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="Z1F-EH-gF0"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0f-bk-nse">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0f-bk-nse">
                                     <rect key="frame" x="302" y="0.0" width="47.5" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title="i">
@@ -413,7 +412,7 @@
                                         <action selector="keysPress:" destination="-1" eventType="touchUpInside" id="i1U-Ue-Kyl"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-vR-ehM">
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="D7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-vR-ehM">
                                     <rect key="frame" x="352.5" y="0.0" width="47" height="43.5"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <state key="normal" title=",">
