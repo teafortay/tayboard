@@ -171,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				345BF9652016B87600E3F9CB /* AppDelegate.swift */,
-				4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */,
 				345BF9672016B87600E3F9CB /* ViewController.swift */,
 				4AEA77382C7FD06D00A280CF /* Shared */,
 				345BF9692016B87600E3F9CB /* Main.storyboard */,
@@ -194,6 +193,7 @@
 		345BF98A2016B8DF00E3F9CB /* Dvorak-Right-Handed */ = {
 			isa = PBXGroup;
 			children = (
+				4A3A4B602B718A2C0092121E /* PrivacyInfo.xcprivacy */,
 				4ACFC6C526C6248800504F3A /* RightKeyTitles.swift */,
 				4A1F20252CB8310500F9E59F /* RightKeyboardViewController.swift */,
 				345BF98D2016B8DF00E3F9CB /* Info.plist */,
